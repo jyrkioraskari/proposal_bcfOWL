@@ -1,4 +1,4 @@
-# BCF 2.1  Ontology Description
+# BIM Collaboration Format (BCF) 2.1  Ontology Description
 
 version 0.31
 

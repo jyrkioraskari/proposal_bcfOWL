@@ -1,0 +1,1297 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">	The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+        <rdfs:comment xml:lang="en">Comment author</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component"/>
+        <rdfs:comment xml:lang="en">Name of the system in which the component is originated</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera"/>
+        <rdfs:comment xml:lang="en">Camera direction</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera"/>
+        <rdfs:comment xml:lang="en">Camera up vector</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera"/>
+        <rdfs:comment xml:lang="en">	Camera location</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">User who created the topic.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference"/>
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20"/>
+        <rdfs:comment xml:lang="en">URI to the extension schema.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera"/>
+        <rdfs:comment xml:lang="en">Cameraâ€™s field of view angle in degrees.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header"/>
+        <rdfs:comment xml:lang="en">URI to IfcFile.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component"/>
+        <rdfs:comment xml:lang="en">The IfcGuid of the component</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">Tags for grouping Topics. The list of possible values are defined in the extension schema.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component"/>
+        <rdfs:comment xml:lang="en">Name of the system in which the component is originated</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">Topic priority. The list of possible values are defined in the extension schema.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet"/>
+        <rdfs:comment xml:lang="en">URI to BimSnippet IFC.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">List of references to the topic, for example, a work request management system or an URI to a model.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet"/>
+        <rdfs:comment xml:lang="en">URI to BimSnippetSchema</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference"/>
+        <rdfs:comment xml:lang="en">URI to document.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic"/>
+        <rdfs:comment xml:lang="en"> GUID of the referenced topic</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints"/>
+        <rdfs:comment xml:lang="en">The URL of the snapshot(.png)</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet"/>
+        <rdfs:comment xml:lang="en">Type of the Snippet (Predefined listâ€�)</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">Stage this topic is part of (Predefined list).</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">Title of the topic.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">Type of the topic (Predefined list)</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">Type of the topic (Predefined list)</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:comment xml:lang="en">User who modified the topic. Exists only when Topic has been modified after creation.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera"/>
+        <rdfs:comment xml:lang="en">Scaling from view to world</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints"/>
+        <rdfs:comment xml:lang="en">Back reference to the viewpoint</rdfs:comment>
+        <rdfs:comment xml:lang="en">The viewpoint </rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+        <rdfs:comment xml:lang="en">The author who modified the comment</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20 -->
+
+
+    <ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date of the comment</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date when comment was modified</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date when the topic was created.</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Guid attribute for identifying it uniquely</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date until when the topics issue needs to be resolved.</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IfcGuid Reference to the project to which this topic is related in the IFC file</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header"/>
+        <rdfs:comment xml:lang="en">IfcGuid Reference to the spatial structure element, e.g. IfcBuildingStorey, to which this topic is related.</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the project.</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">ProjectId of the project</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Guid of the topic</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate -->
+
+
+    <DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date when the topic was last modified. Exists only when Topic has been modified after creation.</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF">
+        <rdfs:comment xml:lang="en">The markup contains textual information about the topic.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap">
+        <rdfs:comment xml:lang="en">A list of bitmaps can be used to add more information, for example, text in the visualization.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes">
+        <rdfs:comment xml:lang="en">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring">
+        <rdfs:comment xml:lang="en">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style=&quot;color:#40E0D0;&quot;;&gt;Turquoise. More information about the color format can be found on Wikipedia.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component"/>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">
+        <rdfs:comment xml:lang="en">The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Header node contains information about the IFC files relevant to this topic. It has one attribute, ProjectGuid, which is the project GUID. Header has also a list of File nodes.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines">
+        <rdfs:comment xml:lang="en">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup"/>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera">
+        <rdfs:subClassOf rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This element describes a viewpoint using orthogonal camera. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera">
+        <rdfs:subClassOf rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This element describes a viewpoint using perspective camera.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Relation between topics (Clash -&gt; PfV -&gt; Opening)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection">
+        <rdfs:comment xml:lang="en">The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints">
+        <rdfs:comment xml:lang="en">This element contains information about the default visibility for elements of certain types (SpacesVisible, SpaceBoundariesVisible and OpeningsVisible) that should be applied if not stated otherwise.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility">
+        <rdfs:comment xml:lang="en">The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20 -->
+
+
+    <Class rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</minCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The project contains reference information about the project the topics belong to.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+        <rdfs:comment xml:lang="en">The comment text</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+        <rdfs:comment xml:lang="en">Description of the document</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of the topic.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+        <rdfs:comment xml:lang="en">Number to maintain the order of the topics.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Parameter for sorting</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

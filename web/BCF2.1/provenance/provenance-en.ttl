@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1> a prov:Entity;
+	 dc:title "BCF 2.1 Ontology Description";
+	 prov:wasAttributedTo <https://dc.rwth-aachen.de/de/team/team/jyrki-oraskari>;
+	 dc:creator <https://dc.rwth-aachen.de/de/team/team/jyrki-oraskari>;
+	 prov:wasAttributedTo <https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation>;
+	 dc:contributor <https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://lbd.arch.rwth-aachen.de/bcf/v2.1>;
+	 prov:wasGeneratedAt "3.12.2020";
+.

@@ -1,0 +1,709 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "\tThe user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Comment author"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the system in which the component is originated"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Camera direction"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector> <http://www.w3.org/2000/01/rdf-schema#comment> "Camera up vector"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "\tCamera location"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "User who created the topic."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "URI to the extension schema."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView> <http://www.w3.org/2000/01/rdf-schema#comment> "Cameraâ€™s field of view angle in degrees."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference> <http://www.w3.org/2000/01/rdf-schema#comment> "URI to IfcFile."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid> <http://www.w3.org/2000/01/rdf-schema#comment> "The IfcGuid of the component"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels> <http://www.w3.org/2000/01/rdf-schema#comment> "Tags for grouping Topics. The list of possible values are defined in the extension schema."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the system in which the component is originated"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority> <http://www.w3.org/2000/01/rdf-schema#comment> "Topic priority. The list of possible values are defined in the extension schema."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference> <http://www.w3.org/2000/01/rdf-schema#comment> "URI to BimSnippet IFC."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink> <http://www.w3.org/2000/01/rdf-schema#comment> "List of references to the topic, for example, a work request management system or an URI to a model."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "URI to BimSnippetSchema"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "URI to document."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic> <http://www.w3.org/2000/01/rdf-schema#comment> " GUID of the referenced topic"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL of the snapshot(.png)"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the Snippet (Predefined listâ€�)"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Stage this topic is part of (Predefined list)."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the topic."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the topic (Predefined list)"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the topic (Predefined list)"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "User who modified the topic. Exists only when Topic has been modified after creation."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale> <http://www.w3.org/2000/01/rdf-schema#comment> "Scaling from view to world"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Back reference to the viewpoint"@en .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The viewpoint "@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The author who modified the comment"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of the comment"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when comment was modified"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the topic was created."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid> <http://www.w3.org/2000/01/rdf-schema#comment> "Guid attribute for identifying it uniquely"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date until when the topics issue needs to be resolved."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcGuid Reference to the project to which this topic is related in the IFC file"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement> <http://www.w3.org/2000/01/rdf-schema#comment> "IfcGuid Reference to the spatial structure element, e.g. IfcBuildingStorey, to which this topic is related."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the project."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> <http://www.w3.org/2000/01/rdf-schema#comment> "ProjectId of the project"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> <http://www.w3.org/2000/01/rdf-schema#comment> "Guid of the topic"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the topic was last modified. Exists only when Topic has been modified after creation."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> <http://www.w3.org/2000/01/rdf-schema#comment> "The markup contains textual information about the topic."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference> .
+_:genid2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema> .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType> .
+_:genid4 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType> .
+_:genid5 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> <http://www.w3.org/2000/01/rdf-schema#comment> "BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of bitmaps can be used to add more information, for example, text in the visualization."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection> .
+_:genid6 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector> .
+_:genid7 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint> .
+_:genid8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes> <http://www.w3.org/2000/01/rdf-schema#comment> "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring> <http://www.w3.org/2000/01/rdf-schema#comment> "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor> .
+_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> .
+_:genid10 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> .
+_:genid11 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor> .
+_:genid12 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> .
+_:genid13 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate> .
+_:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate> .
+_:genid15 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate> .
+_:genid16 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> <http://www.w3.org/2000/01/rdf-schema#comment> "The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> .
+_:genid17 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument> .
+_:genid18 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid> .
+_:genid19 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> <http://www.w3.org/2000/01/rdf-schema#comment> "DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate> .
+_:genid21 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference> .
+_:genid22 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate> .
+_:genid23 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference> .
+_:genid24 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> .
+_:genid25 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement> .
+_:genid26 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> .
+_:genid27 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement> .
+_:genid28 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> <http://www.w3.org/2000/01/rdf-schema#comment> "Header node contains information about the IFC files relevant to this topic. It has one attribute, ProjectGuid, which is the project GUID. Header has also a list of File nodes."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines> <http://www.w3.org/2000/01/rdf-schema#comment> "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale> .
+_:genid29 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#comment> "This element describes a viewpoint using orthogonal camera. "@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView> .
+_:genid30 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#comment> "This element describes a viewpoint using perspective camera."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic> .
+_:genid31 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between topics (Clash -> PfV -> Opening)"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> <http://www.w3.org/2000/01/rdf-schema#comment> "The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo> .
+_:genid32 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor> .
+_:genid33 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> .
+_:genid34 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> .
+_:genid35 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels> .
+_:genid36 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority> .
+_:genid37 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink> .
+_:genid38 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage> .
+_:genid39 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle> .
+_:genid40 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus> .
+_:genid41 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType> .
+_:genid42 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor> .
+_:genid43 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus> .
+_:genid44 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType> .
+_:genid45 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate> .
+_:genid46 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate> .
+_:genid47 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> .
+_:genid48 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate> .
+_:genid49 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> .
+_:genid50 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> <http://www.w3.org/2000/01/rdf-schema#comment> "This element contains information about the default visibility for elements of certain types (SpacesVisible, SpaceBoundariesVisible and OpeningsVisible) that should be applied if not stated otherwise."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> .
+_:genid51 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot> .
+_:genid52 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> .
+_:genid53 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> <http://www.w3.org/2000/01/rdf-schema#comment> "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility> <http://www.w3.org/2000/01/rdf-schema#comment> "The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components."@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera> .
+_:genid54 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera> .
+_:genid55 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema> .
+_:genid56 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName> .
+_:genid57 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> .
+_:genid58 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> .
+_:genid59 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> <http://www.w3.org/2000/01/rdf-schema#comment> "The project contains reference information about the project the topics belong to."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment> <http://www.w3.org/2000/01/rdf-schema#comment> "The comment text"@en .
+# 
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the document"@en .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the topic."@en .
+# 
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Number to maintain the order of the topics."@en .
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter for sorting"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

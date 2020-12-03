@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>BCF 2.1 Ontology Description</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://lbd.arch.rwth-aachen.de/bcf/v2.1","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lbd.arch.rwth-aachen.de/bcf/v2.1","name":"BCF 2.1 Ontology Description", "headline":"BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML", "datePublished":"3.12.2020", "version":"v0.3.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Jyrki Oraskari","url":"https://dc.rwth-aachen.de/de/team/team/jyrki-oraskari"}], "contributor":[{"@type":"Person","name":"Pasi Paasiala Et al.","url":"https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>BCF 2.1 Ontology Description</h1>
+<h2>Release  3.12.2020</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://lbd.arch.rwth-aachen.de/bcf/v2.1">http://lbd.arch.rwth-aachen.de/bcf/v2.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://lbd.arch.rwth-aachen.de/bcf/v2.1">http://lbd.arch.rwth-aachen.de/bcf/v2.1</a></dd>
+<dt>Revision:</dt>
+<dd>v0.3.1</dd>
+<dt>Authors:</dt>
+<dd><a href="https://dc.rwth-aachen.de/de/team/team/jyrki-oraskari">Jyrki Oraskari</a>, (<a href="https://dc.rwth-aachen.de/de">RWTH</a>)</dd>
+
+<dt>Contributors:</dt>
+<dd><a href="https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation">Pasi Paasiala Et al.</a>, (<a href="https://www.buildingsmart.org/">buildingSMART</a>)</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://dc.rwth-aachen.de/de/team/team/jyrki-oraskari">Jyrki Oraskari</a>, (<a href="http://www.linkedbuildingdata.net/">Linked Building Data (LBD) community</a>)</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-Creative%20Commons%20Attribution%204.0%20International-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+<img src="https://licensebuttons.net/l/by/4.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>In progress</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">BCF 2.1 Ontology Description: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#/BCF" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF">
+         <span>b c f</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/BimSnippet"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">
+         <span>bim snippet</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Bitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap">
+         <span>bitmap</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">
+         <span>camera</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ClippingPlanes"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes">
+         <span>clipping planes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Coloring" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring">
+         <span>coloring</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">
+         <span>comment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Components"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">
+         <span>components</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DocumentReference"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">
+         <span>document reference</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">
+         <span>header</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Lines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines">
+         <span>lines</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/OrthogonalCamera"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera">
+         <span>orthogonal camera</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/PerspectiveCamera"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera">
+         <span>perspective camera</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Project "
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">
+         <span>project%20</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RelatedTopic"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic">
+         <span>related topic</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Selection"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection">
+         <span>selection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">
+         <span>topic</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ViewSetupHints"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints">
+         <span>view setup hints</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Viewpoints"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">
+         <span>viewpoints</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Visibility"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility">
+         <span>visibility</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/VisualizationInfo"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">
+         <span>visualization info</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#/hasAssignedTo"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo">
+         <span>has assigned to</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor">
+         <span>has author</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasAuthoringToolId"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId">
+         <span>has authoring tool id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasBimSnippet"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet">
+         <span>has bim snippet</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap">
+         <span>has bitmap</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasCameraDirection"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection">
+         <span>has camera direction</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasCameraUpVector"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector">
+         <span>has camera up vector</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasCameraViewPoint"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint">
+         <span>has camera view point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasClippingPlanes"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes">
+         <span>has clipping planes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasColoring"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring">
+         <span>has coloring</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasComment"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+         <span>has comment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasComment:ModifiedAuthor"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor">
+         <span>has comment: modified author</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasComponent"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent">
+         <span>has component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasComponents"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents">
+         <span>has components</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasCreationAuthor"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor">
+         <span>has creation author</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasDescription"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+         <span>has description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasDocumentReference"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference">
+         <span>has document reference</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasExtensionSchema"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema">
+         <span>has extension schema</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasFieldOfView"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView">
+         <span>has field of view</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasFileDate"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate">
+         <span>has file date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasFileReference"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference">
+         <span>has file reference</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasHeader"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader">
+         <span>has header</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasIfcGuid"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid">
+         <span>has ifc guid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasIndex" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+         <span>has index</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasLabels"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels">
+         <span>has labels</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasLines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines">
+         <span>has lines</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasMarkup"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup">
+         <span>has markup</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasOriginatingSystem"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem">
+         <span>has originating system</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasOrthogonalCamera"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera">
+         <span>has orthogonal camera</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasPerspectiveCamera"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera">
+         <span>has perspective camera</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasPriority"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority">
+         <span>has priority</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasProject "
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20">
+         <span>has project%20</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasReference"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference">
+         <span>has reference</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasReferenceLink"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink">
+         <span>has reference link</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasReferenceSchema"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema">
+         <span>has reference schema</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasReferencedDocument"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument">
+         <span>has referenced document</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasRelatedTopic"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic">
+         <span>has related topic</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasSelection"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection">
+         <span>has selection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasSnapshot"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot">
+         <span>has snapshot</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasSnippetType"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType">
+         <span>has snippet type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasStage" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage">
+         <span>has stage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTitle" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle">
+         <span>has title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTopic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic">
+         <span>has topic</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTopic_ModifiedAuthor"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor">
+         <span>has topic modified author</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTopicStatus"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus">
+         <span>has topic status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTopicType"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType">
+         <span>has topic type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasViewSetupHints"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints">
+         <span>has view setup hints</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasViewToWorldScale"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale">
+         <span>has view to world scale</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasViewpoint"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint">
+         <span>has viewpoint</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasViewpoints"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints">
+         <span>has viewpoints</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasVisibility"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility">
+         <span>has visibility</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasVisualizationInfo"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo">
+         <span>has visualization info</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#/hasComment"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+         <span>has comment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasCommentDate"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate">
+         <span>has comment date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasComment_ModifiedDate"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate">
+         <span>has comment modified date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasCreationDate"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate">
+         <span>has creation date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasDescription"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+         <span>has description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasDocumentReferenceGuid"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid">
+         <span>has document reference guid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasDueDate"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate">
+         <span>has due date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasIfcProject"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject">
+         <span>has ifc project</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasIfcSpatialStructureElement"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement">
+         <span>has ifc spatial structure element</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasIndex" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+         <span>has index</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasName" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName">
+         <span>has name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasProjectId"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId">
+         <span>has project id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTopicGuid"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid">
+         <span>has topic guid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasTopic_ModifiedDate"
+         title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate">
+         <span>has topic modified date</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">BCF 2.1 Ontology Description: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for BCF 2.1 Ontology Description classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by BCF 2.1 Ontology Description.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/BCF" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF">
+            <span>b c f</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/BimSnippet"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">
+            <span>bim snippet</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Bitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap">
+            <span>bitmap</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">
+            <span>camera</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ClippingPlanes"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes">
+            <span>clipping planes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Coloring" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring">
+            <span>coloring</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">
+            <span>comment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Components"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">
+            <span>components</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/DocumentReference"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">
+            <span>document reference</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">
+            <span>header</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Lines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines">
+            <span>lines</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/OrthogonalCamera"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera">
+            <span>orthogonal camera</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/PerspectiveCamera"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera">
+            <span>perspective camera</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Project "
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">
+            <span>project%20</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/RelatedTopic"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic">
+            <span>related topic</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Selection"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection">
+            <span>selection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">
+            <span>topic</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ViewSetupHints"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints">
+            <span>view setup hints</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Viewpoints"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">
+            <span>viewpoints</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Visibility"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility">
+            <span>visibility</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/VisualizationInfo"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">
+            <span>visualization info</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/BCF">
+      <h3>b c f<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF</p>
+      <div class="comment">
+         <span class="markdown">The markup contains textual information about the topic.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasMarkup"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup">has markup</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasProject "
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20">has project%20</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasVisualizationInfo"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo">has visualization info</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/BimSnippet">
+      <h3>bim snippet<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet</p>
+      <div class="comment">
+         <span class="markdown">BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasReference"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference">has reference</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasReferenceSchema"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema">has reference schema</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasSnippetType"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType">has snippet type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasBimSnippet"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet">has bim snippet</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Bitmap">
+      <h3>bitmap<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap</p>
+      <div class="comment">
+         <span class="markdown">A list of bitmaps can be used to add more information, for example, text in the visualization.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap">has bitmap</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Camera">
+      <h3>camera<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/OrthogonalCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera">orthogonal camera</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/PerspectiveCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera">perspective camera</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasCameraDirection"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection">has camera direction</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasCameraUpVector"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector">has camera up vector</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasCameraViewPoint"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint">has camera view point</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ClippingPlanes">
+      <h3>clipping planes<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes</p>
+      <div class="comment">
+         <span class="markdown">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasClippingPlanes"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes">has clipping planes</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Coloring">
+      <h3>coloring<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring</p>
+      <div class="comment">
+         <span class="markdown">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style="color:#40E0D0;";&gt;Turquoise. More information about the color format can be found on Wikipedia.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasColoring"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring">has coloring</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Comment">
+      <h3>comment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment</p>
+      <div class="comment">
+         <span class="markdown">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor">has author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasComment"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">has comment</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasCommentDate"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate">has comment date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasComment_ModifiedDate"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate">has comment modified date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasComment:ModifiedAuthor"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor">has comment: modified author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasViewpoint"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint">has viewpoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasComment"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">has comment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Components">
+      <h3>components<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components</p>
+      <div class="comment">
+         <span class="markdown">The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasColoring"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring">has coloring</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasSelection"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection">has selection</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasViewSetupHints"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints">has view setup hints</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasVisibility"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility">has visibility</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasComponents"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents">has components</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DocumentReference">
+      <h3>document reference<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference</p>
+      <div class="comment">
+         <span class="markdown">DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasDescription"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">has description</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasDocumentReferenceGuid"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid">has document reference guid</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasReferencedDocument"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument">has referenced document</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasDocumentReference"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference">has document reference</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Header">
+      <h3>header<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header</p>
+      <div class="comment">
+         <span class="markdown">Header node contains information about the IFC files relevant to this topic. It has one attribute, ProjectGuid, which is the project GUID. Header has also a list of File nodes.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasFileDate"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate">has file date</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasFileReference"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference">has file reference</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasIfcProject"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject">has ifc project</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasIfcSpatialStructureElement"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement">has ifc spatial structure element</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasHeader"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader">has header</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Lines">
+      <h3>lines<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines</p>
+      <div class="comment">
+         <span class="markdown">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasLines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines">has lines</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/OrthogonalCamera">
+      <h3>orthogonal camera<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera</p>
+      <div class="comment">
+         <span class="markdown">This element describes a viewpoint using orthogonal camera. </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">camera</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasViewToWorldScale"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale">has view to world scale</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasOrthogonalCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera">has orthogonal camera</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PerspectiveCamera">
+      <h3>perspective camera<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera</p>
+      <div class="comment">
+         <span class="markdown">This element describes a viewpoint using perspective camera.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">camera</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasFieldOfView"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView">has field of view</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasPerspectiveCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera">has perspective camera</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Project ">
+      <h3>project%20<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20</p>
+      <div class="comment">
+         <span class="markdown">The project contains reference information about the project the topics belong to.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasExtensionSchema"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema">has extension schema</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasName" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName">has name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasProjectId"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId">has project id</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasProject "
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20">has project%20</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/RelatedTopic">
+      <h3>related topic<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic</p>
+      <div class="comment">
+         <span class="markdown">Relation between topics (Clash -&gt; PfV -&gt; Opening)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasRelatedTopic"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic">has related topic</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasRelatedTopic"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic">has related topic</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Selection">
+      <h3>selection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection</p>
+      <div class="comment">
+         <span class="markdown">The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasComponent"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent">has component</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasSelection"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection">has selection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Topic">
+      <h3>topic<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic</p>
+      <div class="comment">
+         <span class="markdown">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasAssignedTo"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo">has assigned to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasCreationAuthor"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor">has creation author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasCreationDate"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate">has creation date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasDescription"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">has description</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasDueDate"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate">has due date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasIndex" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">has index</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasLabels"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels">has labels</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasPriority"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority">has priority</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasReferenceLink"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink">has reference link</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasStage" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage">has stage</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasTitle" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle">has title</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasTopicGuid"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid">has topic guid</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasTopic_ModifiedAuthor"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor">has topic modified author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasTopic_ModifiedDate"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate">has topic modified date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasTopicStatus"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus">has topic status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasTopicType"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType">has topic type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasTopic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic">has topic</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ViewSetupHints">
+      <h3>view setup hints<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints</p>
+      <div class="comment">
+         <span class="markdown">This element contains information about the default visibility for elements of certain types (SpacesVisible, SpaceBoundariesVisible and OpeningsVisible) that should be applied if not stated otherwise.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasViewSetupHints"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints">has view setup hints</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Viewpoints">
+      <h3>viewpoints<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints</p>
+      <div class="comment">
+         <span class="markdown">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasIndex" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">has index</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasSnapshot"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot">has snapshot</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasViewpoint"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint">has viewpoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasViewpoints"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints">has viewpoints</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Visibility">
+      <h3>visibility<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility</p>
+      <div class="comment">
+         <span class="markdown">The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasVisibility"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility">has visibility</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/VisualizationInfo">
+      <h3>visualization info<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap">has bitmap</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasClippingPlanes"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes">has clipping planes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasComponents"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents">has components</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasLines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines">has lines</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasOrthogonalCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera">has orthogonal camera</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasPerspectiveCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera">has perspective camera</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasVisualizationInfo"
+               title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo">has visualization info</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/hasAssignedTo"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo">
+            <span>has assigned to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor">
+            <span>has author</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasAuthoringToolId"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId">
+            <span>has authoring tool id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasBimSnippet"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet">
+            <span>has bim snippet</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap">
+            <span>has bitmap</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasCameraDirection"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection">
+            <span>has camera direction</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasCameraUpVector"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector">
+            <span>has camera up vector</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasCameraViewPoint"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint">
+            <span>has camera view point</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasClippingPlanes"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes">
+            <span>has clipping planes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasColoring"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring">
+            <span>has coloring</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasComment"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+            <span>has comment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasComment:ModifiedAuthor"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor">
+            <span>has comment: modified author</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasComponent"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent">
+            <span>has component</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasComponents"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents">
+            <span>has components</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasCreationAuthor"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor">
+            <span>has creation author</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasDescription"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+            <span>has description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasDocumentReference"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference">
+            <span>has document reference</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasExtensionSchema"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema">
+            <span>has extension schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasFieldOfView"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView">
+            <span>has field of view</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasFileDate"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate">
+            <span>has file date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasFileReference"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference">
+            <span>has file reference</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasHeader"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader">
+            <span>has header</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasIfcGuid"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid">
+            <span>has ifc guid</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasIndex" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+            <span>has index</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasLabels"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels">
+            <span>has labels</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasLines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines">
+            <span>has lines</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasMarkup"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup">
+            <span>has markup</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasOriginatingSystem"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem">
+            <span>has originating system</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasOrthogonalCamera"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera">
+            <span>has orthogonal camera</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasPerspectiveCamera"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera">
+            <span>has perspective camera</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasPriority"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority">
+            <span>has priority</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasProject "
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20">
+            <span>has project%20</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasReference"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference">
+            <span>has reference</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasReferenceLink"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink">
+            <span>has reference link</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasReferenceSchema"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema">
+            <span>has reference schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasReferencedDocument"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument">
+            <span>has referenced document</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasRelatedTopic"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic">
+            <span>has related topic</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasSelection"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection">
+            <span>has selection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasSnapshot"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot">
+            <span>has snapshot</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasSnippetType"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType">
+            <span>has snippet type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasStage" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage">
+            <span>has stage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTitle" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle">
+            <span>has title</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTopic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic">
+            <span>has topic</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTopic_ModifiedAuthor"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor">
+            <span>has topic modified author</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTopicStatus"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus">
+            <span>has topic status</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTopicType"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType">
+            <span>has topic type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasViewSetupHints"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints">
+            <span>has view setup hints</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasViewToWorldScale"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale">
+            <span>has view to world scale</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasViewpoint"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint">
+            <span>has viewpoint</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasViewpoints"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints">
+            <span>has viewpoints</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasVisibility"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility">
+            <span>has visibility</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasVisualizationInfo"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo">
+            <span>has visualization info</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/hasAssignedTo">
+      <h3>has assigned to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo</p>
+      <div class="comment">
+         <span class="markdown">	The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasAuthor">
+      <h3>has author<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor</p>
+      <div class="comment">
+         <span class="markdown">Comment author</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasAuthoringToolId">
+      <h3>has authoring tool id<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId</p>
+      <div class="comment">
+         <span class="markdown">Name of the system in which the component is originated</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component">component</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasBimSnippet">
+      <h3>has bim snippet<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/BimSnippet"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">bim snippet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasBitmap">
+      <h3>has bitmap<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBitmap</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Bitmap" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap">bitmap</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasCameraDirection">
+      <h3>has camera direction<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection</p>
+      <div class="comment">
+         <span class="markdown">Camera direction</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasCameraUpVector">
+      <h3>has camera up vector<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector</p>
+      <div class="comment">
+         <span class="markdown">Camera up vector</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasCameraViewPoint">
+      <h3>has camera view point<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint</p>
+      <div class="comment">
+         <span class="markdown">	Camera location</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Camera" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera">camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasClippingPlanes">
+      <h3>has clipping planes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasClippingPlanes</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/ClippingPlanes"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ClippingPlanes">clipping planes</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasColoring">
+      <h3>has coloring<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasColoring</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Components"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">components</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Coloring" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring">coloring</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasComment">
+      <h3>has comment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/hasComment">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasComment:ModifiedAuthor">
+      <h3>has comment: modified author<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor</p>
+      <div class="comment">
+         <span class="markdown">The author who modified the comment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasComponent">
+      <h3>has component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Selection"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection">selection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component">component</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasComponents">
+      <h3>has components<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Components"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">components</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasCreationAuthor">
+      <h3>has creation author<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor</p>
+      <div class="comment">
+         <span class="markdown">User who created the topic.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasDescription">
+      <h3>has description<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/DocumentReference"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">document reference</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/hasDescription">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasDocumentReference">
+      <h3>has document reference<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReference</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/DocumentReference"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">document reference</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasExtensionSchema">
+      <h3>has extension schema<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema</p>
+      <div class="comment">
+         <span class="markdown">URI to the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Project "
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">project%20</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasFieldOfView">
+      <h3>has field of view<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView</p>
+      <div class="comment">
+         <span class="markdown">Cameraâ€™s field of view angle in degrees.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/PerspectiveCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera">perspective camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasFileDate">
+      <h3>has file date<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasFileReference">
+      <h3>has file reference<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference</p>
+      <div class="comment">
+         <span class="markdown">URI to IfcFile.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasHeader">
+      <h3>has header<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasIfcGuid">
+      <h3>has ifc guid<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid</p>
+      <div class="comment">
+         <span class="markdown">The IfcGuid of the component</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component">component</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasIndex">
+      <h3>has index<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#/Viewpoints"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">viewpoints</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/hasIndex">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasLabels">
+      <h3>has labels<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels</p>
+      <div class="comment">
+         <span class="markdown">Tags for grouping Topics. The list of possible values are defined in the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasLines">
+      <h3>has lines<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLines</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Lines" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines">lines</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasMarkup">
+      <h3>has markup<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/BCF" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF">b c f</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasOriginatingSystem">
+      <h3>has originating system<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem</p>
+      <div class="comment">
+         <span class="markdown">Name of the system in which the component is originated</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component">component</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasOrthogonalCamera">
+      <h3>has orthogonal camera<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOrthogonalCamera</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/OrthogonalCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera">orthogonal camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasPerspectiveCamera">
+      <h3>has perspective camera<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPerspectiveCamera</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/PerspectiveCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera">perspective camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasPriority">
+      <h3>has priority<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority</p>
+      <div class="comment">
+         <span class="markdown">Topic priority. The list of possible values are defined in the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasProject ">
+      <h3>has project%20<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/BCF" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF">b c f</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Project "
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">project%20</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasReference">
+      <h3>has reference<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference</p>
+      <div class="comment">
+         <span class="markdown">URI to BimSnippet IFC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/BimSnippet"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">bim snippet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasReferenceLink">
+      <h3>has reference link<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceLink</p>
+      <div class="comment">
+         <span class="markdown">List of references to the topic, for example, a work request management system or an URI to a model.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasReferenceSchema">
+      <h3>has reference schema<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferenceSchema</p>
+      <div class="comment">
+         <span class="markdown">URI to BimSnippetSchema</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/BimSnippet"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">bim snippet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasReferencedDocument">
+      <h3>has referenced document<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReferencedDocument</p>
+      <div class="comment">
+         <span class="markdown">URI to document.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/DocumentReference"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">document reference</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasRelatedTopic">
+      <h3>has related topic<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasRelatedTopic</p>
+      <div class="comment">
+         <span class="markdown"> GUID of the referenced topic</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#/RelatedTopic"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic">related topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/RelatedTopic"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic">related topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasSelection">
+      <h3>has selection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Components"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">components</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Selection"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection">selection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasSnapshot">
+      <h3>has snapshot<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnapshot</p>
+      <div class="comment">
+         <span class="markdown">The URL of the snapshot(.png)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Viewpoints"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">viewpoints</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasSnippetType">
+      <h3>has snippet type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSnippetType</p>
+      <div class="comment">
+         <span class="markdown">Type of the Snippet (Predefined listâ€�)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/BimSnippet"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet">bim snippet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasStage">
+      <h3>has stage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage</p>
+      <div class="comment">
+         <span class="markdown">Stage this topic is part of (Predefined list).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTitle">
+      <h3>has title<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle</p>
+      <div class="comment">
+         <span class="markdown">Title of the topic.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTopic">
+      <h3>has topic<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTopic_ModifiedAuthor">
+      <h3>has topic modified author<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedAuthor</p>
+      <div class="comment">
+         <span class="markdown">User who modified the topic. Exists only when Topic has been modified after creation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTopicStatus">
+      <h3>has topic status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus</p>
+      <div class="comment">
+         <span class="markdown">Type of the topic (Predefined list)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTopicType">
+      <h3>has topic type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType</p>
+      <div class="comment">
+         <span class="markdown">Type of the topic (Predefined list)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasViewSetupHints">
+      <h3>has view setup hints<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Components"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">components</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/ViewSetupHints"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints">view setup hints</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasViewToWorldScale">
+      <h3>has view to world scale<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale</p>
+      <div class="comment">
+         <span class="markdown">Scaling from view to world</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/OrthogonalCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera">orthogonal camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasViewpoint">
+      <h3>has viewpoint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint</p>
+      <div class="comment">
+         <span class="markdown">Back reference to the viewpoint</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#/Viewpoints"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">viewpoints</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasViewpoints">
+      <h3>has viewpoints<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup">markup</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Viewpoints"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints">viewpoints</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasVisibility">
+      <h3>has visibility<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisibility</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Components"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components">components</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Visibility"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility">visibility</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasVisualizationInfo">
+      <h3>has visualization info<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/BCF" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF">b c f</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/VisualizationInfo"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo">visualization info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/hasComment"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment">
+            <span>has comment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasCommentDate"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate">
+            <span>has comment date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasComment_ModifiedDate"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate">
+            <span>has comment modified date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasCreationDate"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate">
+            <span>has creation date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasDescription"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription">
+            <span>has description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasDocumentReferenceGuid"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid">
+            <span>has document reference guid</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasDueDate"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate">
+            <span>has due date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasIfcProject"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject">
+            <span>has ifc project</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasIfcSpatialStructureElement"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement">
+            <span>has ifc spatial structure element</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasIndex" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex">
+            <span>has index</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasName" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName">
+            <span>has name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasProjectId"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId">
+            <span>has project id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTopicGuid"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid">
+            <span>has topic guid</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasTopic_ModifiedDate"
+            title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate">
+            <span>has topic modified date</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/hasComment">
+      <h3>has comment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/hasComment">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasCommentDate">
+      <h3>has comment date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate</p>
+      <div class="comment">
+         <span class="markdown">Date of the comment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasComment_ModifiedDate">
+      <h3>has comment modified date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment_ModifiedDate</p>
+      <div class="comment">
+         <span class="markdown">The date when comment was modified</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Comment" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment">comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasCreationDate">
+      <h3>has creation date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate</p>
+      <div class="comment">
+         <span class="markdown">Date when the topic was created.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasDescription">
+      <h3>has description<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/hasDescription">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasDocumentReferenceGuid">
+      <h3>has document reference guid<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid</p>
+      <div class="comment">
+         <span class="markdown">Guid attribute for identifying it uniquely</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/DocumentReference"
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference">document reference</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasDueDate">
+      <h3>has due date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate</p>
+      <div class="comment">
+         <span class="markdown">Date until when the topics issue needs to be resolved.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasIfcProject">
+      <h3>has ifc project<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject</p>
+      <div class="comment">
+         <span class="markdown">IfcGuid Reference to the project to which this topic is related in the IFC file</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasIfcSpatialStructureElement">
+      <h3>has ifc spatial structure element<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement</p>
+      <div class="comment">
+         <span class="markdown">IfcGuid Reference to the spatial structure element, e.g. IfcBuildingStorey, to which this topic is related.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Header" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header">header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasIndex">
+      <h3>has index<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/hasIndex">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasName">
+      <h3>has name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName</p>
+      <div class="comment">
+         <span class="markdown">Name of the project.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Project "
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">project%20</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasProjectId">
+      <h3>has project id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId</p>
+      <div class="comment">
+         <span class="markdown">ProjectId of the project</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Project "
+                  title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20">project%20</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTopicGuid">
+      <h3>has topic guid<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid</p>
+      <div class="comment">
+         <span class="markdown">Guid of the topic</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasTopic_ModifiedDate">
+      <h3>has topic modified date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopic_ModifiedDate</p>
+      <div class="comment">
+         <span class="markdown">Date when the topic was last modified. Exists only when Topic has been modified after creation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Topic" title="http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic">topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

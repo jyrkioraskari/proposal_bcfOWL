@@ -45,7 +45,7 @@ public class CreateBCFOntology {
 			createVisualizationInfo(oc_BCF);
 			
 			
-			ontology_model.write(System.out, "TTL");
+			ontology_model.write(System.out);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -339,14 +339,14 @@ public class CreateBCFOntology {
 		op_CreationAuthor.addDomain(oc_Topic);
 		setObligatoryElement(oc_Topic, op_CreationAuthor);
 
-		DatatypeProperty dp_ModifiedDate = ontology_model.createDatatypeProperty(this.bcf_ns + "has" + "ModifiedDate");
+		DatatypeProperty dp_ModifiedDate = ontology_model.createDatatypeProperty(this.bcf_ns + "has" + "Topic_ModifiedDate");
 		dp_ModifiedDate.addComment("Date when the topic was last modified. Exists only when Topic has been modified after creation.", "en");
 		dp_ModifiedDate.addDomain(oc_Topic);
 		dp_ModifiedDate.addRange(XSD.dateTime);
 		setOptionalElement(oc_Topic, dp_ModifiedDate);
 		
 		
-		ObjectProperty op_ModifiedAuthor = ontology_model.createObjectProperty(this.bcf_ns + "has" + "ModifiedAuthor");
+		ObjectProperty op_ModifiedAuthor = ontology_model.createObjectProperty(this.bcf_ns + "has" + "Topic_ModifiedAuthor");
 		op_ModifiedAuthor.addComment("User who modified the topic. Exists only when Topic has been modified after creation.", "en");
 		op_ModifiedAuthor.addDomain(oc_Topic);
 		setOptionalElement(oc_Topic, op_ModifiedAuthor);
@@ -443,14 +443,15 @@ public class CreateBCFOntology {
 		op_Viewpoint.addDomain(oc_Comment);
 		setOptionalElement(oc_Comment, op_Viewpoint);
 
-		DatatypeProperty dp_ModifiedDate = ontology_model.createDatatypeProperty(this.bcf_ns + "has" + "ModifiedDate");
+		//TODO make Modification class
+		DatatypeProperty dp_ModifiedDate = ontology_model.createDatatypeProperty(this.bcf_ns + "has" + "Comment_ModifiedDate");
 		dp_ModifiedDate.addComment("The date when comment was modified", "en");
 		dp_ModifiedDate.addDomain(oc_Comment);
 		dp_ModifiedDate.addRange(XSD.dateTime);
-		setOptionalElement(oc_Comment, dp_ModifiedDate);  //TODO make Modification class
+		setOptionalElement(oc_Comment, dp_ModifiedDate);  
 
 
-		ObjectProperty op_ModifiedAuthor = ontology_model.createObjectProperty(this.bcf_ns + "has" + "ModifiedAuthor");
+		ObjectProperty op_ModifiedAuthor = ontology_model.createObjectProperty(this.bcf_ns + "has" + "Comment:ModifiedAuthor");
 		op_ModifiedAuthor.addComment("The author who modified the comment", "en");
 		op_ModifiedAuthor.addDomain(oc_Comment);
 		setOptionalElement(oc_Comment, op_ModifiedAuthor); 

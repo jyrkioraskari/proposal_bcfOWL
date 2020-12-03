@@ -82,6 +82,11 @@
         rdfs:domain  <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> ;
         rdfs:range   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> .
 
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints>
+        a            owl:ObjectProperty ;
+        rdfs:domain  <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> ;
+        rdfs:range   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> .
+
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera>
         a                owl:Class ;
         rdfs:comment     "This element describes a viewpoint using orthogonal camera. "@en ;
@@ -90,11 +95,6 @@
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale>
                          ] .
-
-<http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewSetupHints>
-        a            owl:ObjectProperty ;
-        rdfs:domain  <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> ;
-        rdfs:range   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference>
         a             owl:ObjectProperty ;
@@ -136,23 +136,35 @@
         rdfs:comment     "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels>
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType>
+                           owl:minCardinality  "1"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus>
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus>
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasModifiedAuthor>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
@@ -163,44 +175,32 @@
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasModifiedAuthor>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasModifiedDate>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationDate>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "1"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex>
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasModifiedDate>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
@@ -208,7 +208,7 @@
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription>
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDueDate>
                          ] .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDocumentReferenceGuid>
@@ -345,22 +345,6 @@
         a                owl:Class ;
         rdfs:comment     "Header node contains information about the IFC files relevant to this topic. It has one attribute, ProjectGuid, which is the project GUID. Header has also a list of File nodes."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate>
                          ] ;
@@ -370,11 +354,27 @@
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcSpatialStructureElement>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileReference>
                          ] .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF>
@@ -403,14 +403,14 @@
         rdfs:comment  "Camera direction"@en ;
         rdfs:domain   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> .
 
+<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility>
+        a             owl:Class ;
+        rdfs:comment  "The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components."@en .
+
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema>
         a             owl:ObjectProperty ;
         rdfs:comment  "URI to the extension schema."@en ;
         rdfs:domain   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project > .
-
-<http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility>
-        a             owl:Class ;
-        rdfs:comment  "The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components."@en .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasSelection>
         a            owl:ObjectProperty ;
@@ -450,10 +450,10 @@
         rdfs:range    xsd:dateTime .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment>
-        a             owl:ObjectProperty ;
+        a             owl:DatatypeProperty , owl:ObjectProperty ;
         rdfs:comment  "The comment text"@en ;
         rdfs:domain   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> , <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
-        rdfs:range    <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
+        rdfs:range    xsd:string , <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo>
         a             owl:ObjectProperty ;
@@ -484,19 +484,11 @@
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasModifiedDate>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
@@ -507,8 +499,16 @@
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment>
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCommentDate>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint>
                          ] .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/RelatedTopic>
@@ -579,9 +579,10 @@
                          ] .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription>
-        a             owl:ObjectProperty ;
+        a             owl:DatatypeProperty , owl:ObjectProperty ;
         rdfs:comment  "Description of the document"@en , "Description of the topic."@en ;
-        rdfs:domain   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> , <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
+        rdfs:domain   <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> , <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
+        rdfs:range    xsd:string .
 
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView>
         a             owl:ObjectProperty ;

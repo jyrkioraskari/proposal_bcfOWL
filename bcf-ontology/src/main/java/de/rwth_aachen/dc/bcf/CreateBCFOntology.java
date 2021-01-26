@@ -18,9 +18,9 @@ public class CreateBCFOntology {
 			
 			OntClass oc_BCF = ontology_model.createClass(this.bcf_ns + "BCF");
 			
-			OntClass oc_Project  = ontology_model.createClass(this.bcf_ns + "Project ");
+			OntClass oc_Project  = ontology_model.createClass(this.bcf_ns + "Project");
 			oc_Project.addComment("The project contains reference information about the project the topics belong to.", "en");
-			ObjectProperty op_hasProject  = ontology_model.createObjectProperty(this.bcf_ns + "has" + "Project ");
+			ObjectProperty op_hasProject  = ontology_model.createObjectProperty(this.bcf_ns + "has" + "Project");
 			op_hasProject .addDomain(oc_BCF);
 			op_hasProject .addRange(oc_Project);
 			

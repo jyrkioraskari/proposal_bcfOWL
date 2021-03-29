@@ -16,13 +16,9 @@ public class CreateBCFOntology {
 	public CreateBCFOntology() {
 		try {
 			
-			OntClass oc_BCF = ontology_model.createClass(this.bcf_ns + "BCF");
 			
 			OntClass oc_Project  = ontology_model.createClass(this.bcf_ns + "Project");
 			oc_Project.addComment("The project contains reference information about the project the topics belong to.", "en");
-			ObjectProperty op_hasProject  = ontology_model.createObjectProperty(this.bcf_ns + "has" + "Project");
-			op_hasProject .addDomain(oc_BCF);
-			op_hasProject .addRange(oc_Project);
 			
 			DatatypeProperty dp_hasProjectId = ontology_model.createDatatypeProperty(this.bcf_ns + "has" + "ProjectId");
 			dp_hasProjectId.addComment("ProjectId of the project", "en");
@@ -41,8 +37,8 @@ public class CreateBCFOntology {
 			op_hasExtensionSchema.addDomain(oc_Project);
 			setObligatoryElement(oc_Project, op_hasExtensionSchema);
 			
-			createMarkup(oc_BCF);
-			createVisualizationInfo(oc_BCF);
+			createMarkup();
+			createVisualizationInfo();
 			
 			
 			ontology_model.write(System.out);
@@ -52,11 +48,8 @@ public class CreateBCFOntology {
 		}
 	}
 
-	private void createVisualizationInfo(OntClass oc_BCF) {
+	private void createVisualizationInfo() {
 		OntClass oc_VisualizationInfo = ontology_model.createClass(this.bcf_ns + "VisualizationInfo");		
-		ObjectProperty op_hasVisualizationInfo = ontology_model.createObjectProperty(this.bcf_ns + "has" + "VisualizationInfo");
-		op_hasVisualizationInfo.addDomain(oc_BCF);
-		op_hasVisualizationInfo.addRange(oc_VisualizationInfo);
 		
 		
 		OntClass oc_Components = ontology_model.createClass(this.bcf_ns + "Components");
@@ -186,12 +179,9 @@ public class CreateBCFOntology {
 
 	}
 
-	private void createMarkup(OntClass oc_BCF) {
+	private void createMarkup() {
 		OntClass oc_Markup = ontology_model.createClass(this.bcf_ns + "Markup");
-		oc_BCF.addComment("The markup contains textual information about the topic.", "en");
-		ObjectProperty op_hasMarkup = ontology_model.createObjectProperty(this.bcf_ns + "has" + "Markup");
-		op_hasMarkup.addDomain(oc_BCF);
-		op_hasMarkup.addRange(oc_Markup);
+		oc_Markup.addComment("The markup contains textual information about the topic.", "en");
 
 		OntClass oc_Header = ontology_model.createClass(this.bcf_ns + "Header");
 		oc_Header.addComment(

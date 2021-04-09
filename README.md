@@ -1,6 +1,6 @@
 # BIM Collaboration Format (BCF) 2.1  Ontology Description
 
-version 0.31.0
+version 0.32.0
 
 http://lbd.arch.rwth-aachen.de/bcf/v2.1/
 

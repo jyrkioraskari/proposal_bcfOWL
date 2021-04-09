@@ -96,7 +96,7 @@ public class BCFOntology {
 		op_hasPerspectiveCamera.addDomain(oc_VisualizationInfo);
 		op_hasPerspectiveCamera.addRange(oc_PerspectiveCamera);
 		ObjectProperty op_FieldOfView= ontology_model.createObjectProperty(this.bcf_ns + "has" + "FieldOfView");
-		op_FieldOfView.addComment("Camera’s field of view angle in degrees.", "en");
+		op_FieldOfView.addComment("Cameraï¿½s field of view angle in degrees.", "en");
 		op_FieldOfView.addDomain(oc_PerspectiveCamera);
 		setOptionalElement(oc_VisualizationInfo, op_hasPerspectiveCamera);
 		setObligatoryElement(oc_PerspectiveCamera, op_FieldOfView);

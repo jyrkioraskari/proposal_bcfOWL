@@ -7,148 +7,139 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 a bcfOWL:Project ;
-		bcfOWL:hasName						"Reiff" .
+		bcfOWL:hasGuid						"5a9bc49e-da48-9615-bcc9-0c45d0a3ede4"^^xsd:string
+		bcfOWL:hasName						"ReiffBCF"^^xsd:string
+		bcfOWL:hasExtensionSchema			inst:ReiffExtension .
 
 inst:ReiffExtension a bcfOWL:Extension ;
-		bcfOWL:hasProject					inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 ;
 		bcfOWL:hasTopicType					inst:Information, inst:Error ;
 		bcfOWL:hasTopicStatus				inst:Open, inst:Closed, inst:Resolved ;
 		bcfOWL:hasLabels					inst:Documentation, inst:Strutucal, inst:MEP , inst:Architecture ;
 		bcfOWL:hasPriority					inst:Low, inst:Medium, inst:High ;
-		bcfOWL:hasUser						inst:JyrkiOraskari, inst:OliverSchulz ;
+		bcfOWL:hasUser						inst:JohnDoe, inst:JaneDoe ;
 		bcfOWL:hasStage						inst:Documentation, inst:ConstructionStart, inst:ConstructionEnd .
 		
-inst:JyrkiOraskari	a	foaf:Person ;
-		foaf:firstName "Jyrki" ;
-		foaf:lastName "Oraskari" ;
-		foaf:mbox <mailto:jyrki.oraskari@dc.rwth-aachen.de>	.
+inst:JohnDoe	a	foaf:Person ;
+		foaf:firstName "John"^^xsd:string ;
+		foaf:lastName "Doe"^^xsd:string ;
+		foaf:mbox <mailto:john.doe@example.org>	.
 			
-inst:OliverSchulz	a	foaf:Person ;
-		foaf:firstName "Oliver" ;
-		foaf:lastName "Schulz" ;
-		foaf:mbox <mailto:schulz@dc.rwth-aachen.de>	.
+inst:JaneDoe	a	foaf:Person ;
+		foaf:firstName "Jane"^^xsd:string ;
+		foaf:lastName "Doe"^^xsd:string ;
+		foaf:mbox <mailto:jane.doe@example.org>	.
 		
-inst:Information 	a 	bcfOWL:TopicType .
+inst:Information 	a 	bcfOWL:TopicType ;
+		rdfs:Label 			"Information" .
 
-inst:Error			a 	bcfOWL:TopicType .
+inst:Error			a 	bcfOWL:TopicType ;
+		rdfs:Label 			"Error" .
 
-inst:Open			a 	bcfOWL:TopicStatus .
+inst:Open			a 	bcfOWL:TopicStatus ;
+		rdfs:Label 			"Open" .
 
-inst:Closed			a 	bcfOWL:TopicStatus .
+inst:Closed			a 	bcfOWL:TopicStatus ;
+		rdfs:Label 			"Closed" .
 
-inst:Resolved 		a 	bcfOWL:TopicStatus .
+inst:Resolved 		a 	bcfOWL:TopicStatus ;
+		rdfs:Label 			"Resolved" .
 
-inst:Documentation	a 	bcfOWL:Label .
+inst:Documentation	a 	bcfOWL:Label ;
+		rdfs:Label 			"Documentation" .
 
-inst:Architecture 	a 	bcfOWL:Label .
+inst:Architecture 	a 	bcfOWL:Label ;
+		rdfs:Label 			"Architecture" .
 
-inst:Structural		a	bcfOWL:Label .
+inst:Structural		a	bcfOWL:Label ;
+		rdfs:Label 			"Structural" .
 
-inst:MEP			a	bcfOWL:Label .
+inst:MEP			a	bcfOWL:Label ;
+		rdfs:Label 			"MEP" .
 
-inst:Low			a	bcfOWL:Priority .
+inst:Low			a	bcfOWL:Priority ;
+		rdfs:Label 			"Low" .
 
-inst:Medium			a	bcfOWL:Priority .
+inst:Medium			a	bcfOWL:Priority ;
+		rdfs:Label 			"Medium" .
 
-inst:High			a	bcfOWL:Priority .
+inst:High			a	bcfOWL:Priority ;
+		rdfs:Label 			"High" .
 
-inst:DocumentationStage	a	bcfOWL:Stage .
+inst:DocumentationStage	a	bcfOWL:Stage ;
+		rdfs:Label 			"DocumentationStage" .
 
-inst:ContructionStart	a	bcfOWL:Stage .
+inst:ContructionStart	a	bcfOWL:Stage ;
+		rdfs:Label 			"ContructionStart" .
 
-inst:ConstructionEnd	a	bcfOWL:Stage .
+inst:ConstructionEnd	a	bcfOWL:Stage ;
+		rdfs:Label 			"ConstructionEnd" .
 
-inst:ExampleCADApplication a bcfOWL:OriginatingSystem .
-
-
+inst:ExampleCADApplication a bcfOWL:OriginatingSystem ;
+		rdfs:Label 			"ExampleCADApplication" .
 
 inst:topic_2ef7f882-8b52-4860-af69-c61dc8408e60		a	bcfOWL:Topic ;
+		bcfOWL:hasGuid						"2ef7f882-8b52-4860-af69-c61dc8408e60"^^xsd:string ;
 		bcfOWL:hasProject					inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 ;
 		bcfOWL:hasTopicStatus				inst:Closed ;
 		bcfOWL:hasTopicType					inst:Information ;
-		bcfOWL:hasTitle						"Working" ;
-		bcfOWL:hasCreationAuthor			inst:OliverSchulz ;
-		bcfOWL:hasCreationDay				"2021-01-25T17:18:50+00:00"^^xsd:dateTime ;
-		bcfOWL:hasAssignedTo				inst:OliverSchulz ;
+		bcfOWL:hasTitle						"Working Title"^^xsd:string ;
+		bcfOWL:hasCreationAuthor			inst:JaneDoe ;
+		bcfOWL:hasCreationDay				"2021-01-26T17:18:50+00:00"^^xsd:dateTime ;
+		bcfOWL:hasAssignedTo				inst:JohnDoe ;
 		bcfOWL:hasLabels					inst:Documentation ;
-		bcfOWL:hasIndex						1 ;
-		bcfOWL:hasViewpoint					inst:viewpoint_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasComment					inst:comment_66556fb6-dc5c-4ba3-9005-1751e8c0881a .
+		bcfOWL:hasIndex						"1"^^xsd:integer .
 		
 inst:comment_66556fb6-dc5c-4ba3-9005-1751e8c0881a	a bcfOWL:Comment ;
+		bcfOWL:hasGuid						"66556fb6-dc5c-4ba3-9005-1751e8c0881a"^^xsd:string ;
+		bcfOWL:hasTopic						inst:topic_2ef7f882-8b52-4860-af69-c61dc8408e60 ;
 		bcfOWL:hasProject					inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 ;
-		bcfOWL:hasCommentText					"Test Comment" ;
-		bcfOWL:hasAuthor					inst:OliverSchulz ;
-		bcfOWL:hasModifiedAuthor			inst:OliverSchulz ;
-		bcfOWL:hasCommentDate				"2021-01-25T17:18:50+00:00"^^xsd:dateTime ;
+		bcfOWL:hasComment					"Test Comment"^^xsd:string ;
+		bcfOWL:hasAuthor					inst:JaneDoe ;
+		bcfOWL:hasModifiedAuthor			inst:JaneDoe ;
+		bcfOWL:hasCommentDate				"2021-01-26T17:18:50+00:00"^^xsd:dateTime ;
 		bcfOWL:hasViewpoint					inst:viewpoint_daca6c77-555e-4854-9e13-90668f1f41a5 .
 		
 inst:viewpoint_daca6c77-555e-4854-9e13-90668f1f41a5	a bcfOWL:Viewpoint ;
+		bcfOWL:hasGuid						"daca6c77-555e-4854-9e13-90668f1f41a5"^^xsd:string ;
+		bcfOWL:hasTopic						inst:topic_2ef7f882-8b52-4860-af69-c61dc8408e60 ;
 		bcfOWL:hasProject					inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 ;
 		bcfOWL:hasPerspectiveCamera			inst:PerspectiveCamera_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasComponents				inst:Components_daca6c77-555e-4854-9e13-90668f1f41a5 ;
+		bcfOWL:hasSelection					inst:Selection_daca6c77-555e-4854-9e13-90668f1f41a5 ;
+		bcfOWL:hasDefaulVisibility			false ;
+		bcfOWL:hasException					inst:Exception_daca6c77-555e-4854-9e13-90668f1f41a5 ;
+		bcfOWL:SpacesVisible				true ;
+		bcfOWL:SpaceBoundariesVisible		false ;
+		bcfOWL:OpeningsVisible				true ;
 		bcfOWL:hasSnapshot					inst:Snapshot_daca6c77-555e-4854-9e13-90668f1f41a5 .
 			
 inst:PerspectiveCamera_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:PerspectiveCamera ;
-		bcfOWL:hasCameraViewPoint			inst:CameraViewPoint_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasCameraDirection			inst:CameraDirection_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasCameraUpVector			inst:CameraUpVector_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasFieldOfView				"30" .
-		
+		bcfOWL:hasCameraViewPoint			"POINT Z(10.72 16.16 1.26)"^^geo:wktLiteral ;
+		bcfOWL:hasCameraDirection			"POINT Z(0.96 -0.21 -0.14)"^^geo:wktLiteral ;
+		bcfOWL:hasCameraUpVector			"POINT Z(0.13 -0.03 0.99)"^^geo:wktLiteral ;
+		bcfOWL:hasFieldOfView				"30"^^xsd:double ;
+		bcfOWL:hasAspectRatio				"1.33"^^xsd:double .
+			
 inst:Snapshot_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:Snapshot ;
-		bcfOWL:hasSnapshotType				"png" ;
+		bcfOWL:hasSnapshotType				"png"^^xsd:string ;
 		bcfOWL:hasSnapshotURI				"http://lbd.arch.rwth-aachen.de/bcf/v2.1/snapshot/daca6c77-555e-4854-9e13-90668f1f41a5" .
 
-inst:CameraViewPoint_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:CameraViewPoint ;
-		bcfOWL:hasXValue					"10.722208" ;
-		bcfOWL:hasYValue					"16.162144" ;
-		bcfOWL:hasZValue					"1.266495" .
-
-inst:CameraDirection_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:CameraDirection ;
-		bcfOWL:hasXValue					"0.9665" ;
-		bcfOWL:hasYValue					"-0.215124" ; 
-		bcfOWL:hasZValue					"-0.140001" .
-
-inst:CameraUpVector_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:CameraUpVector ;
-		bcfOWL:hasXValue					"0.136231" ;
-		bcfOWL:hasYValue					"-0.032326" ;
-		bcfOWL:hasZValue					"0.990149" .
-		
-inst:Components_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:Components ;
-		bcfOWL:hasSelection					inst:Selection_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasVisibility				inst:Visibility_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasException					inst:Exception_daca6c77-555e-4854-9e13-90668f1f41a5 .
-		
-inst:ViewSetupHints_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:ViewSetupHints ;
-		bcfOWL:SpacesVisible				true ;
-		bcfOWL:SpaceBoundariesVisible		false ;
-		bcfOWL:OpeningsVisible				true .
-		
 inst:Selection_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:Selection ;
-		bcfOWL:hasElement					inst:Element_1ZwJHS85D3YQG5AK5ER1Wc ;
-		bcfOWL:hasElement					inst:Element_1zMXMGg3H1MOhxQ9qjUS4B ;
-		bcfOWL:hasElement					inst:Element_1fJWCTBjX5EvoBol6ESMBJ .
+		bcfOWL:hasComponent					inst:Element_1ZwJHS85D3YQG5AK5ER1Wc ;
+		bcfOWL:hasComponent					inst:Element_1zMXMGg3H1MOhxQ9qjUS4B .
 		
-inst:Visibility_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:Visibility ;
-		bcfOWL:hasDefaulVisibility			false ;
-		bcfOWL:hasException					inst:Exception_daca6c77-555e-4854-9e13-90668f1f41a5 ;
-		bcfOWL:hasViewSetupHints			inst:ViewSetupHints_daca6c77-555e-4854-9e13-90668f1f41a5 .
-
 inst:Exception_daca6c77-555e-4854-9e13-90668f1f41a5 a bcfOWL:Exception ;
-		bcfOWL:hasElement					inst:Element_4ScshxZO9AJBebsniSz9Yk .
+		bcfOWL:hasComponent					inst:Element_4ScshxZO9AJBebsniSz9Yk .
 
 inst:Element_1ZwJHS85D3YQG5AK5ER1Wc a bcfOWL:Element ;
-		bcfOWL:hasIfcGuid					"1ZwJH$85D3YQG5AK5ER1Wc" ;
+		bcfOWL:hasIfcGuid					"1ZwJH$85D3YQG5AK5ER1Wc"^^xsd:string ;
+		bcfOWL:hasAuthoringToolId			"33123123" ;
 		bcfOWL:hasOriginatingSystem			inst:ExampleCADApplication .
 
 inst:Element_1zMXMGg3H1MOhxQ9qjUS4B a bcfOWL:Element ;
-		bcfOWL:hasIfcGuid					"1zMXMGg3H1MOhxQ9qjUS4B" ;
-		bcfOWL:hasOriginatingSystem			inst:ExampleCADApplication .
-		
-inst:Element_1fJWCTBjX5EvoBol6ESMBJ a bcfOWL:Element ;
-		bcfOWL:hasIfcGuid					"1fJWCTBjX5EvoBol6E$MBJ" ;
+		bcfOWL:hasIfcElement				inst:BotElement_1zMXMGg3H1MOhxQ9qjUS4B ;
+		bcfOWL:hasIfcGuid					"1zMXMGg3H1MOhxQ9qjUS4B"^^xsd:string ;
 		bcfOWL:hasOriginatingSystem			inst:ExampleCADApplication .
 		
 inst:Element_4ScshxZO9AJBebsniSz9Yk a bcfOWL:Element ;
-		bcfOWL:hasIfcGuid					"4$cshxZO9AJBebsni$z9Yk" ;
+		bcfOWL:hasIfcGuid					"4$cshxZO9AJBebsni$z9Yk"^^xsd:string ;
 		bcfOWL:hasOriginatingSystem			inst:ExampleCADApplication.

@@ -16,20 +16,22 @@
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAssignedTo> rdf:type owl:ObjectProperty ;
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
                                                         rdfs:comment "	The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en .
-
+                                                        #TODO: Dont we need a range here? E.G. foaf Person?
+                                                        # rdfs:range foaf:Person .
 
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthor> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> ;
                                                     rdfs:comment "Comment author"@en .
+                                                    # rdfs:range foaf:Person .
 
-
+#TODO: Datafield and a string
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasAuthoringToolId> rdf:type owl:ObjectProperty ;
                                                              rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> ;
                                                              rdfs:comment "Name of the system in which the component is originated"@en .
 
-
+#TODO: Getting rid of BIM Snippets?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasBimSnippet> rdf:type owl:ObjectProperty ;
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
@@ -41,19 +43,19 @@
                                                     rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> ;
                                                     rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap> .
 
-
+#TODO: rdfs:range geo:Geometry Dataproperty range ^^wktLiteral
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraDirection> rdf:type owl:ObjectProperty ;
                                                              rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> ;
-                                                             rdfs:comment "Camera direction"@en .
+                                                             rdfs:comment "Camera direction. Example: 'POINT Z (0 0 1)'^^wktLiteral"@en .
 
-
+#TODO: rdfs:range geo:Geometry Dataproperty range ^^wktLiteral
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraUpVector> rdf:type owl:ObjectProperty ;
                                                             rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> ;
                                                             rdfs:comment "Camera up vector"@en .
 
-
+#TODO: rdfs:range geo:Geometry Dataproperty range ^^wktLiteral
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCameraViewPoint> rdf:type owl:ObjectProperty ;
                                                              rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> ;
@@ -78,25 +80,25 @@
                                                                  <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
                                                      rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> .
 
-
+#TODO: add <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Exceptions> to the domain;
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponent> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> ;
+                                                       rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> ,
                                                        rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> .
 
-
+#TODO: Get rid of "hasComponents"?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComponents> rdf:type owl:ObjectProperty ;
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> ;
                                                         rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> .
 
-
+#TODO: Do we need a range here? rdfs:range foaf:Person
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasCreationAuthor> rdf:type owl:ObjectProperty ;
                                                             rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
                                                             rdfs:comment "User who created the topic."@en .
 
-
+#TODO: Description as a Dataproperty? Simple String?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasDescription> rdf:type owl:ObjectProperty ;
                                                          rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> ,
@@ -108,19 +110,19 @@
                                                                rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
                                                                rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> .
 
-
+#TODO: rdfs:range bcfOWL:ExtensionSchema
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasExtensionSchema> rdf:type owl:ObjectProperty ;
                                                              rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> ;
                                                              rdfs:comment "URI to the extension schema."@en .
 
-
+#TODO: Dataproperty? Simple Number value
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFieldOfView> rdf:type owl:ObjectProperty ;
                                                          rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> ;
                                                          rdfs:comment "Cameraâ€™s field of view angle in degrees."@en .
 
-
+#TODO: What file? I think we should dump the idea of files in bcfOWL (described in paper)
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasFileDate> rdf:type owl:ObjectProperty ;
                                                       rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
@@ -131,25 +133,25 @@
                                                            rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> ;
                                                            rdfs:comment "URI to IfcFile."@en .
 
-
+#TODO: Header? Left over from BCF XML?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasHeader> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
                                                     rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> .
 
-
+#TODO: Dataproperty? hasIfcGuid is currently in the examples a simple string
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcGuid> rdf:type owl:ObjectProperty ;
                                                      rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> ;
                                                      rdfs:comment "The IfcGuid of the component"@en .
-
-
+#TODO: ObjectProperty: bcfOWL:hasIfcElement
+#TODO: DataProperty? Index could be described as Integer
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ,
                                                                <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> .
 
-
+#TODO: Range: bcfOWL:Label
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasLabels> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
@@ -161,13 +163,13 @@
                                                    rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> ;
                                                    rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Lines> .
 
-
+#TODO: Markup necessary? I think we should ditch it
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasMarkup> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> ;
                                                     rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> .
 
-
+#TODO: Range: bcfOWL:OriginatingSystem
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasOriginatingSystem> rdf:type owl:ObjectProperty ;
                                                                rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> ;
@@ -185,13 +187,13 @@
                                                                rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> ;
                                                                rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/PerspectiveCamera> .
 
-
+#TODO: Range: bcfOWL:Priority
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasPriority> rdf:type owl:ObjectProperty ;
                                                       rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
                                                       rdfs:comment "Topic priority. The list of possible values are defined in the extension schema."@en .
 
-
+#TODO: Ditch Idea of BIMsnippet?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasReference> rdf:type owl:ObjectProperty ;
                                                        rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> ;
@@ -241,13 +243,13 @@
                                                          rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> ;
                                                          rdfs:comment "Type of the Snippet (Predefined listâ€�)"@en .
 
-
+#TODO: range bcfOWL:Stage
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasStage> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
                                                    rdfs:comment "Stage this topic is part of (Predefined list)."@en .
 
-
+#TODO: Title can be defined as Dataproperty String
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTitle> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
@@ -259,13 +261,13 @@
                                                    rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
                                                    rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> .
 
-
+#TODO: range bcfOWL:TopicStatus
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicStatus> rdf:type owl:ObjectProperty ;
                                                          rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
                                                          rdfs:comment "Type of the topic (Predefined list)"@en .
 
-
+#TODO: range bcfOWL:TopicType
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicType> rdf:type owl:ObjectProperty ;
                                                        rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
@@ -283,13 +285,13 @@
                                                             rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> ;
                                                             rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> .
 
-
+#TODO: Dataproperty Number?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewToWorldScale> rdf:type owl:ObjectProperty ;
                                                               rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> ;
                                                               rdfs:comment "Scaling from view to world"@en .
 
-
+#TODO: Missing range?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoint> rdf:type owl:ObjectProperty ;
                                                        rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> ,
@@ -297,7 +299,7 @@
                                                        rdfs:comment "Back reference to the viewpoint"@en ,
                                                                     "The viewpoint "@en .
 
-
+#TODO: Why do we have Viewpoint and Viewpoints? We should only use one
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasViewpoints> rdf:type owl:ObjectProperty ;
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> ;
@@ -309,19 +311,19 @@
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> ;
                                                         rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility> .
 
-
+#TODO: Ditch?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasVisualizationInfo> rdf:type owl:ObjectProperty ;
                                                                rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> ;
                                                                rdfs:range <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> .
 
-
+#TODO: Typo?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasComment:ModifiedAuthor> rdf:type owl:ObjectProperty ;
                                                                     rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> ;
                                                                     rdfs:comment "The author who modified the comment"@en .
 
-
+#TODO: Typo?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProject%20> rdf:type owl:ObjectProperty ;
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> ;
@@ -376,7 +378,7 @@
                                                      rdfs:range xsd:dateTime ;
                                                      rdfs:comment "Date until when the topics issue needs to be resolved."@en .
 
-
+#TODO: Where does this come from?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIfcProject> rdf:type owl:DatatypeProperty ;
                                                         rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> ;
@@ -394,21 +396,21 @@
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasIndex> rdf:type owl:DatatypeProperty ;
                                                    rdfs:range xsd:integer .
 
-
+#TODO: Typo in Project
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasName> rdf:type owl:DatatypeProperty ;
                                                   rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> ;
                                                   rdfs:range xsd:string ;
                                                   rdfs:comment "Name of the project."@en .
 
-
+#TODO: Typo in Project
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasProjectId> rdf:type owl:DatatypeProperty ;
                                                        rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> ;
                                                        rdfs:range xsd:string ;
                                                        rdfs:comment "ProjectId of the project"@en .
 
-
+#TODO: Replace hasTopicGuid, hasViewpointGuid and hasCommentGuid with hasGuid?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/hasTopicGuid> rdf:type owl:DatatypeProperty ;
                                                        rdfs:domain <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Topic> ;
@@ -426,12 +428,12 @@
 #################################################################
 #    Classes
 #################################################################
-
+#TODO: Remove?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BCF> rdf:type owl:Class ;
                                               rdfs:comment "The markup contains textual information about the topic."@en .
 
-
+#TODO: Remove?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/BimSnippet> rdf:type owl:Class ;
                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -457,7 +459,7 @@
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Bitmap> rdf:type owl:Class ;
                                                  rdfs:comment "A list of bitmaps can be used to add more information, for example, text in the visualization."@en .
 
-
+#TODO: MinCardinality should be replaced with owl:cardinality. It should always have min 1 and 1 one of these vectors 
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -483,7 +485,7 @@
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Coloring> rdf:type owl:Class ;
                                                    rdfs:comment "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en .
 
-
+#TODO: Replace minCardinality with Cardinality for hasAuthor, hasComment, hasCommentDate
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Comment> rdf:type owl:Class ;
                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -520,16 +522,16 @@
                                                                   ] ;
                                                   rdfs:comment "The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely."@en .
 
-
+#TODO: we need to add hasIfcGuid, hasOrgiginatingSystem and hasAuthoringToolId here. All 3 are optional (min 0 max 1)
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Component> rdf:type owl:Class .
 
-
+#TODO: Components are now deprecated
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Components> rdf:type owl:Class ;
                                                      rdfs:comment "The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint."@en .
 
-
+#TODO: hasDescription and hasReferencedDocument also need a max. Cardinality of 1. 
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/DocumentReference> rdf:type owl:Class ;
                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -550,7 +552,7 @@
                                                                             ] ;
                                                             rdfs:comment "DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location."@en .
 
-
+#TODO: We should get rid of this part
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Header> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -596,7 +598,7 @@
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Markup> rdf:type owl:Class .
 
-
+#TODO: Should we state that an OrthogonalCamera disjointsWith PerspectiveCamera?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/OrthogonalCamera> rdf:type owl:Class ;
                                                            rdfs:subClassOf <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Camera> ,
@@ -625,7 +627,7 @@
                                                                        ] ;
                                                        rdfs:comment "Relation between topics (Clash -> PfV -> Opening)"@en .
 
-
+#TODO: Add minCardinality of hasComponent of 0 here? Or is it redundant?
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Selection> rdf:type owl:Class ;
                                                     rdfs:comment "The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint."@en .
@@ -711,12 +713,13 @@
                                                                 ] ;
                                                 rdfs:comment "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en .
 
-
+#TODO: Deprecated
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/ViewSetupHints> rdf:type owl:Class ;
                                                          rdfs:comment "This element contains information about the default visibility for elements of certain types (SpacesVisible, SpaceBoundariesVisible and OpeningsVisible) that should be applied if not stated otherwise."@en .
 
-
+#TODO: Incomplete max Cardinality is missing; Include remaining Properties (ViewSetupHints etc)
+#TODO: Why is "hasViewpoint" included here? Probably should be "hasTopic"
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Viewpoints> rdf:type owl:Class ;
                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -733,12 +736,12 @@
                                                                      ] ;
                                                      rdfs:comment "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en .
 
-
+#TODO: Same has Viewpoints
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Visibility> rdf:type owl:Class ;
                                                      rdfs:comment "The Visibility element states the components DefaultVisibility and lists all Exceptions that apply to specific components."@en .
 
-
+#TODO: Deprecated
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/VisualizationInfo> rdf:type owl:Class ;
                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -750,7 +753,7 @@
                                                                               owl:minCardinality "0"^^xsd:nonNegativeInteger
                                                                             ] .
 
-
+#TODO: Typo in Project
 ###  http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20
 <http://lbd.arch.rwth-aachen.de/bcf/v2.1/Project%20> rdf:type owl:Class ;
                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;

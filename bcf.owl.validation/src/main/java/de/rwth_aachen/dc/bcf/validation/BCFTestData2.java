@@ -1,4 +1,4 @@
-package de.rwth_aachen.dc.bcf;
+package de.rwth_aachen.dc.bcf.validation;
 
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;

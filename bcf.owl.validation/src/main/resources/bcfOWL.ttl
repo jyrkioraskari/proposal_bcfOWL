@@ -18,7 +18,7 @@ vann:prefferedNamespaceURI a owl:AnnotationProperty .
 
 
 <http://lbd.arch.rwth-aachen.de/bcfOWL/>  rdf:type owl:Ontology ;
-                                          owl:versionInfo "0.32" ;
+                                          owl:versionInfo "0.4" ;
                                           owl:versionIRI <http://lbd.arch.rwth-aachen.de/bcfOWL/0.1/> ;
                                           dcterms:title "BIM collaboration Format Ontology" ;
                                           dcterms:description "BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML" ;
@@ -639,7 +639,7 @@ bcfOWL:hasIfcGuid
         a             owl:DatatypeProperty ;
         rdfs:comment  "The IfcGuid of the component"@en ;
         rdfs:domain   bcfOWL:Component ;
-        rdfs:range    xsd:stringe .
+        rdfs:range    xsd:string .
 
 bcfOWL:hasClippingPlanes
         a            owl:ObjectProperty ;

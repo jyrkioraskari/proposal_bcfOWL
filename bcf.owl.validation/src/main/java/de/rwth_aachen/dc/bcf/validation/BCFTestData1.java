@@ -1,4 +1,4 @@
-package de.rwth_aachen.dc.bcf;
+package de.rwth_aachen.dc.bcf.validation;
 
 import java.io.IOException;
 import java.util.Enumeration;

@@ -1,19 +1,20 @@
-package de.rwth_aachen.dc.bcf;
+package de.rwth_aachen.dc.bcf.validation;
 
 import java.util.Iterator;
 
 import org.apache.jena.ontology.OntModel;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.reasoner.ValidityReport;
 
+import de.rwth_aachen.dc.bcf.BCFOntology;
+
 @SuppressWarnings("restriction")
-public class BCFTestData4 {
+public class BCFTestData3 {
 	final OntModel model;
 	
 
-	public BCFTestData4() {
-		model = ModelFactory.createOntologyModel();
-		model.read("./src/main/resources/bcfOWL.ttl");
+	public BCFTestData3() {
+		model = (new BCFOntology()).getOntology_model();
+		model.read("./src/main/resources/BcfSample.ttl");
 		// print validation report
 		final ValidityReport report = model	.validate();
 		printIterator(report.getReports(), "Validation Results");
@@ -37,6 +38,6 @@ public class BCFTestData4 {
 	}
 	
 	public static void main(String[] args) {
-		new BCFTestData4();
+		new BCFTestData3();
 	}
 }

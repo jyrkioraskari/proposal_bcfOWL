@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.rwth-aachen.dc</groupId>
-	<artifactId>bcf-ontology</artifactId>
+	<artifactId>bcf.owl.validation</artifactId>
 	<version>0.31</version>
-	<name>BCF Ontology</name>
+	<name>BCF Ontology Generator</name>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -28,6 +28,12 @@
 			<groupId>com.github.galigator.openllet</groupId>
 			<artifactId>openllet-jena</artifactId>
 			<version>2.6.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-distribution -->
+		<dependency>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-distribution</artifactId>
+			<version>5.1.17</version>
 		</dependency>
 
 	</dependencies>

@@ -37,13 +37,17 @@ vann:prefferedNamespaceURI a owl:AnnotationProperty .
 bcfOWL:hasGuid
         a             owl:DatatypeProperty ;
         rdfs:label  "ProjectId of the project"@en ;
-        rdfs:domain   bcfOWL:Project, bcfOWL:Topic, bcfOWL:Comment, bcfOWL:Viewpoint ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:Project bcfOWL:Topic bcfOWL:Comment bcfOWL:Viewpoint  )
+                      ] ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasTopic
         a             owl:ObjectProperty ;
         rdfs:label  "A link to the relating comment"@en ;
-        rdfs:domain   bcfOWL:Viewpoint, bcfOWL:Comment ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment )
+                      ] ;
         rdfs:range    bcfOWL:Topic .
 
 #### Project ####
@@ -89,7 +93,9 @@ bcfOWL:hasProjectId
 bcfOWL:hasProject
         a             owl:ObjectProperty ;
         rdfs:label  "Reference to the corresponding Project"@en ;
-        rdfs:domain   bcfOWL:Viewpoint, bcfOWL:Topic, bcfOWL:Comment ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment bcfOWL:Topic )
+                      ] ;
         rdfs:range    bcfOWL:Project .
 
 #### Extensions ####
@@ -145,37 +151,49 @@ bcfOWL:Stage
 bcfOWL:hasTopicType
         a             owl:ObjectProperty ;
         rdfs:label    "Type of the topic (Predefined list)"@en ;
-        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
+                      ] ;
         rdfs:range    bcfOWL:TopicType .
 
 bcfOWL:hasTopicStatus
         a             owl:ObjectProperty ;
         rdfs:label  "Type of the topic (Predefined list)"@en ;
-        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
+                      ] ;
         rdfs:range    bcfOWL:TopicStatus .
 
 bcfOWL:hasLabels
         a             owl:ObjectProperty ;
         rdfs:label  "Tags for grouping Topics. The list of possible values are defined in the extension schema."@en ;
-        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
+                      ] ;
         rdfs:range    bcfOWL:Label .
 
 bcfOWL:hasPriority
         a             owl:ObjectProperty ;
         rdfs:label  "Topic priority. The list of possible values are defined in the extension schema."@en ;
-        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
+                      ] ;
         rdfs:range    bcfOWL:Priority .
 
 bcfOWL:hasAuthor
         a             owl:ObjectProperty ;
         rdfs:label  "Comment author"@en ;
-        rdfs:domain   bcfOWL:Comment, bcfOWL:ExtensionSchema ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Comment )
+                      ] ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasStage
         a             owl:ObjectProperty ;
         rdfs:label  "Stage this topic is part of (Predefined list)."@en ;
-        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
+                      ] ;
         rdfs:range    bcfOWL:Stage .
 
 #### Topic ####
@@ -296,7 +314,7 @@ bcfOWL:hasIndex
         rdfs:label  "Parameter for sorting"@en , "Number to maintain the order of the topics."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:integer .
-
+#TODO: We can make AssignedTo, ModifiedAuthor etc to subproperties of hasAuthor
 bcfOWL:hasAssignedTo
         a             owl:ObjectProperty ;
         rdfs:label  "The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en ;
@@ -662,7 +680,9 @@ bcfOWL:hasColoring
 bcfOWL:hasComponent
         a            owl:ObjectProperty ;
         rdfs:label   "Pointer to the Component"@en ;
-        rdfs:domain  bcfOWL:Selection, bcfOWL:Exception ;
+        rdfs:domain   [ a            owl:Class ;
+                                  owl:unionOf  ( bcfOWL:Selection bcfOWL:Exception )
+                      ] ;
         rdfs:range   bcfOWL:Component .
 
 bcfOWL:hasOriginatingSystem
@@ -705,7 +725,7 @@ bcfOWL:Camera
 
 bcfOWL:OrthogonalCamera
         a                owl:Class ;
-        rdfs:label     "This element describes a viewpoint using orthogonal camera. "@en ;
+        rdfs:label       "This element describes a viewpoint using orthogonal camera. "@en ;
         owl:disjointWith bcfOWL:PerspectiveCamera ;
         rdfs:subClassOf  bcfOWL:Camera ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
@@ -715,7 +735,7 @@ bcfOWL:OrthogonalCamera
 
 bcfOWL:PerspectiveCamera
         a                owl:Class ;
-        rdfs:label     "This element describes a viewpoint using perspective camera."@en ;
+        rdfs:label       "This element describes a viewpoint using perspective camera."@en ;
         owl:disjointWith bcfOWL:OrthogoanlCamera ;
         rdfs:subClassOf  bcfOWL:Camera ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
@@ -725,37 +745,37 @@ bcfOWL:PerspectiveCamera
 
 bcfOWL:hasFieldOfView
         a             owl:DatatypeProperty ;
-        rdfs:label  "Camera's field of view angle in degrees."@en ;
+        rdfs:label    "Camera's field of view angle in degrees."@en ;
         rdfs:domain   bcfOWL:PerspectiveCamera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasViewToWorldScale
         a             owl:DatatypeProperty ;
-        rdfs:label  "Proportion of camera view to model"@en ;
+        rdfs:label    "Proportion of camera view to model"@en ;
         rdfs:domain   bcfOWL:OrthogonalCamera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasAspectRatio
         a             owl:DatatypeProperty ;
-        rdfs:label  "Proportional relationship between the width and the height of the view (w/h)"@en ;
+        rdfs:label    "Proportional relationship between the width and the height of the view (w/h)"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasCameraUpVector
         a             owl:DatatypeProperty ;
-        rdfs:label  "Camera up vector"@en ;
+        rdfs:label    "Camera up vector"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 
 bcfOWL:hasCameraDirection
         a             owl:DatatypeProperty ;
-        rdfs:label  "Camera direction"@en ;
+        rdfs:label    "Camera direction"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 
 bcfOWL:hasCameraViewPoint
         a             owl:DatatypeProperty ;
-        rdfs:label  "Camera location"@en ;
+        rdfs:label    "Camera location"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 

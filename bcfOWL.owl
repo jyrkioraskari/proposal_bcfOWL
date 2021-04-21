@@ -4,6 +4,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: 	<http://www.opengis.net/ont/geosparql#> .
 @prefix bot:   <https://w3id.org/bot#> .
+@prefix ifc:	<http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
@@ -20,8 +21,8 @@ vann:prefferedNamespaceURI a owl:AnnotationProperty .
 
 
 <http://lbd.arch.rwth-aachen.de/bcfOWL/>  rdf:type owl:Ontology ;
-                                          owl:versionInfo "0.32" ;
-                                          owl:versionIRI <http://lbd.arch.rwth-aachen.de/bcfOWL/0.1/> ;
+                                          owl:versionInfo "0.7.0" ;
+                                          owl:versionIRI <http://lbd.arch.rwth-aachen.de/bcfOWL/> ;
                                           dcterms:title "BIM collaboration Format Ontology" ;
                                           dcterms:description "BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML" ;
                                           dcterms:creator "Jyrki Oraskai" ;
@@ -36,7 +37,8 @@ vann:prefferedNamespaceURI a owl:AnnotationProperty .
 
 bcfOWL:hasGuid
         a             owl:DatatypeProperty ;
-        rdfs:label  "ProjectId of the project"@en ;
+        rdfs:label    "has GUID"@en ;
+        rdfs:comment  "The GUID of the resource"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:Project bcfOWL:Topic bcfOWL:Comment bcfOWL:Viewpoint  )
                       ] ;
@@ -44,7 +46,8 @@ bcfOWL:hasGuid
 
 bcfOWL:hasTopic
         a             owl:ObjectProperty ;
-        rdfs:label  "A link to the relating comment"@en ;
+        rdfs:label    "has Topic"@en ;
+        rdfs:comment    "A link to the relating comment"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment )
                       ] ;
@@ -54,7 +57,8 @@ bcfOWL:hasTopic
 
 bcfOWL:Project
         a                owl:Class ;
-        rdfs:label     "The project contains reference information about the project the topics belong to."@en ;
+        rdfs:label       "Project"@en ;
+        rdfs:comment     "The project contains reference information about the project the topics belong to."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasExtensionSchema
@@ -74,25 +78,29 @@ bcfOWL:Project
 
 bcfOWL:hasExtensionSchema
         a             owl:ObjectProperty ;
-        rdfs:label  "URI to the extension schema."@en ;
+        rdfs:label       "has Extension Schema"@en ;
+        rdfs:comment  "URI to the extension schema."@en ;
         rdfs:domain   bcfOWL:Project ;
         rdfs:range    bcfOWL:ExtensionSchema .
 
 bcfOWL:hasName
         a             owl:DatatypeProperty ;
-        rdfs:label  "Name of the project."@en ;
+        rdfs:label       "has Name"@en ;
+        rdfs:comment  "Name of the project."@en ;
         rdfs:domain   bcfOWL:Project ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasProjectId
         a             owl:DatatypeProperty ;
-        rdfs:label  "GUID of the Project"@en ;
+        rdfs:label       "has Project ID"@en ;
+        rdfs:comment  "GUID of the Project"@en ;
         rdfs:domain   bcfOWL:Project ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasProject
         a             owl:ObjectProperty ;
-        rdfs:label  "Reference to the corresponding Project"@en ;
+        rdfs:label       "has Project"@en ;
+        rdfs:comment  "Reference to the corresponding Project"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment bcfOWL:Topic )
                       ] ;
@@ -102,7 +110,8 @@ bcfOWL:hasProject
 
 bcfOWL:ExtensionSchema
         a                owl:Class ;
-        rdfs:label     "The extension define the mapping of a BCF project."@en ;
+        rdfs:label       "Extension Schema"@en ;
+        rdfs:comment     "The extension define the mapping of a BCF project."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasTopicType
@@ -130,27 +139,33 @@ bcfOWL:ExtensionSchema
 
 bcfOWL:TopicType
         a                owl:Class ;
-        rdfs:label       "The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc."@en .
+        rdfs:label       "Topic Type"@en ;
+        rdfs:comment       "The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc."@en .
 
 bcfOWL:TopicStatus
         a                owl:Class ;
-        rdfs:label     "Status of the issue. Is it still active or closed?"@en .                       
+        rdfs:label       "Topic Status"@en ;
+        rdfs:comment     "Status of the issue. Is it still active or closed?"@en .                       
 
 bcfOWL:Label
         a                owl:Class ;
-        rdfs:label     "The label is for tagging the Issue to be able to make a better categorization"@en .               
+        rdfs:label       "Label"@en ;
+        rdfs:comment     "The label is for tagging the Issue to be able to make a better categorization"@en .               
 
 bcfOWL:Priority
         a                owl:Class ;
-        rdfs:label     "Indication of the Priority of an Issue"@en .
+        rdfs:label       "Priority"@en ;
+        rdfs:comment     "Indication of the Priority of an Issue"@en .
 
 bcfOWL:Stage
         a                owl:Class ;
-        rdfs:label     "To what stage of the project does the Topic relate to?"@en .                        
+        rdfs:label       "Stage"@en ;
+        rdfs:comment     "To what stage of the project does the Topic relate to?"@en .                        
 
 bcfOWL:hasTopicType
         a             owl:ObjectProperty ;
-        rdfs:label    "Type of the topic (Predefined list)"@en ;
+        rdfs:label       "has Topic Type"@en ;
+        rdfs:comment    "Type of the topic (Predefined list)"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
                       ] ;
@@ -158,7 +173,8 @@ bcfOWL:hasTopicType
 
 bcfOWL:hasTopicStatus
         a             owl:ObjectProperty ;
-        rdfs:label  "Type of the topic (Predefined list)"@en ;
+        rdfs:label       "has Topic Status"@en ;
+        rdfs:comment  "Type of the topic (Predefined list)"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
                       ] ;
@@ -166,7 +182,8 @@ bcfOWL:hasTopicStatus
 
 bcfOWL:hasLabels
         a             owl:ObjectProperty ;
-        rdfs:label  "Tags for grouping Topics. The list of possible values are defined in the extension schema."@en ;
+        rdfs:label       "has Label"@en ;
+        rdfs:comment  "Tags for grouping Topics. The list of possible values are defined in the extension schema."@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
                       ] ;
@@ -174,7 +191,8 @@ bcfOWL:hasLabels
 
 bcfOWL:hasPriority
         a             owl:ObjectProperty ;
-        rdfs:label  "Topic priority. The list of possible values are defined in the extension schema."@en ;
+        rdfs:label       "has Priority"@en ;
+        rdfs:comment  "Topic priority. The list of possible values are defined in the extension schema."@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
                       ] ;
@@ -182,7 +200,8 @@ bcfOWL:hasPriority
 
 bcfOWL:hasAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "Comment author"@en ;
+        rdfs:label       "has Author"@en ;
+        rdfs:comment  "Comment author"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Comment )
                       ] ;
@@ -190,7 +209,8 @@ bcfOWL:hasAuthor
 
 bcfOWL:hasStage
         a             owl:ObjectProperty ;
-        rdfs:label  "Stage this topic is part of (Predefined list)."@en ;
+        rdfs:label       "has Stage"@en ;
+        rdfs:comment  "Stage this topic is part of (Predefined list)."@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
                       ] ;
@@ -201,7 +221,8 @@ bcfOWL:hasStage
 
 bcfOWL:Topic
         a                owl:Class ;
-        rdfs:label     "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en ;
+        rdfs:label       "Topic"@en ;
+        rdfs:comment     "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasTitle
@@ -305,55 +326,64 @@ bcfOWL:Topic
 
 bcfOWL:hasTitle
         a             owl:DatatypeProperty ;
-        rdfs:label  "Title of the topic."@en ;
+        rdfs:label       "has Title"@en ;
+        rdfs:comment  "Title of the topic."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasIndex
         a             owl:DatatypeProperty ;
-        rdfs:label  "Parameter for sorting"@en , "Number to maintain the order of the topics."@en ;
+        rdfs:label       "has Index"@en ;
+        rdfs:comment  "Parameter for sorting"@en , "Number to maintain the order of the topics."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:integer .
 #TODO: We can make AssignedTo, ModifiedAuthor etc to subproperties of hasAuthor
 bcfOWL:hasAssignedTo
         a             owl:ObjectProperty ;
-        rdfs:label  "The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en ;
+        rdfs:label       "has Assigned To"@en ;
+        rdfs:comment  "The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasTopicModifiedAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "User who modified the topic. Exists only when Topic has been modified after creation."@en ;
+        rdfs:label       "has Topic Modified Author"@en ;
+        rdfs:comment  "User who modified the topic. Exists only when Topic has been modified after creation."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasDescription
         a             owl:DatatypeProperty ;
-        rdfs:label  "Description of the topic."@en ;
+        rdfs:label       "has Description"@en ;
+        rdfs:comment  "Description of the topic."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasCreationAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "User who created the topic."@en ;
+        rdfs:label       "has Creation Author"@en ;
+        rdfs:comment  "User who created the topic."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasCreationDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date when the topic was created."@en ;
+        rdfs:label       "has Creation Date"@en ;
+        rdfs:comment  "Date when the topic was created."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:dateTime .
 
 bcfOWL:hasTopicModifiedDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date when the topic was last modified. Exists only when Topic has been modified after creation."@en ;
+        rdfs:label       "has Topic Modified Date"@en ;
+        rdfs:comment  "Date when the topic was last modified. Exists only when Topic has been modified after creation."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:dateTime .
 
 bcfOWL:hasDueDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date until when the topics issue needs to be resolved."@en ;
+        rdfs:label       "has Due Date"@en ;
+        rdfs:comment  "Date until when the topics issue needs to be resolved."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:dateTime .
 
@@ -363,7 +393,8 @@ bcfOWL:hasDueDate
 
 bcfOWL:Comment
         a                owl:Class ;
-        rdfs:label     "The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely."@en ;
+        rdfs:label       "Comment"@en ;
+        rdfs:comment     "The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCommentDate
@@ -411,31 +442,36 @@ bcfOWL:Comment
 
 bcfOWL:hasCommentText
         a             owl:DatatypeProperty ;
-        rdfs:label  "The comment text"@en ;
+        rdfs:label       "has Comment Text"@en ;
+        rdfs:comment  "The comment text"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasCommentModifiedAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "The author who modified the comment"@en ;
+        rdfs:label       "has Comment Modified Author"@en ;
+        rdfs:comment  "The author who modified the comment"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasCommentDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date of the comment"@en ;
+        rdfs:label       "has Comment Date"@en ;
+        rdfs:comment  "Date of the comment"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    xsd:dateTime .
 
 bcfOWL:hasViewpoint
         a             owl:ObjectProperty ;
-        rdfs:label  "The viewpoint "@en , "Back reference to the viewpoint"@en ;
+        rdfs:label       "has Viewpoint"@en ;
+        rdfs:comment  "The viewpoint "@en , "Back reference to the viewpoint"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    bcfOWL:Viewpoint .
 
 bcfOWL:hasCommentModifiedDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "The date when comment was modified"@en ;
+        rdfs:label       "has Comment Modified Date"@en ;
+        rdfs:comment  "The date when comment was modified"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    xsd:dateTime .
 
@@ -443,7 +479,8 @@ bcfOWL:hasCommentModifiedDate
 
 bcfOWL:Viewpoint
         a                owl:Class ;
-        rdfs:label     "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en ;                        
+        rdfs:label       "Viewpoint"@en ;
+        rdfs:comment     "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en ;                        
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasGuid
@@ -494,19 +531,19 @@ bcfOWL:Viewpoint
                          ] ; 
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:SpacesVisible
+                           owl:onProperty      bcfOWL:spacesVisible
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:SpacesVisible
+                           owl:onProperty      bcfOWL:spacesVisible
                          ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:SpaceBoundariesVisible
+                           owl:onProperty      bcfOWL:spaceBoundariesVisible
                          ] ;                       
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:OpeningsVisible
+                           owl:onProperty      bcfOWL:openingsVisible
                          ] ;         
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
@@ -523,7 +560,8 @@ bcfOWL:Viewpoint
 
 bcfOWL:Component
         a       owl:Class ;
-        rdfs:label      "A component that links to a building element." ;
+        rdfs:label       "Component"@en ;
+        rdfs:comment      "A component that links to a building element." ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasIfcElement
@@ -559,7 +597,8 @@ bcfOWL:Component
 
 bcfOWL:Selection
         a                owl:Class ;
-        rdfs:label       "Selected components	"@en ;
+        rdfs:label       "Selection"@en ;
+        rdfs:comment       "Selected components	"@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasComponent
@@ -568,7 +607,8 @@ bcfOWL:Selection
 #TODO: Subclass exceptions and selections?
 bcfOWL:Exception
         a             owl:Class ;
-        rdfs:label  "Components to hide/show determined by default_visibility."@en ;
+        rdfs:label       "Exception"@en ;
+        rdfs:comment  "Components to hide/show determined by default_visibility."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasComponent
@@ -576,110 +616,130 @@ bcfOWL:Exception
 
 bcfOWL:hasBitmap
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Bitmap"@en ;
+        rdfs:label       "has Bitmap"@en ;
+        rdfs:comment   "Object Property, pointing to the Bitmap"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Bitmap .
 
 bcfOWL:hasException
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Exception"@en ;
+        rdfs:label       "has Exception"@en ;
+        rdfs:comment   "Object Property, pointing to the Exception"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Exception .
 
 bcfOWL:hasDefaulVisibility
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Default Visibility"@en ;
+        rdfs:label       "has Default Visibility"@en ;
+        rdfs:comment   "Object Property, pointing to the Default Visibility"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .
 
-bcfOWL:SpacesVisible
+bcfOWL:spacesVisible
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Spaces Visible class"@en ;
+        rdfs:label       "spaces Visible"@en ;
+        rdfs:comment   "Object Property, pointing to the Spaces Visible class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .
 
-bcfOWL:SpaceBoundariesVisible
+bcfOWL:spaceBoundariesVisible
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Space Boundaries Visible class"@en ;
+        rdfs:label       "space Boundaries Visible"@en ;
+        rdfs:comment   "Object Property, pointing to the Space Boundaries Visible class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .  
 
-bcfOWL:OpeningsVisible
+bcfOWL:openingsVisible
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Openings Visible class"@en ;
+        rdfs:label       "openings Visible"@en ;
+        rdfs:comment   "Object Property, pointing to the Openings Visible class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .
-
+#TODO: Clipping Planes, Lines and Coloring are not yet finished
 bcfOWL:ClippingPlanes
         a            owl:Class ;
-        rdfs:label   "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en .
+        rdfs:label       "Clipping Planes"@en ;
+        rdfs:comment   "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en .
 
 bcfOWL:Lines
         a            owl:Class ;
-        rdfs:label   "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en .
+        rdfs:label       "Lines"@en ;
+        rdfs:comment   "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en .
 
 bcfOWL:Coloring
         a            owl:Class ;
-        rdfs:label   "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en .
+        rdfs:label       "Coloring"@en ;
+        rdfs:comment   "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en .
 
 bcfOWL:hasIfcGuid
         a             owl:DatatypeProperty ;
-        rdfs:label    "The IfcGuid of the component"@en ;
+        rdfs:label       "has Ifc Guid"@en ;
+        rdfs:comment    "The IfcGuid of the component"@en ;
         rdfs:domain   bcfOWL:Component ;
         rdfs:range    xsd:stringe .
 
 bcfOWL:hasClippingPlanes
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Clipping Planes"@en ;
+        rdfs:label       "has Clipping Planes"@en ;
+        rdfs:comment   "Object Property, pointing to the Clipping Planes"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:ClippingPlanes .
 
 bcfOWL:hasLines
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Lines"@en ;
+        rdfs:label       "has Lines"@en ;
+        rdfs:comment   "Object Property, pointing to the Lines"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Lines .
 
 bcfOWL:hasIfcElement
         a            owl:ObjectProperty ;
-        rdfs:label   "The link to the linked data Ifc Element."@en ;
+        rdfs:label       "has Ifc Element"@en ;
+        rdfs:comment   "The link to the linked data Ifc Element."@en ;
         rdfs:domain  bcfOWL:Component ;
-        rdfs:range   bot:Element .
-#TODO: Should we add ifcOWL or BOT as range here?
+        rdfs:range   [ a            owl:Class ;
+                                  owl:unionOf  ( bot:Element ifc:IfcProduct )
+                      ] .
 
 bcfOWL:hasAuthoringToolId
         a             owl:DatatypeProperty ;
-        rdfs:label  "Name of the system in which the component is originated"@en ;
+        rdfs:label       "has Authoring Tool Id"@en ;
+        rdfs:comment  "Name of the system in which the component is originated"@en ;
         rdfs:domain   bcfOWL:Component ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasOrthogonalCamera
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the orthogonal camera"@en ;
+        rdfs:label       "has Orthogonal Camera"@en ;
+        rdfs:comment   "Object Property, pointing to the orthogonal camera"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:OrthogonalCamera .
 
 bcfOWL:hasPerspectiveCamera
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Perspective Camera"@en ;
+        rdfs:label       "has Perspective Camera"@en ;
+        rdfs:comment   "Object Property, pointing to the Perspective Camera"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:PerspectiveCamera .
 
 bcfOWL:hasSnapshot
         a             owl:DatatypeProperty ;
-        rdfs:label    "The URL of the snapshot(.png)"@en ;
+        rdfs:label       "has Snapshot"@en ;
+        rdfs:comment    "The URL of the snapshot(.png)"@en ;
         rdfs:domain   bcfOWL:Viewpoint ;
         rdfs:range    xsd:anyURI .   
 
 bcfOWL:hasColoring
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Coloring class"@en ;
+        rdfs:label       "has Coloring"@en ;
+        rdfs:comment   "Object Property, pointing to the Coloring class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Coloring .
 
 bcfOWL:hasComponent
         a            owl:ObjectProperty ;
-        rdfs:label   "Pointer to the Component"@en ;
+        rdfs:label       "has Component"@en ;
+        rdfs:comment   "Pointer to the Component"@en ;
         rdfs:domain   [ a            owl:Class ;
                                   owl:unionOf  ( bcfOWL:Selection bcfOWL:Exception )
                       ] ;
@@ -687,21 +747,26 @@ bcfOWL:hasComponent
 
 bcfOWL:hasOriginatingSystem
         a            owl:ObjectProperty ;
-        rdfs:label   "Name of the system in which the component is originated"@en ;
+        rdfs:label       "has Originating System"@en ;
+        rdfs:comment   "Name of the system in which the component is originated"@en ;
         rdfs:domain  bcfOWL:Component ;
         rdfs:range   bcfOWL:OriginatingSystem .
 
 bcfOWL:OriginatingSystem
         a            owl:Class ;
-        rdfs:label   "Software with which the respective element was created"@en .
+        rdfs:label       "Originating System"@en ;
+        rdfs:comment   "Software with which the respective element was created"@en .
 
+#TODO: Bitmap
 bcfOWL:Bitmap
         a             owl:Class ;
-        rdfs:label  "A list of bitmaps can be used to add more information, for example, text in the visualization."@en .
+        rdfs:label       "Bitmap"@en ;
+        rdfs:comment  "A list of bitmaps can be used to add more information, for example, text in the visualization."@en .
 
 bcfOWL:hasSelection
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Selection class"@en ;
+        rdfs:label       "has Selection"@en ;
+        rdfs:comment   "Object Property, pointing to the Selection class"@en ;
         rdfs:domain  bcfOWL:Component ;
         rdfs:range   bcfOWL:Selection .
 
@@ -709,7 +774,8 @@ bcfOWL:hasSelection
 
 bcfOWL:Camera
         a                owl:Class ;
-        rdfs:label       "Camera View"@en ;
+        rdfs:label       "Camera"@en ;
+        rdfs:comment       "Camera View"@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCameraUpVector
@@ -725,7 +791,8 @@ bcfOWL:Camera
 
 bcfOWL:OrthogonalCamera
         a                owl:Class ;
-        rdfs:label       "This element describes a viewpoint using orthogonal camera. "@en ;
+        rdfs:label       "Orthogonal Camera"@en ;
+        rdfs:comment       "This element describes a viewpoint using orthogonal camera. "@en ;
         owl:disjointWith bcfOWL:PerspectiveCamera ;
         rdfs:subClassOf  bcfOWL:Camera ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
@@ -735,8 +802,9 @@ bcfOWL:OrthogonalCamera
 
 bcfOWL:PerspectiveCamera
         a                owl:Class ;
-        rdfs:label       "This element describes a viewpoint using perspective camera."@en ;
-        owl:disjointWith bcfOWL:OrthogoanlCamera ;
+        rdfs:label       "Perspective Camera"@en ;
+        rdfs:comment       "This element describes a viewpoint using perspective camera."@en ;
+        owl:disjointWith bcfOWL:OrthogonalCamera ;
         rdfs:subClassOf  bcfOWL:Camera ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:cardinality     "1"^^xsd:int ;
@@ -745,37 +813,43 @@ bcfOWL:PerspectiveCamera
 
 bcfOWL:hasFieldOfView
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera's field of view angle in degrees."@en ;
+        rdfs:label       "has Vield Of View"@en ;
+        rdfs:comment    "Camera's field of view angle in degrees."@en ;
         rdfs:domain   bcfOWL:PerspectiveCamera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasViewToWorldScale
         a             owl:DatatypeProperty ;
-        rdfs:label    "Proportion of camera view to model"@en ;
+        rdfs:label       "has View To World Scale"@en ;
+        rdfs:comment    "Proportion of camera view to model"@en ;
         rdfs:domain   bcfOWL:OrthogonalCamera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasAspectRatio
         a             owl:DatatypeProperty ;
-        rdfs:label    "Proportional relationship between the width and the height of the view (w/h)"@en ;
+        rdfs:label       "has Aspect Ratio"@en ;
+        rdfs:comment    "Proportional relationship between the width and the height of the view (w/h)"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasCameraUpVector
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera up vector"@en ;
+        rdfs:label       "has Camera Up Vector"@en ;
+        rdfs:comment    "Points to the Camera up vector, defined as wktLiteral"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 
 bcfOWL:hasCameraDirection
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera direction"@en ;
+        rdfs:label       "has Camera Direction"@en ;
+        rdfs:comment    "Points to the Camera direction, defined as wktLiteral"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 
 bcfOWL:hasCameraViewPoint
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera location"@en ;
+        rdfs:label       "has Camera View Point"@en ;
+        rdfs:comment    "Points to the Camera location, defined as wktLiteral"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 

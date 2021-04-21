@@ -207,7 +207,7 @@
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "58",
+    "id" : "57",
     "type" : "owl:Class"
   }, {
     "id" : "94",
@@ -222,7 +222,7 @@
     "id" : "100",
     "type" : "owl:unionOf"
   }, {
-    "id" : "57",
+    "id" : "56",
     "type" : "owl:unionOf"
   }, {
     "id" : "101",
@@ -231,7 +231,7 @@
     "id" : "15",
     "type" : "owl:unionOf"
   }, {
-    "id" : "64",
+    "id" : "63",
     "type" : "owl:unionOf"
   }, {
     "id" : "103",
@@ -688,7 +688,7 @@
     "comment" : {
       "en" : "Indication of the Priority of an Issue"
     },
-    "id" : "58"
+    "id" : "57"
   }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Selection",
     "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
@@ -720,7 +720,7 @@
     "instances" : 0,
     "union" : [ "20", "35" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "57"
+    "id" : "56"
   }, {
     "instances" : 0,
     "union" : [ "19", "20", "21" ],
@@ -735,7 +735,7 @@
     "instances" : 0,
     "union" : [ "19", "21" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "64"
+    "id" : "63"
   }, {
     "instances" : 0,
     "union" : [ "20", "35" ],
@@ -842,19 +842,19 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "55",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "56",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "61",
     "type" : "owl:objectProperty"
   }, {
     "id" : "62",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "63",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "65",
     "type" : "owl:datatypeProperty"
@@ -944,10 +944,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "112",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "113",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "114",
     "type" : "owl:datatypeProperty"
@@ -1167,6 +1167,21 @@
     "attributes" : [ "object" ],
     "id" : "53"
   }, {
+    "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority",
+    "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasPriority",
+      "en" : "has Priority"
+    },
+    "maxCardinality" : "1",
+    "domain" : "56",
+    "comment" : {
+      "en" : "Topic priority. The list of possible values are defined in the extension schema."
+    },
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate",
     "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
     "range" : "12",
@@ -1180,22 +1195,7 @@
       "en" : "Date when the topic was last modified. Exists only when Topic has been modified after creation."
     },
     "attributes" : [ "datatype" ],
-    "id" : "55"
-  }, {
-    "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority",
-    "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
-    "range" : "58",
-    "label" : {
-      "IRI-based" : "hasPriority",
-      "en" : "has Priority"
-    },
-    "maxCardinality" : "1",
-    "domain" : "57",
-    "comment" : {
-      "en" : "Topic priority. The list of possible values are defined in the extension schema."
-    },
-    "attributes" : [ "object" ],
-    "id" : "56"
+    "id" : "58"
   }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera",
     "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
@@ -1212,6 +1212,21 @@
     "attributes" : [ "object" ],
     "id" : "61"
   }, {
+    "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic",
+    "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasTopic",
+      "en" : "has Topic"
+    },
+    "cardinality" : "1",
+    "domain" : "63",
+    "comment" : {
+      "en" : "A link to the relating comment"
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate",
     "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
     "range" : "44",
@@ -1225,22 +1240,7 @@
       "en" : "Date when the topic was created."
     },
     "attributes" : [ "datatype" ],
-    "id" : "62"
-  }, {
-    "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic",
-    "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
-    "range" : "20",
-    "label" : {
-      "IRI-based" : "hasTopic",
-      "en" : "has Topic"
-    },
-    "cardinality" : "1",
-    "domain" : "64",
-    "comment" : {
-      "en" : "A link to the relating comment"
-    },
-    "attributes" : [ "object" ],
-    "id" : "63"
+    "id" : "64"
   }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView",
     "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
@@ -1410,7 +1410,7 @@
     "maxCardinality" : "1",
     "domain" : "20",
     "comment" : {
-      "en" : "Parameter for sorting"
+      "en" : "Number to maintain the order of the topics."
     },
     "attributes" : [ "datatype" ],
     "id" : "87"
@@ -1644,21 +1644,6 @@
     "attributes" : [ "object" ],
     "id" : "111"
   }, {
-    "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale",
-    "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "hasViewToWorldScale",
-      "en" : "has View To World Scale"
-    },
-    "cardinality" : "1",
-    "domain" : "27",
-    "comment" : {
-      "en" : "Proportion of camera view to model"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "112"
-  }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem",
     "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
     "range" : "84",
@@ -1672,6 +1657,21 @@
       "en" : "Name of the system in which the component is originated"
     },
     "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale",
+    "baseIri" : "http://lbd.arch.rwth-aachen.de/bcfOWL",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasViewToWorldScale",
+      "en" : "has View To World Scale"
+    },
+    "cardinality" : "1",
+    "domain" : "27",
+    "comment" : {
+      "en" : "Proportion of camera view to model"
+    },
+    "attributes" : [ "datatype" ],
     "id" : "113"
   }, {
     "iri" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot",

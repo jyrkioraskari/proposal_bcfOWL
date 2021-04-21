@@ -676,7 +676,7 @@ bcfOWL:hasIfcGuid
         rdfs:label       "has Ifc Guid"@en ;
         rdfs:comment    "The IfcGuid of the component"@en ;
         rdfs:domain   bcfOWL:Component ;
-        rdfs:range    xsd:stringe .
+        rdfs:range    xsd:string .
 
 bcfOWL:hasClippingPlanes
         a            owl:ObjectProperty ;

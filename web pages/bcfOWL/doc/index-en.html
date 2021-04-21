@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://lbd.arch.rwth-aachen.de/bcfOWL/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lbd.arch.rwth-aachen.de/bcfOWL/","name":"BCF 0.7 Ontology Description", "headline":"BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML", "datePublished":"21.4.2021", "version":"v0.7.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Oliver Schulz, Jyrki Oraskari, Jakob Beetz","url":"https://dc.rwth-aachen.de/de/team/team/"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://lbd.arch.rwth-aachen.de/bcfOWL/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lbd.arch.rwth-aachen.de/bcfOWL/","name":"BCF 0.7 Ontology Description", "headline":"BCF Ontology Description based on https://github.com/buildingSMART/BCF-XML", "datePublished":"21.4.2021", "version":"v0.7.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Oliver Schulz, Jyrki Oraskari, Jakob Beetz","url":"https://dc.rwth-aachen.de/de/team/team/"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -73,7 +73,7 @@ function loadTOC(){
 <img src="https://licensebuttons.net/l/by/4.0/88x31.png" style="border-width:0" alt="License" />
 </a>
 <br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+<dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd></dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
 </div>
@@ -82,7 +82,7 @@ function loadTOC(){
 <span>In progress</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML</span>
+BCF Ontology Description based on https://github.com/buildingSMART/BCF-XML</span>
 </div>
 <div id="toc"></div>  
 
@@ -93,276 +93,268 @@ This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
-      <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
+      <a href="#Bitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">Bitmap</a>
    </li>
    <li>
-      <a href="#Bitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">A list of bitmaps can be used to add more information, for example, text in the visualization.</a>
-   </li>
-   <li>
-      <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
+      <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
    </li>
    <li>
       <a href="#ClippingPlanes"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">Clipping Planes</a>
    </li>
    <li>
-      <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Components to hide/show determined by default_visibility.</a>
+      <a href="#Coloring" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">Coloring</a>
    </li>
    <li>
-      <a href="#Priority" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">Indication of the Priority of an Issue</a>
+      <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
    </li>
    <li>
-      <a href="#Lines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</a>
+      <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
    </li>
    <li>
-      <a href="#OrthogoanlCamera"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogoanlCamera">
-         <span>orthogoanl camera</span>
-      </a>
-   </li>
-   <li>
-      <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selected components	</a>
-   </li>
-   <li>
-      <a href="#OriginatingSystem"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">Software with which the respective element was created</a>
-   </li>
-   <li>
-      <a href="#TopicStatus"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">Status of the issue. Is it still active or closed?</a>
-   </li>
-   <li>
-      <a href="#Coloring" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style="color:#40E0D0;";&gt;Turquoise. More information about the color format can be found on Wikipedia.</a>
+      <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Exception</a>
    </li>
    <li>
       <a href="#ExtensionSchema"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
    </li>
    <li>
-      <a href="#Label" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">The label is for tagging the Issue to be able to make a better categorization</a>
+      <a href="#Label" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">Label</a>
    </li>
    <li>
-      <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
+      <a href="#Lines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">Lines</a>
    </li>
    <li>
-      <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-   </li>
-   <li>
-      <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-   </li>
-   <li>
-      <a href="#TopicType" title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc.</a>
+      <a href="#OriginatingSystem"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">Originating System</a>
    </li>
    <li>
       <a href="#OrthogonalCamera"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">This element describes a viewpoint using orthogonal camera. </a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">Orthogonal Camera</a>
    </li>
    <li>
       <a href="#PerspectiveCamera"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">Perspective Camera</a>
    </li>
    <li>
-      <a href="#Stage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">To what stage of the project does the Topic relate to?</a>
+      <a href="#Priority" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">Priority</a>
    </li>
    <li>
-      <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+      <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
+   </li>
+   <li>
+      <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selection</a>
+   </li>
+   <li>
+      <a href="#Stage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">Stage</a>
+   </li>
+   <li>
+      <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+   </li>
+   <li>
+      <a href="#TopicStatus"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">Topic Status</a>
+   </li>
+   <li>
+      <a href="#TopicType" title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">Topic Type</a>
+   </li>
+   <li>
+      <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#hasTopic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">A link to the relating comment</a>
+      <a href="#hasAssignedTo"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">has Assigned To</a>
    </li>
    <li>
-      <a href="#hasViewpoint"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">Back reference to the viewpoint</a>
+      <a href="#hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor">has Author</a>
+   </li>
+   <li>
+      <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">has Bitmap</a>
    </li>
    <li>
       <a href="#hasCameraDirection"
          title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection">
-         <span>Camera direction</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasCameraViewPoint"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">
-         <span>Camera location</span>
+         <span>has Camera Direction</span>
       </a>
    </li>
    <li>
       <a href="#hasCameraUpVector"
          title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector">
-         <span>Camera up vector</span>
+         <span>has Camera Up Vector</span>
       </a>
    </li>
    <li>
-      <a href="#hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor">Comment author</a>
-   </li>
-   <li>
-      <a href="#hasOriginatingSystem"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">Name of the system in which the component is originated</a>
-   </li>
-   <li>
-      <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">Object Property, pointing to the Bitmap</a>
+      <a href="#hasCameraViewPoint"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">
+         <span>has Camera View Point</span>
+      </a>
    </li>
    <li>
       <a href="#hasClippingPlanes"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">Object Property, pointing to the Clipping Planes</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">has Clipping Planes</a>
    </li>
    <li>
       <a href="#hasColoring"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">Object Property, pointing to the Coloring class</a>
-   </li>
-   <li>
-      <a href="#hasException"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">Object Property, pointing to the Exception</a>
-   </li>
-   <li>
-      <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">Object Property, pointing to the Lines</a>
-   </li>
-   <li>
-      <a href="#hasOrthogonalCamera"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">Object Property, pointing to the orthogonal camera</a>
-   </li>
-   <li>
-      <a href="#hasPerspectiveCamera"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">Object Property, pointing to the Perspective Camera</a>
-   </li>
-   <li>
-      <a href="#hasSelection"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">Object Property, pointing to the Selection class</a>
-   </li>
-   <li>
-      <a href="#hasComponent"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">Pointer to the Component</a>
-   </li>
-   <li>
-      <a href="#hasProject" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">Reference to the corresponding Project</a>
-   </li>
-   <li>
-      <a href="#hasStage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">Stage this topic is part of (Predefined list).</a>
-   </li>
-   <li>
-      <a href="#hasLabels" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">Tags for grouping Topics. The list of possible values are defined in the extension schema.</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">has Coloring</a>
    </li>
    <li>
       <a href="#hasCommentModifiedAuthor"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">The author who modified the comment</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">has Comment Modified Author</a>
    </li>
    <li>
-      <a href="#hasIfcGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">
-         <span>The IfcGuid of the component</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasIfcElement"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">The link to the linked data Ifc Element.</a>
-   </li>
-   <li>
-      <a href="#hasAssignedTo"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</a>
-   </li>
-   <li>
-      <a href="#hasPriority"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">Topic priority. The list of possible values are defined in the extension schema.</a>
-   </li>
-   <li>
-      <a href="#hasTopicStatus"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">Type of the topic (Predefined list)</a>
-   </li>
-   <li>
-      <a href="#hasTopicType"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">Type of the topic (Predefined list)</a>
-   </li>
-   <li>
-      <a href="#hasExtensionSchema"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">URI to the extension schema.</a>
+      <a href="#hasComponent"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">has Component</a>
    </li>
    <li>
       <a href="#hasCreationAuthor"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">User who created the topic.</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">has Creation Author</a>
+   </li>
+   <li>
+      <a href="#hasException"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">has Exception</a>
+   </li>
+   <li>
+      <a href="#hasExtensionSchema"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">has Extension Schema</a>
+   </li>
+   <li>
+      <a href="#hasIfcElement"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">has Ifc Element</a>
+   </li>
+   <li>
+      <a href="#hasLabels" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">has Label</a>
+   </li>
+   <li>
+      <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">has Lines</a>
+   </li>
+   <li>
+      <a href="#hasOriginatingSystem"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">has Originating System</a>
+   </li>
+   <li>
+      <a href="#hasOrthogonalCamera"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">has Orthogonal Camera</a>
+   </li>
+   <li>
+      <a href="#hasPerspectiveCamera"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">has Perspective Camera</a>
+   </li>
+   <li>
+      <a href="#hasPriority"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">has Priority</a>
+   </li>
+   <li>
+      <a href="#hasProject" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">has Project</a>
+   </li>
+   <li>
+      <a href="#hasSelection"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">has Selection</a>
+   </li>
+   <li>
+      <a href="#hasStage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">has Stage</a>
+   </li>
+   <li>
+      <a href="#hasTopic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">has Topic</a>
    </li>
    <li>
       <a href="#hasTopicModifiedAuthor"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">User who modified the topic. Exists only when Topic has been modified after creation.</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">has Topic Modified Author</a>
+   </li>
+   <li>
+      <a href="#hasTopicStatus"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">has Topic Status</a>
+   </li>
+   <li>
+      <a href="#hasTopicType"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">has Topic Type</a>
+   </li>
+   <li>
+      <a href="#hasViewpoint"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">has Viewpoint</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
-      <a href="#hasFieldOfView"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">Camera's field of view angle in degrees.</a>
-   </li>
-   <li>
-      <a href="#hasCommentDate"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">Date of the comment</a>
-   </li>
-   <li>
-      <a href="#hasDueDate" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">Date until when the topics issue needs to be resolved.</a>
-   </li>
-   <li>
-      <a href="#hasCreationDate"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">Date when the topic was created.</a>
-   </li>
-   <li>
-      <a href="#hasTopicModifiedDate"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">Date when the topic was last modified. Exists only when Topic has been modified after creation.</a>
-   </li>
-   <li>
-      <a href="#hasDescription"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">Description of the topic.</a>
-   </li>
-   <li>
-      <a href="#hasProjectId"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">GUID of the Project</a>
-   </li>
-   <li>
-      <a href="#hasName" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">Name of the project.</a>
+      <a href="#hasAspectRatio"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">has Aspect Ratio</a>
    </li>
    <li>
       <a href="#hasAuthoringToolId"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">Name of the system in which the component is originated</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">has Authoring Tool Id</a>
    </li>
    <li>
-      <a href="#hasIndex" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">Number to maintain the order of the topics.</a>
-   </li>
-   <li>
-      <a href="#hasDefaulVisibility"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">Object Property, pointing to the Default Visibility</a>
-   </li>
-   <li>
-      <a href="#OpeningsVisible"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/OpeningsVisible">Object Property, pointing to the Openings Visible class</a>
-   </li>
-   <li>
-      <a href="#SpaceBoundariesVisible"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/SpaceBoundariesVisible">Object Property, pointing to the Space Boundaries Visible class</a>
-   </li>
-   <li>
-      <a href="#SpacesVisible"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/SpacesVisible">Object Property, pointing to the Spaces Visible class</a>
-   </li>
-   <li>
-      <a href="#hasGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid">ProjectId of the project</a>
-   </li>
-   <li>
-      <a href="#hasViewToWorldScale"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">Proportion of camera view to model</a>
-   </li>
-   <li>
-      <a href="#hasAspectRatio"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">Proportional relationship between the width and the height of the view (w/h)</a>
-   </li>
-   <li>
-      <a href="#hasCommentText"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">The comment text</a>
+      <a href="#hasCommentDate"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">has Comment Date</a>
    </li>
    <li>
       <a href="#hasCommentModifiedDate"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">The date when comment was modified</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">has Comment Modified Date</a>
+   </li>
+   <li>
+      <a href="#hasCommentText"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">has Comment Text</a>
+   </li>
+   <li>
+      <a href="#hasCreationDate"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">has Creation Date</a>
+   </li>
+   <li>
+      <a href="#hasDefaulVisibility"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">has Default Visibility</a>
+   </li>
+   <li>
+      <a href="#hasDescription"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">has Description</a>
+   </li>
+   <li>
+      <a href="#hasDueDate" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">has Due Date</a>
+   </li>
+   <li>
+      <a href="#hasGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid">has GUID</a>
+   </li>
+   <li>
+      <a href="#hasIfcGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">has Ifc Guid</a>
+   </li>
+   <li>
+      <a href="#hasIndex" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">has Index</a>
+   </li>
+   <li>
+      <a href="#hasName" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">has Name</a>
+   </li>
+   <li>
+      <a href="#hasProjectId"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">has Project ID</a>
    </li>
    <li>
       <a href="#hasSnapshot"
-         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">The URL of the snapshot(.png)</a>
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">has Snapshot</a>
    </li>
    <li>
-      <a href="#hasTitle" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">Title of the topic.</a>
+      <a href="#hasTitle" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">has Title</a>
+   </li>
+   <li>
+      <a href="#hasTopicModifiedDate"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">has Topic Modified Date</a>
+   </li>
+   <li>
+      <a href="#hasFieldOfView"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">has Vield Of View</a>
+   </li>
+   <li>
+      <a href="#hasViewToWorldScale"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">has View To World Scale</a>
+   </li>
+   <li>
+      <a href="#openingsVisible"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible">openings Visible</a>
+   </li>
+   <li>
+      <a href="#spaceBoundariesVisible"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible">space Boundaries Visible</a>
+   </li>
+   <li>
+      <a href="#spacesVisible"
+         title="http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible">spaces Visible</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul class="hlist">
    <li>
@@ -415,566 +407,605 @@ This section provides details for each class and property defined by BCF 0.7 Ont
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
+         <a href="#Bitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">Bitmap</a>
       </li>
       <li>
-         <a href="#Bitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">A list of bitmaps can be used to add more information, for example, text in the visualization.</a>
-      </li>
-      <li>
-         <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
+         <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
       </li>
       <li>
          <a href="#ClippingPlanes"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">Clipping Planes</a>
       </li>
       <li>
-         <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Components to hide/show determined by default_visibility.</a>
+         <a href="#Coloring" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">Coloring</a>
       </li>
       <li>
-         <a href="#Priority" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">Indication of the Priority of an Issue</a>
+         <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
       </li>
       <li>
-         <a href="#Lines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</a>
+         <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
       </li>
       <li>
-         <a href="#OrthogoanlCamera"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogoanlCamera">
-            <span>orthogoanl camera</span>
-         </a>
-      </li>
-      <li>
-         <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selected components	</a>
-      </li>
-      <li>
-         <a href="#OriginatingSystem"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">Software with which the respective element was created</a>
-      </li>
-      <li>
-         <a href="#TopicStatus"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">Status of the issue. Is it still active or closed?</a>
-      </li>
-      <li>
-         <a href="#Coloring" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style="color:#40E0D0;";&gt;Turquoise. More information about the color format can be found on Wikipedia.</a>
+         <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Exception</a>
       </li>
       <li>
          <a href="#ExtensionSchema"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
       </li>
       <li>
-         <a href="#Label" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">The label is for tagging the Issue to be able to make a better categorization</a>
+         <a href="#Label" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">Label</a>
       </li>
       <li>
-         <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
+         <a href="#Lines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">Lines</a>
       </li>
       <li>
-         <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-      </li>
-      <li>
-         <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-      </li>
-      <li>
-         <a href="#TopicType" title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc.</a>
+         <a href="#OriginatingSystem"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">Originating System</a>
       </li>
       <li>
          <a href="#OrthogonalCamera"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">This element describes a viewpoint using orthogonal camera. </a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">Orthogonal Camera</a>
       </li>
       <li>
          <a href="#PerspectiveCamera"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">Perspective Camera</a>
       </li>
       <li>
-         <a href="#Stage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">To what stage of the project does the Topic relate to?</a>
+         <a href="#Priority" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">Priority</a>
       </li>
       <li>
-         <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+         <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
+      </li>
+      <li>
+         <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selection</a>
+      </li>
+      <li>
+         <a href="#Stage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">Stage</a>
+      </li>
+      <li>
+         <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+      </li>
+      <li>
+         <a href="#TopicStatus"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">Topic Status</a>
+      </li>
+      <li>
+         <a href="#TopicType" title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">Topic Type</a>
+      </li>
+      <li>
+         <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
       </li>
    </ul>
-   <div class="entity" id="Component">
-      <h3>A component that links to a building element.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Component</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasOriginatingSystem"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">Name of the system in which the component is originated</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthoringToolId"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">Name of the system in which the component is originated</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSelection"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">Object Property, pointing to the Selection class</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasIfcGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">The IfcGuid of the component</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasIfcElement"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">The link to the linked data Ifc Element.</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasComponent"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">Pointer to the Component</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Bitmap">
-      <h3>A list of bitmaps can be used to add more information, for example, text in the visualization.<sup class="type-c" title="class">c</sup>
+      <h3>Bitmap<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap</p>
+      <div class="comment">
+         <span class="markdown">A list of bitmaps can be used to add more information, for example, text in the visualization.</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">Object Property, pointing to the Bitmap</a>
+            <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">has Bitmap</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="Camera">
-      <h3>Camera View<sup class="type-c" title="class">c</sup>
+      <h3>Camera<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Camera</p>
+      <div class="comment">
+         <span class="markdown">Camera View</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#OrthogonalCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">This element describes a viewpoint using orthogonal camera. </a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">Orthogonal Camera</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PerspectiveCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">Perspective Camera</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasCameraDirection"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection">Camera direction</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasCameraViewPoint"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">Camera location</a>
+            <a href="#hasAspectRatio"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">has Aspect Ratio</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCameraDirection"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection">has Camera Direction</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasCameraUpVector"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector">Camera up vector</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasAspectRatio"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">Proportional relationship between the width and the height of the view (w/h)</a>
-            <sup class="type-dp" title="data property">dp</sup>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector">has Camera Up Vector</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCameraViewPoint"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">has Camera View Point</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="ClippingPlanes">
-      <h3>ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.<sup class="type-c" title="class">c</sup>
+      <h3>Clipping Planes<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes</p>
+      <div class="comment">
+         <span class="markdown">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
             <a href="#hasClippingPlanes"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">Object Property, pointing to the Clipping Planes</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">has Clipping Planes</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Coloring">
+      <h3>Coloring<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring</p>
+      <div class="comment">
+         <span class="markdown">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style="color:#40E0D0;";&gt;Turquoise. More information about the color format can be found on Wikipedia.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasColoring"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">has Coloring</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Comment">
+      <h3>Comment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Comment</p>
+      <div class="comment">
+         <span class="markdown">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCommentDate"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">has Comment Date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCommentModifiedAuthor"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">has Comment Modified Author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCommentModifiedDate"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">has Comment Modified Date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCommentText"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">has Comment Text</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasViewpoint"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">has Viewpoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Component">
+      <h3>Component<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Component</p>
+      <div class="comment">
+         <span class="markdown">A component that links to a building element.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAuthoringToolId"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">has Authoring Tool Id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasIfcElement"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">has Ifc Element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasIfcGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">has Ifc Guid</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOriginatingSystem"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">has Originating System</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSelection"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">has Selection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasComponent"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">has Component</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="Exception">
-      <h3>Components to hide/show determined by default_visibility.<sup class="type-c" title="class">c</sup>
+      <h3>Exception<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Exception</p>
+      <div class="comment">
+         <span class="markdown">Components to hide/show determined by default_visibility.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasException"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">Object Property, pointing to the Exception</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Priority">
-      <h3>Indication of the Priority of an Issue<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Priority</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasPriority"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">Topic priority. The list of possible values are defined in the extension schema.</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Lines">
-      <h3>Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Lines</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">Object Property, pointing to the Lines</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="OrthogoanlCamera">
-      <h3>orthogoanl camera<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogoanlCamera</p>
-      <dl class="description">
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#PerspectiveCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Selection">
-      <h3>Selected components	<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Selection</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasSelection"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">Object Property, pointing to the Selection class</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="OriginatingSystem">
-      <h3>Software with which the respective element was created<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasOriginatingSystem"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">Name of the system in which the component is originated</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TopicStatus">
-      <h3>Status of the issue. Is it still active or closed?<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasTopicStatus"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">Type of the topic (Predefined list)</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Coloring">
-      <h3>The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style="color:#40E0D0;";&gt;Turquoise. More information about the color format can be found on Wikipedia.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasColoring"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">Object Property, pointing to the Coloring class</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">has Exception</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="ExtensionSchema">
-      <h3>The extension define the mapping of a BCF project.<sup class="type-c" title="class">c</sup>
+      <h3>Extension Schema<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema</p>
+      <div class="comment">
+         <span class="markdown">The extension define the mapping of a BCF project.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasExtensionSchema"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">URI to the extension schema.</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">has Extension Schema</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="Label">
-      <h3>The label is for tagging the Issue to be able to make a better categorization<sup class="type-c" title="class">c</sup>
+      <h3>Label<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Label</p>
+      <div class="comment">
+         <span class="markdown">The label is for tagging the Issue to be able to make a better categorization</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasLabels" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">Tags for grouping Topics. The list of possible values are defined in the extension schema.</a>
+            <a href="#hasLabels" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">has Label</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Comment">
-      <h3>The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Lines">
+      <h3>Lines<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Comment</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Lines</p>
+      <div class="comment">
+         <span class="markdown">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</span>
+      </div>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasViewpoint"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">Back reference to the viewpoint</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasCommentDate"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">Date of the comment</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCommentModifiedAuthor"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">The author who modified the comment</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasCommentText"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">The comment text</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCommentModifiedDate"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">The date when comment was modified</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Viewpoint">
-      <h3>The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">Object Property, pointing to the Bitmap</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasClippingPlanes"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">Object Property, pointing to the Clipping Planes</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasColoring"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">Object Property, pointing to the Coloring class</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasDefaulVisibility"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">Object Property, pointing to the Default Visibility</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasException"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">Object Property, pointing to the Exception</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">Object Property, pointing to the Lines</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#OpeningsVisible"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/OpeningsVisible">Object Property, pointing to the Openings Visible class</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPerspectiveCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">Object Property, pointing to the Perspective Camera</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#SpaceBoundariesVisible"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/SpaceBoundariesVisible">Object Property, pointing to the Space Boundaries Visible class</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#SpacesVisible"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/SpacesVisible">Object Property, pointing to the Spaces Visible class</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOrthogonalCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">Object Property, pointing to the orthogonal camera</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasSnapshot"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">The URL of the snapshot(.png)</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasViewpoint"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">Back reference to the viewpoint</a>
+            <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">has Lines</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Project">
-      <h3>The project contains reference information about the project the topics belong to.<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="OriginatingSystem">
+      <h3>Originating System<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Project</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasProjectId"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">GUID of the Project</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasName" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">Name of the project.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExtensionSchema"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">URI to the extension schema.</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasProject" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">Reference to the corresponding Project</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TopicType">
-      <h3>The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem</p>
+      <div class="comment">
+         <span class="markdown">Software with which the respective element was created</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasTopicType"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">Type of the topic (Predefined list)</a>
+            <a href="#hasOriginatingSystem"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">has Originating System</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="OrthogonalCamera">
-      <h3>This element describes a viewpoint using orthogonal camera. <sup class="type-c" title="class">c</sup>
+      <h3>Orthogonal Camera<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera</p>
+      <div class="comment">
+         <span class="markdown">This element describes a viewpoint using orthogonal camera. </span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
+            <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasViewToWorldScale"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">Proportion of camera view to model</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">has View To World Scale</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasOrthogonalCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">Object Property, pointing to the orthogonal camera</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">has Orthogonal Camera</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#PerspectiveCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">Perspective Camera</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="PerspectiveCamera">
-      <h3>This element describes a viewpoint using perspective camera.<sup class="type-c" title="class">c</sup>
+      <h3>Perspective Camera<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera</p>
+      <div class="comment">
+         <span class="markdown">This element describes a viewpoint using perspective camera.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
+            <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasFieldOfView"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">Camera's field of view angle in degrees.</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">has Vield Of View</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasPerspectiveCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">Object Property, pointing to the Perspective Camera</a>
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">has Perspective Camera</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#OrthogoanlCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogoanlCamera">orthogoanl camera</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#OrthogonalCamera"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">This element describes a viewpoint using orthogonal camera. </a>
+            <a href="#OrthogonalCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">Orthogonal Camera</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Stage">
-      <h3>To what stage of the project does the Topic relate to?<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Priority">
+      <h3>Priority<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Stage</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Priority</p>
+      <div class="comment">
+         <span class="markdown">Indication of the Priority of an Issue</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasStage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">Stage this topic is part of (Predefined list).</a>
+            <a href="#hasPriority"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">has Priority</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Topic">
-      <h3>Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Project">
+      <h3>Project<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Topic</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Project</p>
+      <div class="comment">
+         <span class="markdown">The project contains reference information about the project the topics belong to.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasDueDate" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">Date until when the topics issue needs to be resolved.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCreationDate"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">Date when the topic was created.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTopicModifiedDate"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">Date when the topic was last modified. Exists only when Topic has been modified after creation.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDescription"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">Description of the topic.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasIndex" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">Number to maintain the order of the topics.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAssignedTo"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasTitle" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">Title of the topic.</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCreationAuthor"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">User who created the topic.</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasTopicModifiedAuthor"
-               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">User who modified the topic. Exists only when Topic has been modified after creation.</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#hasExtensionSchema"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">has Extension Schema</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasName" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">has Name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasProjectId"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">has Project ID</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasTopic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">A link to the relating comment</a>
+            <a href="#hasProject" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">has Project</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Selection">
+      <h3>Selection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Selection</p>
+      <div class="comment">
+         <span class="markdown">Selected components	</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSelection"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">has Selection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Stage">
+      <h3>Stage<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Stage</p>
+      <div class="comment">
+         <span class="markdown">To what stage of the project does the Topic relate to?</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasStage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">has Stage</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Topic">
+      <h3>Topic<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Topic</p>
+      <div class="comment">
+         <span class="markdown">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAssignedTo"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">has Assigned To</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCreationAuthor"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">has Creation Author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCreationDate"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">has Creation Date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDescription"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">has Description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDueDate" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">has Due Date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasIndex" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">has Index</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTitle" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">has Title</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTopicModifiedAuthor"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">has Topic Modified Author</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTopicModifiedDate"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">has Topic Modified Date</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasTopic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">has Topic</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TopicStatus">
+      <h3>Topic Status<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus</p>
+      <div class="comment">
+         <span class="markdown">Status of the issue. Is it still active or closed?</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasTopicStatus"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">has Topic Status</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TopicType">
+      <h3>Topic Type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType</p>
+      <div class="comment">
+         <span class="markdown">The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasTopicType"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">has Topic Type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Viewpoint">
+      <h3>Viewpoint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint</p>
+      <div class="comment">
+         <span class="markdown">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">has Bitmap</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasClippingPlanes"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">has Clipping Planes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasColoring"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">has Coloring</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasDefaulVisibility"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">has Default Visibility</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasException"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">has Exception</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">has Lines</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOrthogonalCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">has Orthogonal Camera</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPerspectiveCamera"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">has Perspective Camera</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSnapshot"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">has Snapshot</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#openingsVisible"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible">openings Visible</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#spaceBoundariesVisible"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible">space Boundaries Visible</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#spacesVisible"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible">spaces Visible</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasViewpoint"
+               title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">has Viewpoint</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -983,171 +1014,198 @@ This section provides details for each class and property defined by BCF 0.7 Ont
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasTopic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">A link to the relating comment</a>
+         <a href="#hasAssignedTo"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">has Assigned To</a>
       </li>
       <li>
-         <a href="#hasViewpoint"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">Back reference to the viewpoint</a>
+         <a href="#hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor">has Author</a>
+      </li>
+      <li>
+         <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">has Bitmap</a>
       </li>
       <li>
          <a href="#hasCameraDirection"
             title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection">
-            <span>Camera direction</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasCameraViewPoint"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">
-            <span>Camera location</span>
+            <span>has Camera Direction</span>
          </a>
       </li>
       <li>
          <a href="#hasCameraUpVector"
             title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector">
-            <span>Camera up vector</span>
+            <span>has Camera Up Vector</span>
          </a>
       </li>
       <li>
-         <a href="#hasAuthor" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor">Comment author</a>
-      </li>
-      <li>
-         <a href="#hasOriginatingSystem"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">Name of the system in which the component is originated</a>
-      </li>
-      <li>
-         <a href="#hasBitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">Object Property, pointing to the Bitmap</a>
+         <a href="#hasCameraViewPoint"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">
+            <span>has Camera View Point</span>
+         </a>
       </li>
       <li>
          <a href="#hasClippingPlanes"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">Object Property, pointing to the Clipping Planes</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">has Clipping Planes</a>
       </li>
       <li>
          <a href="#hasColoring"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">Object Property, pointing to the Coloring class</a>
-      </li>
-      <li>
-         <a href="#hasException"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">Object Property, pointing to the Exception</a>
-      </li>
-      <li>
-         <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">Object Property, pointing to the Lines</a>
-      </li>
-      <li>
-         <a href="#hasOrthogonalCamera"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">Object Property, pointing to the orthogonal camera</a>
-      </li>
-      <li>
-         <a href="#hasPerspectiveCamera"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">Object Property, pointing to the Perspective Camera</a>
-      </li>
-      <li>
-         <a href="#hasSelection"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">Object Property, pointing to the Selection class</a>
-      </li>
-      <li>
-         <a href="#hasComponent"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">Pointer to the Component</a>
-      </li>
-      <li>
-         <a href="#hasProject" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">Reference to the corresponding Project</a>
-      </li>
-      <li>
-         <a href="#hasStage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">Stage this topic is part of (Predefined list).</a>
-      </li>
-      <li>
-         <a href="#hasLabels" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">Tags for grouping Topics. The list of possible values are defined in the extension schema.</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">has Coloring</a>
       </li>
       <li>
          <a href="#hasCommentModifiedAuthor"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">The author who modified the comment</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">has Comment Modified Author</a>
       </li>
       <li>
-         <a href="#hasIfcGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">
-            <span>The IfcGuid of the component</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasIfcElement"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">The link to the linked data Ifc Element.</a>
-      </li>
-      <li>
-         <a href="#hasAssignedTo"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</a>
-      </li>
-      <li>
-         <a href="#hasPriority"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">Topic priority. The list of possible values are defined in the extension schema.</a>
-      </li>
-      <li>
-         <a href="#hasTopicStatus"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">Type of the topic (Predefined list)</a>
-      </li>
-      <li>
-         <a href="#hasTopicType"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">Type of the topic (Predefined list)</a>
-      </li>
-      <li>
-         <a href="#hasExtensionSchema"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">URI to the extension schema.</a>
+         <a href="#hasComponent"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">has Component</a>
       </li>
       <li>
          <a href="#hasCreationAuthor"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">User who created the topic.</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">has Creation Author</a>
+      </li>
+      <li>
+         <a href="#hasException"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">has Exception</a>
+      </li>
+      <li>
+         <a href="#hasExtensionSchema"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">has Extension Schema</a>
+      </li>
+      <li>
+         <a href="#hasIfcElement"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">has Ifc Element</a>
+      </li>
+      <li>
+         <a href="#hasLabels" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">has Label</a>
+      </li>
+      <li>
+         <a href="#hasLines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">has Lines</a>
+      </li>
+      <li>
+         <a href="#hasOriginatingSystem"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">has Originating System</a>
+      </li>
+      <li>
+         <a href="#hasOrthogonalCamera"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">has Orthogonal Camera</a>
+      </li>
+      <li>
+         <a href="#hasPerspectiveCamera"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">has Perspective Camera</a>
+      </li>
+      <li>
+         <a href="#hasPriority"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">has Priority</a>
+      </li>
+      <li>
+         <a href="#hasProject" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">has Project</a>
+      </li>
+      <li>
+         <a href="#hasSelection"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">has Selection</a>
+      </li>
+      <li>
+         <a href="#hasStage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">has Stage</a>
+      </li>
+      <li>
+         <a href="#hasTopic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">has Topic</a>
       </li>
       <li>
          <a href="#hasTopicModifiedAuthor"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">User who modified the topic. Exists only when Topic has been modified after creation.</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">has Topic Modified Author</a>
+      </li>
+      <li>
+         <a href="#hasTopicStatus"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">has Topic Status</a>
+      </li>
+      <li>
+         <a href="#hasTopicType"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">has Topic Type</a>
+      </li>
+      <li>
+         <a href="#hasViewpoint"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">has Viewpoint</a>
       </li>
    </ul>
-   <div class="entity" id="hasTopic">
-      <h3>A link to the relating comment<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasAssignedTo">
+      <h3>has Assigned To<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo</p>
+      <div class="comment">
+         <span class="markdown">The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasViewpoint">
-      <h3>Back reference to the viewpoint<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasAuthor">
+      <h3>has Author<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor</p>
+      <div class="comment">
+         <span class="markdown">Comment author</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasBitmap">
+      <h3>has Bitmap<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Bitmap</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Bitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">Bitmap</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasCameraDirection">
-      <h3>Camera direction<sup class="type-op" title="object property">op</sup>
+      <h3>has Camera Direction<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1157,31 +1215,7 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.opengis.net/ont/geosparql#wktLiteral">wkt literal</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>data property</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasCameraViewPoint">
-      <h3>Camera location<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
+               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1195,7 +1229,7 @@ This section provides details for each class and property defined by BCF 0.7 Ont
       </div>
    </div>
    <div class="entity" id="hasCameraUpVector">
-      <h3>Camera up vector<sup class="type-op" title="object property">op</sup>
+      <h3>has Camera Up Vector<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1205,7 +1239,7 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
+               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1218,378 +1252,23 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasAuthor">
-      <h3>Comment author<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasCameraViewPoint">
+      <h3>has Camera View Point<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
+               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasOriginatingSystem">
-      <h3>Name of the system in which the component is originated<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#OriginatingSystem"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">Software with which the respective element was created</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasBitmap">
-      <h3>Object Property, pointing to the Bitmap<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Bitmap" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">A list of bitmaps can be used to add more information, for example, text in the visualization.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasClippingPlanes">
-      <h3>Object Property, pointing to the Clipping Planes<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#ClippingPlanes"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasColoring">
-      <h3>Object Property, pointing to the Coloring class<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Coloring" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style="color:#40E0D0;";&gt;Turquoise. More information about the color format can be found on Wikipedia.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasException">
-      <h3>Object Property, pointing to the Exception<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasException</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Components to hide/show determined by default_visibility.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasLines">
-      <h3>Object Property, pointing to the Lines<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Lines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasOrthogonalCamera">
-      <h3>Object Property, pointing to the orthogonal camera<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#OrthogonalCamera"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">This element describes a viewpoint using orthogonal camera. </a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasPerspectiveCamera">
-      <h3>Object Property, pointing to the Perspective Camera<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#PerspectiveCamera"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasSelection">
-      <h3>Object Property, pointing to the Selection class<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selected components	</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasComponent">
-      <h3>Pointer to the Component<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Components to hide/show determined by default_visibility.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selected components	</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasProject">
-      <h3>Reference to the corresponding Project<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasStage">
-      <h3>Stage this topic is part of (Predefined list).<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Stage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">To what stage of the project does the Topic relate to?</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasLabels">
-      <h3>Tags for grouping Topics. The list of possible values are defined in the extension schema.<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Label" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">The label is for tagging the Issue to be able to make a better categorization</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasCommentModifiedAuthor">
-      <h3>The author who modified the comment<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasIfcGuid">
-      <h3>The IfcGuid of the component<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#stringe">stringe</span>
+               <span class="dotted" title="http://www.opengis.net/ont/geosparql#wktLiteral">wkt literal</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is also defined as</dt>
@@ -1597,40 +1276,72 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasIfcElement">
-      <h3>The link to the linked data Ifc Element.<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasClippingPlanes">
+      <h3>has Clipping Planes<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Clipping Planes</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/bot#Element">element</span>
+               <a href="#ClippingPlanes"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">Clipping Planes</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasAssignedTo">
-      <h3>The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasColoring">
+      <h3>has Coloring<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Coloring class</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Coloring" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">Coloring</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCommentModifiedAuthor">
+      <h3>has Comment Modified Author<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor</p>
+      <div class="comment">
+         <span class="markdown">The author who modified the comment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1641,120 +1352,49 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasPriority">
-      <h3>Topic priority. The list of possible values are defined in the extension schema.<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasComponent">
+      <h3>has Component<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent</p>
+      <div class="comment">
+         <span class="markdown">Pointer to the Component</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
+               <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Exception</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selection</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Priority" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">Indication of the Priority of an Issue</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasTopicStatus">
-      <h3>Type of the topic (Predefined list)<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#TopicStatus"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">Status of the issue. Is it still active or closed?</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasTopicType">
-      <h3>Type of the topic (Predefined list)<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#TopicType" title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasExtensionSchema">
-      <h3>URI to the extension schema.<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#ExtensionSchema"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">The extension define the mapping of a BCF project.</a>
+               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasCreationAuthor">
-      <h3>User who created the topic.<sup class="type-op" title="object property">op</sup>
+      <h3>has Creation Author<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor</p>
+      <div class="comment">
+         <span class="markdown">User who created the topic.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1765,23 +1405,464 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasException">
+      <h3>has Exception<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasException</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Exception</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Exception" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">Exception</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExtensionSchema">
+      <h3>has Extension Schema<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema</p>
+      <div class="comment">
+         <span class="markdown">URI to the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasIfcElement">
+      <h3>has Ifc Element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement</p>
+      <div class="comment">
+         <span class="markdown">The link to the linked data Ifc Element.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct">ifc product</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="https://w3id.org/bot#Element">element</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLabels">
+      <h3>has Label<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels</p>
+      <div class="comment">
+         <span class="markdown">Tags for grouping Topics. The list of possible values are defined in the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Label" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">Label</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLines">
+      <h3>has Lines<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Lines</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Lines" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">Lines</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOriginatingSystem">
+      <h3>has Originating System<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem</p>
+      <div class="comment">
+         <span class="markdown">Name of the system in which the component is originated</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OriginatingSystem"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">Originating System</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOrthogonalCamera">
+      <h3>has Orthogonal Camera<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the orthogonal camera</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OrthogonalCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">Orthogonal Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPerspectiveCamera">
+      <h3>has Perspective Camera<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Perspective Camera</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PerspectiveCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">Perspective Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPriority">
+      <h3>has Priority<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority</p>
+      <div class="comment">
+         <span class="markdown">Topic priority. The list of possible values are defined in the extension schema.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Priority" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">Priority</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasProject">
+      <h3>has Project<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject</p>
+      <div class="comment">
+         <span class="markdown">Reference to the corresponding Project</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSelection">
+      <h3>has Selection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Selection class</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Selection" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">Selection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStage">
+      <h3>has Stage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage</p>
+      <div class="comment">
+         <span class="markdown">Stage this topic is part of (Predefined list).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Stage" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">Stage</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTopic">
+      <h3>has Topic<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic</p>
+      <div class="comment">
+         <span class="markdown">A link to the relating comment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasTopicModifiedAuthor">
-      <h3>User who modified the topic. Exists only when Topic has been modified after creation.<sup class="type-op" title="object property">op</sup>
+      <h3>has Topic Modified Author<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor</p>
+      <div class="comment">
+         <span class="markdown">User who modified the topic. Exists only when Topic has been modified after creation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTopicStatus">
+      <h3>has Topic Status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus</p>
+      <div class="comment">
+         <span class="markdown">Type of the topic (Predefined list)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TopicStatus"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">Topic Status</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTopicType">
+      <h3>has Topic Type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType</p>
+      <div class="comment">
+         <span class="markdown">Type of the topic (Predefined list)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExtensionSchema"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">Extension Schema</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TopicType" title="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">Topic Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasViewpoint">
+      <h3>has Viewpoint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint</p>
+      <div class="comment">
+         <span class="markdown">Back reference to the viewpoint</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1791,98 +1872,103 @@ This section provides details for each class and property defined by BCF 0.7 Ont
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasFieldOfView"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">Camera's field of view angle in degrees.</a>
-      </li>
-      <li>
-         <a href="#hasCommentDate"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">Date of the comment</a>
-      </li>
-      <li>
-         <a href="#hasDueDate" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">Date until when the topics issue needs to be resolved.</a>
-      </li>
-      <li>
-         <a href="#hasCreationDate"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">Date when the topic was created.</a>
-      </li>
-      <li>
-         <a href="#hasTopicModifiedDate"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">Date when the topic was last modified. Exists only when Topic has been modified after creation.</a>
-      </li>
-      <li>
-         <a href="#hasDescription"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">Description of the topic.</a>
-      </li>
-      <li>
-         <a href="#hasProjectId"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">GUID of the Project</a>
-      </li>
-      <li>
-         <a href="#hasName" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">Name of the project.</a>
+         <a href="#hasAspectRatio"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">has Aspect Ratio</a>
       </li>
       <li>
          <a href="#hasAuthoringToolId"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">Name of the system in which the component is originated</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">has Authoring Tool Id</a>
       </li>
       <li>
-         <a href="#hasIndex" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">Number to maintain the order of the topics.</a>
-      </li>
-      <li>
-         <a href="#hasDefaulVisibility"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">Object Property, pointing to the Default Visibility</a>
-      </li>
-      <li>
-         <a href="#OpeningsVisible"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/OpeningsVisible">Object Property, pointing to the Openings Visible class</a>
-      </li>
-      <li>
-         <a href="#SpaceBoundariesVisible"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/SpaceBoundariesVisible">Object Property, pointing to the Space Boundaries Visible class</a>
-      </li>
-      <li>
-         <a href="#SpacesVisible"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/SpacesVisible">Object Property, pointing to the Spaces Visible class</a>
-      </li>
-      <li>
-         <a href="#hasGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid">ProjectId of the project</a>
-      </li>
-      <li>
-         <a href="#hasViewToWorldScale"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">Proportion of camera view to model</a>
-      </li>
-      <li>
-         <a href="#hasAspectRatio"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">Proportional relationship between the width and the height of the view (w/h)</a>
-      </li>
-      <li>
-         <a href="#hasCommentText"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">The comment text</a>
+         <a href="#hasCommentDate"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">has Comment Date</a>
       </li>
       <li>
          <a href="#hasCommentModifiedDate"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">The date when comment was modified</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">has Comment Modified Date</a>
+      </li>
+      <li>
+         <a href="#hasCommentText"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">has Comment Text</a>
+      </li>
+      <li>
+         <a href="#hasCreationDate"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">has Creation Date</a>
+      </li>
+      <li>
+         <a href="#hasDefaulVisibility"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">has Default Visibility</a>
+      </li>
+      <li>
+         <a href="#hasDescription"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">has Description</a>
+      </li>
+      <li>
+         <a href="#hasDueDate" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">has Due Date</a>
+      </li>
+      <li>
+         <a href="#hasGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid">has GUID</a>
+      </li>
+      <li>
+         <a href="#hasIfcGuid" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">has Ifc Guid</a>
+      </li>
+      <li>
+         <a href="#hasIndex" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">has Index</a>
+      </li>
+      <li>
+         <a href="#hasName" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">has Name</a>
+      </li>
+      <li>
+         <a href="#hasProjectId"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">has Project ID</a>
       </li>
       <li>
          <a href="#hasSnapshot"
-            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">The URL of the snapshot(.png)</a>
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">has Snapshot</a>
       </li>
       <li>
-         <a href="#hasTitle" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">Title of the topic.</a>
+         <a href="#hasTitle" title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">has Title</a>
+      </li>
+      <li>
+         <a href="#hasTopicModifiedDate"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">has Topic Modified Date</a>
+      </li>
+      <li>
+         <a href="#hasFieldOfView"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">has Vield Of View</a>
+      </li>
+      <li>
+         <a href="#hasViewToWorldScale"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">has View To World Scale</a>
+      </li>
+      <li>
+         <a href="#openingsVisible"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible">openings Visible</a>
+      </li>
+      <li>
+         <a href="#spaceBoundariesVisible"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible">space Boundaries Visible</a>
+      </li>
+      <li>
+         <a href="#spacesVisible"
+            title="http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible">spaces Visible</a>
       </li>
    </ul>
-   <div class="entity" id="hasFieldOfView">
-      <h3>Camera's field of view angle in degrees.<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasAspectRatio">
+      <h3>has Aspect Ratio<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView</p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio</p>
+      <div class="comment">
+         <span class="markdown">Proportional relationship between the width and the height of the view (w/h)</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#PerspectiveCamera"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">This element describes a viewpoint using perspective camera.</a>
+               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1892,165 +1978,246 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasCommentDate">
-      <h3>Date of the comment<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasDueDate">
-      <h3>Date until when the topics issue needs to be resolved.<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasCreationDate">
-      <h3>Date when the topic was created.<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasTopicModifiedDate">
-      <h3>Date when the topic was last modified. Exists only when Topic has been modified after creation.<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasDescription">
-      <h3>Description of the topic.<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasProjectId">
-      <h3>GUID of the Project<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasName">
-      <h3>Name of the project.<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasName</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasAuthoringToolId">
-      <h3>Name of the system in which the component is originated<sup class="type-dp" title="data property">dp</sup>
+      <h3>has Authoring Tool Id<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId</p>
+      <div class="comment">
+         <span class="markdown">Name of the system in which the component is originated</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">A component that links to a building element.</a>
+               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCommentDate">
+      <h3>has Comment Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate</p>
+      <div class="comment">
+         <span class="markdown">Date of the comment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCommentModifiedDate">
+      <h3>has Comment Modified Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate</p>
+      <div class="comment">
+         <span class="markdown">The date when comment was modified</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCommentText">
+      <h3>has Comment Text<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText</p>
+      <div class="comment">
+         <span class="markdown">The comment text</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCreationDate">
+      <h3>has Creation Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate</p>
+      <div class="comment">
+         <span class="markdown">Date when the topic was created.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDefaulVisibility">
+      <h3>has Default Visibility<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Default Visibility</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDescription">
+      <h3>has Description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription</p>
+      <div class="comment">
+         <span class="markdown">Description of the topic.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDueDate">
+      <h3>has Due Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate</p>
+      <div class="comment">
+         <span class="markdown">Date until when the topics issue needs to be resolved.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasGuid">
+      <h3>has GUID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid</p>
+      <div class="comment">
+         <span class="markdown">The GUID of the resource</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">Comment</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasIfcGuid">
+      <h3>has Ifc Guid<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid</p>
+      <div class="comment">
+         <span class="markdown">The IfcGuid of the component</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Component" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">Component</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2061,17 +2228,20 @@ This section provides details for each class and property defined by BCF 0.7 Ont
       </div>
    </div>
    <div class="entity" id="hasIndex">
-      <h3>Number to maintain the order of the topics.<sup class="type-dp" title="data property">dp</sup>
+      <h3>has Index<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex</p>
+      <div class="comment">
+         <span class="markdown">Number to maintain the order of the topics.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2081,111 +2251,21 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasDefaulVisibility">
-      <h3>Object Property, pointing to the Default Visibility<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasName">
+      <h3>has Name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasName</p>
+      <div class="comment">
+         <span class="markdown">Name of the project.</span>
       </div>
-   </div>
-   <div class="entity" id="OpeningsVisible">
-      <h3>Object Property, pointing to the Openings Visible class<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/OpeningsVisible</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="SpaceBoundariesVisible">
-      <h3>Object Property, pointing to the Space Boundaries Visible class<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/SpaceBoundariesVisible</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="SpacesVisible">
-      <h3>Object Property, pointing to the Spaces Visible class<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/SpacesVisible</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasGuid">
-      <h3>ProjectId of the project<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">The project contains reference information about the project the topics belong to.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
+               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2195,103 +2275,45 @@ This section provides details for each class and property defined by BCF 0.7 Ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasViewToWorldScale">
-      <h3>Proportion of camera view to model<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasProjectId">
+      <h3>has Project ID<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#OrthogonalCamera"
-                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">This element describes a viewpoint using orthogonal camera. </a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
-            </dd>
-         </dl>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId</p>
+      <div class="comment">
+         <span class="markdown">GUID of the Project</span>
       </div>
-   </div>
-   <div class="entity" id="hasAspectRatio">
-      <h3>Proportional relationship between the width and the height of the view (w/h)<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Camera" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">Camera View</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasCommentText">
-      <h3>The comment text<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
+               <a href="#Project" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasCommentModifiedDate">
-      <h3>The date when comment was modified<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Comment" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely.</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasSnapshot">
-      <h3>The URL of the snapshot(.png)<sup class="type-dp" title="data property">dp</sup>
+      <h3>has Snapshot<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot</p>
+      <div class="comment">
+         <span class="markdown">The URL of the snapshot(.png)</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely.</a>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2302,22 +2324,171 @@ This section provides details for each class and property defined by BCF 0.7 Ont
       </div>
    </div>
    <div class="entity" id="hasTitle">
-      <h3>Title of the topic.<sup class="type-dp" title="data property">dp</sup>
+      <h3>has Title<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle</p>
+      <div class="comment">
+         <span class="markdown">Title of the topic.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.</a>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTopicModifiedDate">
+      <h3>has Topic Modified Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate</p>
+      <div class="comment">
+         <span class="markdown">Date when the topic was last modified. Exists only when Topic has been modified after creation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFieldOfView">
+      <h3>has Vield Of View<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView</p>
+      <div class="comment">
+         <span class="markdown">Camera's field of view angle in degrees.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PerspectiveCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">Perspective Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasViewToWorldScale">
+      <h3>has View To World Scale<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale</p>
+      <div class="comment">
+         <span class="markdown">Proportion of camera view to model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OrthogonalCamera"
+                  title="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">Orthogonal Camera</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="openingsVisible">
+      <h3>openings Visible<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Openings Visible class</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="spaceBoundariesVisible">
+      <h3>space Boundaries Visible<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Space Boundaries Visible class</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="spacesVisible">
+      <h3>spaces Visible<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible</p>
+      <div class="comment">
+         <span class="markdown">Object Property, pointing to the Spaces Visible class</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Viewpoint" title="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">Viewpoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
             </dd>
          </dl>
       </div>

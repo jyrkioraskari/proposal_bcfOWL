@@ -3,7 +3,6 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix geo: 	<http://www.opengis.net/ont/geosparql#> .
-@prefix bot:   <https://w3id.org/bot#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
@@ -14,20 +13,18 @@
 dcterms:title a owl:AnnotationProperty .
 dcterms:description a owl:AnnotationProperty .
 dcterms:creator a owl:AnnotationProperty .
-dcterms:license a owl:AnnotationProperty .
 vann:prefferedNamespacePrefix a owl:AnnotationProperty .
 vann:prefferedNamespaceURI a owl:AnnotationProperty .
 
 
 <http://lbd.arch.rwth-aachen.de/bcfOWL/>  rdf:type owl:Ontology ;
-                                          owl:versionInfo "0.32" ;
+                                          owl:versionInfo "0.4" ;
                                           owl:versionIRI <http://lbd.arch.rwth-aachen.de/bcfOWL/0.1/> ;
                                           dcterms:title "BIM collaboration Format Ontology" ;
                                           dcterms:description "BCF 2.1 Ontology Description based on https://github.com/buildingSMART/BCF-XML" ;
                                           dcterms:creator "Jyrki Oraskai" ;
                                           dcterms:creator "Oliver Schulz" ;
                                           dcterms:creator "Jakob Beetz" ;
-                                          dcterms:license "https://creativecommons.org/licenses/by/4.0/" ;
                                           vann:prefferedNamespacePrefix "bcfOWL" ;
                                           vann:prefferedNamespaceURI "http://lbd.arch.rwth-aachen.de/bcfOWL/" .
 
@@ -36,73 +33,71 @@ vann:prefferedNamespaceURI a owl:AnnotationProperty .
 
 bcfOWL:hasGuid
         a             owl:DatatypeProperty ;
-        rdfs:label  "ProjectId of the project"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:Project bcfOWL:Topic bcfOWL:Comment bcfOWL:Viewpoint  )
-                      ] ;
+        rdfs:comment  "ProjectId of the project"@en ;
+        rdfs:domain   bcfOWL:Project, bcfOWL:Topic, bcfOWL:Comment, bcfOWL:Viewpoint ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasTopic
         a             owl:ObjectProperty ;
-        rdfs:label  "A link to the relating comment"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment )
-                      ] ;
+        rdfs:comment  "A link to the relating comment"@en ;
+        rdfs:domain   bcfOWL:Viewpoint, bcfOWL:Comment ;
         rdfs:range    bcfOWL:Topic .
 
 #### Project ####
 
 bcfOWL:Project
         a                owl:Class ;
-        rdfs:label     "The project contains reference information about the project the topics belong to."@en ;
+        rdfs:comment     "The project contains reference information about the project the topics belong to."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasExtensionSchema
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasName
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasProjectId
                          ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "0"^^xsd:int ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasProjectId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasGuid
                          ] .
 
 bcfOWL:hasExtensionSchema
         a             owl:ObjectProperty ;
-        rdfs:label  "URI to the extension schema."@en ;
+        rdfs:comment  "URI to the extension schema."@en ;
         rdfs:domain   bcfOWL:Project ;
         rdfs:range    bcfOWL:ExtensionSchema .
 
 bcfOWL:hasName
         a             owl:DatatypeProperty ;
-        rdfs:label  "Name of the project."@en ;
+        rdfs:comment  "Name of the project."@en ;
         rdfs:domain   bcfOWL:Project ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasProjectId
         a             owl:DatatypeProperty ;
-        rdfs:label  "GUID of the Project"@en ;
+        rdfs:comment  "GUID of the Project"@en ;
         rdfs:domain   bcfOWL:Project ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasProject
         a             owl:ObjectProperty ;
-        rdfs:label  "Reference to the corresponding Project"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment bcfOWL:Topic )
-                      ] ;
+        rdfs:comment  "Reference to the corresponding Project"@en ;
+        rdfs:domain   bcfOWL:Viewpoint, bcfOWL:Topic, bcfOWL:Comment ;
         rdfs:range    bcfOWL:Project .
 
 #### Extensions ####
 
 bcfOWL:ExtensionSchema
         a                owl:Class ;
-        rdfs:label     "The extension define the mapping of a BCF project."@en ;
+        rdfs:comment     "The extension define the mapping of a BCF project."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasTopicType
@@ -112,11 +107,11 @@ bcfOWL:ExtensionSchema
                            owl:onProperty      bcfOWL:hasTopicStatus
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasLabels
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasPriority
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
@@ -124,76 +119,64 @@ bcfOWL:ExtensionSchema
                            owl:onProperty      bcfOWL:hasAuthor
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasStage
                          ] .
 
 bcfOWL:TopicType
         a                owl:Class ;
-        rdfs:label       "The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc."@en .
+        rdfs:comment     "The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc."@en .
 
 bcfOWL:TopicStatus
         a                owl:Class ;
-        rdfs:label     "Status of the issue. Is it still active or closed?"@en .                       
+        rdfs:comment     "Status of the issue. Is it still active or closed?"@en .                       
 
 bcfOWL:Label
         a                owl:Class ;
-        rdfs:label     "The label is for tagging the Issue to be able to make a better categorization"@en .               
+        rdfs:comment     "The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc."@en .               
 
 bcfOWL:Priority
         a                owl:Class ;
-        rdfs:label     "Indication of the Priority of an Issue"@en .
+        rdfs:comment     "Indication of the Priority of an Issue"@en .
 
 bcfOWL:Stage
         a                owl:Class ;
-        rdfs:label     "To what stage of the project does the Topic relate to?"@en .                        
+        rdfs:comment     "To what stage of the project does the Topic relate to?"@en .                        
 
 bcfOWL:hasTopicType
         a             owl:ObjectProperty ;
-        rdfs:label    "Type of the topic (Predefined list)"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
-                      ] ;
+        rdfs:comment  "Type of the topic (Predefined list)"@en ;
+        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
         rdfs:range    bcfOWL:TopicType .
 
 bcfOWL:hasTopicStatus
         a             owl:ObjectProperty ;
-        rdfs:label  "Type of the topic (Predefined list)"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
-                      ] ;
+        rdfs:comment  "Type of the topic (Predefined list)"@en ;
+        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
         rdfs:range    bcfOWL:TopicStatus .
 
 bcfOWL:hasLabels
         a             owl:ObjectProperty ;
-        rdfs:label  "Tags for grouping Topics. The list of possible values are defined in the extension schema."@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
-                      ] ;
+        rdfs:comment  "Tags for grouping Topics. The list of possible values are defined in the extension schema."@en ;
+        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
         rdfs:range    bcfOWL:Label .
 
 bcfOWL:hasPriority
         a             owl:ObjectProperty ;
-        rdfs:label  "Topic priority. The list of possible values are defined in the extension schema."@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
-                      ] ;
+        rdfs:comment  "Topic priority. The list of possible values are defined in the extension schema."@en ;
+        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
         rdfs:range    bcfOWL:Priority .
 
 bcfOWL:hasAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "Comment author"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Comment )
-                      ] ;
+        rdfs:comment  "Comment author"@en ;
+        rdfs:domain   bcfOWL:Comment, bcfOWL:ExtensionSchema ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasStage
         a             owl:ObjectProperty ;
-        rdfs:label  "Stage this topic is part of (Predefined list)."@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:ExtensionSchema bcfOWL:Topic )
-                      ] ;
+        rdfs:comment  "Stage this topic is part of (Predefined list)."@en ;
+        rdfs:domain   bcfOWL:Topic, bcfOWL:ExtensionSchema ;
         rdfs:range    bcfOWL:Stage .
 
 #### Topic ####
@@ -201,11 +184,15 @@ bcfOWL:hasStage
 
 bcfOWL:Topic
         a                owl:Class ;
-        rdfs:label     "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en ;
+        rdfs:comment     "Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasTitle
-                         ] ;                       
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasTitle
+                         ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasIndex
@@ -224,11 +211,11 @@ bcfOWL:Topic
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasTopicModifiedAuthor
+                           owl:onProperty      bcfOWL:hasTopic_ModifiedAuthor
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasTopicModifiedAuthor
+                           owl:onProperty      bcfOWL:hasTopic_ModifiedAuthor
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
@@ -239,9 +226,13 @@ bcfOWL:Topic
                            owl:onProperty      bcfOWL:hasDescription
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCreationAuthor
-                         ] ;                       
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasCreationAuthor
+                         ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasTopicStatus
@@ -271,7 +262,11 @@ bcfOWL:Topic
                            owl:onProperty      bcfOWL:hasStage
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasCreationDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCreationDate
                          ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
@@ -283,16 +278,20 @@ bcfOWL:Topic
                            owl:onProperty      bcfOWL:hasTopicType
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasGuid
-                         ] ;             
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasGuid
+                         ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasTopicModifiedDate
+                           owl:onProperty      bcfOWL:hasTopic_ModifiedDate
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasTopicModifiedDate
+                           owl:onProperty      bcfOWL:hasTopic_ModifiedDate
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
@@ -305,55 +304,55 @@ bcfOWL:Topic
 
 bcfOWL:hasTitle
         a             owl:DatatypeProperty ;
-        rdfs:label  "Title of the topic."@en ;
+        rdfs:comment  "Title of the topic."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasIndex
         a             owl:DatatypeProperty ;
-        rdfs:label  "Parameter for sorting"@en , "Number to maintain the order of the topics."@en ;
+        rdfs:comment  "Parameter for sorting"@en , "Number to maintain the order of the topics."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:integer .
-#TODO: We can make AssignedTo, ModifiedAuthor etc to subproperties of hasAuthor
+
 bcfOWL:hasAssignedTo
         a             owl:ObjectProperty ;
-        rdfs:label  "The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en ;
+        rdfs:comment  "\tThe user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    foaf:Person .
 
-bcfOWL:hasTopicModifiedAuthor
+bcfOWL:hasTopic_ModifiedAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "User who modified the topic. Exists only when Topic has been modified after creation."@en ;
+        rdfs:comment  "User who modified the topic. Exists only when Topic has been modified after creation."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasDescription
         a             owl:DatatypeProperty ;
-        rdfs:label  "Description of the topic."@en ;
+        rdfs:comment  "Description of the topic."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasCreationAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "User who created the topic."@en ;
+        rdfs:comment  "User who created the topic."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    foaf:Person .
 
 bcfOWL:hasCreationDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date when the topic was created."@en ;
+        rdfs:comment  "Date when the topic was created."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:dateTime .
 
-bcfOWL:hasTopicModifiedDate
+bcfOWL:hasTopic_ModifiedDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date when the topic was last modified. Exists only when Topic has been modified after creation."@en ;
+        rdfs:comment  "Date when the topic was last modified. Exists only when Topic has been modified after creation."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:dateTime .
 
 bcfOWL:hasDueDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date until when the topics issue needs to be resolved."@en ;
+        rdfs:comment  "Date until when the topics issue needs to be resolved."@en ;
         rdfs:domain   bcfOWL:Topic ;
         rdfs:range    xsd:dateTime .
 
@@ -363,79 +362,81 @@ bcfOWL:hasDueDate
 
 bcfOWL:Comment
         a                owl:Class ;
-        rdfs:label     "The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely."@en ;
+        rdfs:comment     "The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCommentDate
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCommentText
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasCommentModifiedAuthor
+                           owl:onProperty      bcfOWL:hasComment_ModifiedAuthor
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasCommentModifiedAuthor
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasAuthor
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasCommentModifiedDate
+                           owl:onProperty      bcfOWL:hasComment_ModifiedDate
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasCommentModifiedDate
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasTopic
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasProject
+                           owl:onProperty      bcfOWL:hasCommentText
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasViewpoint
+                           owl:onProperty      bcfOWL:hasTopic
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasTopic
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasProject
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasProject
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasCommentDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasViewpoint
                          ] .
 
 bcfOWL:hasCommentText
         a             owl:DatatypeProperty ;
-        rdfs:label  "The comment text"@en ;
+        rdfs:comment  "The comment text"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    xsd:string .
 
-bcfOWL:hasCommentModifiedAuthor
+bcfOWL:hasComment_ModifiedAuthor
         a             owl:ObjectProperty ;
-        rdfs:label  "The author who modified the comment"@en ;
-        rdfs:domain   bcfOWL:Comment ;
-        rdfs:range    foaf:Person .
+        rdfs:comment  "The author who modified the comment"@en ;
+        rdfs:domain   bcfOWL:Comment .
 
 bcfOWL:hasCommentDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "Date of the comment"@en ;
+        rdfs:comment  "Date of the comment"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    xsd:dateTime .
 
 bcfOWL:hasViewpoint
         a             owl:ObjectProperty ;
-        rdfs:label  "The viewpoint "@en , "Back reference to the viewpoint"@en ;
-        rdfs:domain   bcfOWL:Comment ;
-        rdfs:range    bcfOWL:Viewpoint .
+        rdfs:comment  "The viewpoint "@en , "Back reference to the viewpoint"@en ;
+        rdfs:domain   bcfOWL:Viewpoint , bcfOWL:Comment .
 
-bcfOWL:hasCommentModifiedDate
+bcfOWL:hasComment_ModifiedDate
         a             owl:DatatypeProperty ;
-        rdfs:label  "The date when comment was modified"@en ;
+        rdfs:comment  "The date when comment was modified"@en ;
         rdfs:domain   bcfOWL:Comment ;
         rdfs:range    xsd:dateTime .
 
@@ -443,17 +444,29 @@ bcfOWL:hasCommentModifiedDate
 
 bcfOWL:Viewpoint
         a                owl:Class ;
-        rdfs:label     "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en ;                        
+        rdfs:comment     "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en ;                        
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasGuid
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasGuid
+                         ] ;                         
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasTopic
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasTopic
+                         ] ;                         
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasProject
                          ] ; 
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasTopic
-                         ] ;               
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasProject
                          ] ;                           
         rdfs:subClassOf  [ a                   owl:Restriction ;
@@ -481,9 +494,13 @@ bcfOWL:Viewpoint
                            owl:onProperty      bcfOWL:hasSelection
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasDefaulVisibility
-                         ] ;                            
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:hasDefaulVisibility
+                         ] ;                             
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasException
@@ -493,289 +510,274 @@ bcfOWL:Viewpoint
                            owl:onProperty      bcfOWL:hasException
                          ] ; 
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:SpacesVisible
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:SpacesVisible
                          ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:SpaceBoundariesVisible
-                         ] ;                       
+                         ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:SpaceBoundariesVisible
+                         ] ;                         
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:OpeningsVisible
-                         ] ;         
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
-                           owl:onProperty      bcfOWL:hasColoring
-                         ] ;                                                                                                                                                                     
+                         ] ;   
+         rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality     "1"^^xsd:int ;
+                           owl:onProperty      bcfOWL:OpeningsVisible
+                         ] ;                                                                                                                                                           
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasSnapshot
                          ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:minCardinality  "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasSnapshot
                          ] .
 
 bcfOWL:Component
         a       owl:Class ;
-        rdfs:label      "A component that links to a building element." ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasIfcElement
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasIfcElement
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasIfcGuid
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasIfcGuid
                          ] ;                         
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasOriginatingSystem
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasOriginatingSystem
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasAuthoringToolId
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:int ;
+                           owl:maxCardinality     "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasAuthoringToolId
                          ] .
 
 bcfOWL:Selection
-        a                owl:Class ;
-        rdfs:label       "Selected components	"@en ;
+        a             owl:Class ;
+        rdfs:comment  "The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasComponent
-                         ] .       
-
+                         ] .                                                                                                                                                          
 #TODO: Subclass exceptions and selections?
 bcfOWL:Exception
         a             owl:Class ;
-        rdfs:label  "Components to hide/show determined by default_visibility."@en ;
+        rdfs:comment  "The Selection element lists all components that should be either highlighted or selected when displaying a viewpoint."@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:minCardinality  "0"^^xsd:int ;
+                           owl:minCardinality     "0"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasComponent
                          ] .  
 
 bcfOWL:hasBitmap
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Bitmap"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Bitmap .
 
 bcfOWL:hasException
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Exception"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Exception .
 
 bcfOWL:hasDefaulVisibility
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Default Visibility"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .
 
 bcfOWL:SpacesVisible
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Spaces Visible class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .
 
 bcfOWL:SpaceBoundariesVisible
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Space Boundaries Visible class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .  
 
 bcfOWL:OpeningsVisible
         a            owl:DatatypeProperty ;
-        rdfs:label   "Object Property, pointing to the Openings Visible class"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   xsd:boolean .
 
 bcfOWL:ClippingPlanes
-        a            owl:Class ;
-        rdfs:label   "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en .
+        a             owl:Class ;
+        rdfs:comment  "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en .
 
 bcfOWL:Lines
-        a            owl:Class ;
-        rdfs:label   "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en .
+        a             owl:Class ;
+        rdfs:comment  "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en .
 
 bcfOWL:Coloring
-        a            owl:Class ;
-        rdfs:label   "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en .
+        a             owl:Class ;
+        rdfs:comment  "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en .
 
 bcfOWL:hasIfcGuid
         a             owl:DatatypeProperty ;
-        rdfs:label    "The IfcGuid of the component"@en ;
+        rdfs:comment  "The IfcGuid of the component"@en ;
         rdfs:domain   bcfOWL:Component ;
-        rdfs:range    xsd:stringe .
+        rdfs:range    xsd:string .
 
 bcfOWL:hasClippingPlanes
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Clipping Planes"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:ClippingPlanes .
 
 bcfOWL:hasLines
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Lines"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Lines .
 
 bcfOWL:hasIfcElement
         a            owl:ObjectProperty ;
-        rdfs:label   "The link to the linked data Ifc Element."@en ;
-        rdfs:domain  bcfOWL:Component ;
-        rdfs:range   bot:Element .
+        rdfs:domain  bcfOWL:Component .
 #TODO: Should we add ifcOWL or BOT as range here?
 
 bcfOWL:hasAuthoringToolId
         a             owl:DatatypeProperty ;
-        rdfs:label  "Name of the system in which the component is originated"@en ;
+        rdfs:comment  "Name of the system in which the component is originated"@en ;
         rdfs:domain   bcfOWL:Component ;
         rdfs:range    xsd:string .
 
 bcfOWL:hasOrthogonalCamera
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the orthogonal camera"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:OrthogonalCamera .
 
 bcfOWL:hasPerspectiveCamera
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Perspective Camera"@en ;
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:PerspectiveCamera .
 
 bcfOWL:hasSnapshot
-        a             owl:DatatypeProperty ;
-        rdfs:label    "The URL of the snapshot(.png)"@en ;
-        rdfs:domain   bcfOWL:Viewpoint ;
-        rdfs:range    xsd:anyURI .   
+        a             owl:ObjectProperty ;
+        rdfs:comment  "The URL of the snapshot(.png)"@en ;
+        rdfs:domain   bcfOWL:Viewpoint .
 
 bcfOWL:hasColoring
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Coloring class"@en ;
-        rdfs:domain  bcfOWL:Viewpoint ;
+        rdfs:domain  bcfOWL:Components ;
         rdfs:range   bcfOWL:Coloring .
 
 bcfOWL:hasComponent
         a            owl:ObjectProperty ;
-        rdfs:label   "Pointer to the Component"@en ;
-        rdfs:domain   [ a            owl:Class ;
-                                  owl:unionOf  ( bcfOWL:Selection bcfOWL:Exception )
-                      ] ;
+        rdfs:domain  bcfOWL:Selection, bcfOWL:Exception ;
         rdfs:range   bcfOWL:Component .
 
 bcfOWL:hasOriginatingSystem
-        a            owl:ObjectProperty ;
-        rdfs:label   "Name of the system in which the component is originated"@en ;
-        rdfs:domain  bcfOWL:Component ;
-        rdfs:range   bcfOWL:OriginatingSystem .
+        a             owl:ObjectProperty ;
+        rdfs:comment  "Name of the system in which the component is originated"@en ;
+        rdfs:domain   bcfOWL:Component ;
+        rdfs:range    bcfOWL:OriginatingSystem .
 
 bcfOWL:OriginatingSystem
-        a            owl:Class ;
-        rdfs:label   "Software with which the respective element was created"@en .
+        a             owl:Class ;
+        rdfs:comment  "Software with which the respective element was created"@en .
 
 bcfOWL:Bitmap
         a             owl:Class ;
-        rdfs:label  "A list of bitmaps can be used to add more information, for example, text in the visualization."@en .
+        rdfs:comment  "A list of bitmaps can be used to add more information, for example, text in the visualization."@en .
 
 bcfOWL:hasSelection
         a            owl:ObjectProperty ;
-        rdfs:label   "Object Property, pointing to the Selection class"@en ;
-        rdfs:domain  bcfOWL:Component ;
+        rdfs:domain  bcfOWL:Components ;
         rdfs:range   bcfOWL:Selection .
+
+bcfOWL:Components
+        a             owl:Class ;
+        rdfs:comment  "The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint."@en .
 
 #### Cameras ####
 
 bcfOWL:Camera
         a                owl:Class ;
-        rdfs:label       "Camera View"@en ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality  "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCameraUpVector
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality  "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCameraDirection
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality  "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasCameraViewPoint
                          ] .
 
 bcfOWL:OrthogonalCamera
         a                owl:Class ;
-        rdfs:label       "This element describes a viewpoint using orthogonal camera. "@en ;
-        owl:disjointWith bcfOWL:PerspectiveCamera ;
+        rdfs:comment     "This element describes a viewpoint using orthogonal camera. "@en ;
         rdfs:subClassOf  bcfOWL:Camera ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasViewToWorldScale
                          ] .
 
 bcfOWL:PerspectiveCamera
         a                owl:Class ;
-        rdfs:label       "This element describes a viewpoint using perspective camera."@en ;
-        owl:disjointWith bcfOWL:OrthogoanlCamera ;
+        rdfs:comment     "This element describes a viewpoint using perspective camera."@en ;
         rdfs:subClassOf  bcfOWL:Camera ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:cardinality     "1"^^xsd:int ;
+                           owl:minCardinality  "1"^^xsd:int ;
                            owl:onProperty      bcfOWL:hasFieldOfView
                          ] .
 
 bcfOWL:hasFieldOfView
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera's field of view angle in degrees."@en ;
+        rdfs:comment  "Camera's field of view angle in degrees."@en ;
         rdfs:domain   bcfOWL:PerspectiveCamera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasViewToWorldScale
         a             owl:DatatypeProperty ;
-        rdfs:label    "Proportion of camera view to model"@en ;
+        rdfs:comment  "Proportion of camera view to model"@en ;
         rdfs:domain   bcfOWL:OrthogonalCamera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasAspectRatio
         a             owl:DatatypeProperty ;
-        rdfs:label    "Proportional relationship between the width and the height of the view (w/h)"@en ;
+        rdfs:comment  "Proportional relationship between the width and the height of the view (w/h)"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    xsd:double .
 
 bcfOWL:hasCameraUpVector
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera up vector"@en ;
+        rdfs:comment  "Camera up vector"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 
 bcfOWL:hasCameraDirection
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera direction"@en ;
+        rdfs:comment  "Camera direction"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 
 bcfOWL:hasCameraViewPoint
         a             owl:DatatypeProperty ;
-        rdfs:label    "Camera location"@en ;
+        rdfs:comment  "Camera location"@en ;
         rdfs:domain   bcfOWL:Camera ;
         rdfs:range    geo:wktLiteral .
 

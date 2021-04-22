@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://lbd.arch.rwth-aachen.de/bcfOWL/"
-     xml:base="http://lbd.arch.rwth-aachen.de/bcfOWL/"
+<rdf:RDF xmlns="http://lbd.arch.rwth-aachen.de/bcfOWL#"
+     xml:base="http://lbd.arch.rwth-aachen.de/bcfOWL"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,8 +8,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/">
-        <owl:versionIRI rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/"/>
+    <owl:Ontology rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#">
+        <owl:versionIRI rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#"/>
         <terms:creator>Jakob Beetz</terms:creator>
         <terms:creator>Jyrki Oraskai</terms:creator>
         <terms:creator>Oliver Schulz</terms:creator>
@@ -17,7 +17,7 @@
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
         <terms:title>BIM collaboration Format Ontology</terms:title>
         <vann:prefferedNamespacePrefix>bcfOWL</vann:prefferedNamespacePrefix>
-        <vann:prefferedNamespaceURI>http://lbd.arch.rwth-aachen.de/bcfOWL/</vann:prefferedNamespaceURI>
+        <vann:prefferedNamespaceURI>http://lbd.arch.rwth-aachen.de/bcfOWL#</vann:prefferedNamespaceURI>
         <owl:versionInfo>0.7.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -89,11 +89,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.</rdfs:comment>
         <rdfs:label xml:lang="en">has Assigned To</rdfs:label>
@@ -101,15 +101,15 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -120,77 +120,77 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Bitmap"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Bitmap</rdfs:comment>
         <rdfs:label xml:lang="en">has Bitmap</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#ClippingPlanes"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Clipping Planes</rdfs:comment>
         <rdfs:label xml:lang="en">has Clipping Planes</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Coloring"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Coloring class</rdfs:comment>
         <rdfs:label xml:lang="en">has Coloring</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">The author who modified the comment</rdfs:comment>
         <rdfs:label xml:lang="en">has Comment Modified Author</rdfs:label>
@@ -198,30 +198,30 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Exception"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Selection"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Component"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Component"/>
         <rdfs:comment xml:lang="en">Pointer to the Component</rdfs:comment>
         <rdfs:label xml:lang="en">has Component</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">User who created the topic.</rdfs:comment>
         <rdfs:label xml:lang="en">has Creation Author</rdfs:label>
@@ -229,35 +229,35 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasException -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasException -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasException">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Exception"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Exception</rdfs:comment>
         <rdfs:label xml:lang="en">has Exception</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Project"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Project"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
         <rdfs:comment xml:lang="en">URI to the extension schema.</rdfs:comment>
         <rdfs:label xml:lang="en">has Extension Schema</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Component"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Component"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -272,167 +272,167 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Label"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Label"/>
         <rdfs:comment xml:lang="en">Tags for grouping Topics. The list of possible values are defined in the extension schema.</rdfs:comment>
         <rdfs:label xml:lang="en">has Label</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Lines"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Lines</rdfs:comment>
         <rdfs:label xml:lang="en">has Lines</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Component"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Component"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#OriginatingSystem"/>
         <rdfs:comment xml:lang="en">Name of the system in which the component is originated</rdfs:comment>
         <rdfs:label xml:lang="en">has Originating System</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the orthogonal camera</rdfs:comment>
         <rdfs:label xml:lang="en">has Orthogonal Camera</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Perspective Camera</rdfs:comment>
         <rdfs:label xml:lang="en">has Perspective Camera</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Priority"/>
         <rdfs:comment xml:lang="en">Topic priority. The list of possible values are defined in the extension schema.</rdfs:comment>
         <rdfs:label xml:lang="en">has Priority</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Project"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Project"/>
         <rdfs:comment xml:lang="en">Reference to the corresponding Project</rdfs:comment>
         <rdfs:label xml:lang="en">has Project</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Selection"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Selection class</rdfs:comment>
         <rdfs:label xml:lang="en">has Selection</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Stage"/>
         <rdfs:comment xml:lang="en">Stage this topic is part of (Predefined list).</rdfs:comment>
         <rdfs:label xml:lang="en">has Stage</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:comment xml:lang="en">A link to the relating comment</rdfs:comment>
         <rdfs:label xml:lang="en">has Topic</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">User who modified the topic. Exists only when Topic has been modified after creation.</rdfs:comment>
         <rdfs:label xml:lang="en">has Topic Modified Author</rdfs:label>
@@ -440,50 +440,50 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#TopicStatus"/>
         <rdfs:comment xml:lang="en">Type of the topic (Predefined list)</rdfs:comment>
         <rdfs:label xml:lang="en">has Topic Status</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType">
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#TopicType"/>
         <rdfs:comment xml:lang="en">Type of the topic (Predefined list)</rdfs:comment>
         <rdfs:label xml:lang="en">has Topic Type</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint -->
 
 
-    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
-        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
+        <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:comment xml:lang="en">Back reference to the viewpoint</rdfs:comment>
         <rdfs:comment xml:lang="en">The viewpoint </rdfs:comment>
         <rdfs:label xml:lang="en">has Viewpoint</rdfs:label>
@@ -503,11 +503,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasAspectRatio -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAspectRatio">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">Proportional relationship between the width and the height of the view (w/h)</rdfs:comment>
         <rdfs:label xml:lang="en">has Aspect Ratio</rdfs:label>
@@ -515,11 +515,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Component"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of the system in which the component is originated</rdfs:comment>
         <rdfs:label xml:lang="en">has Authoring Tool Id</rdfs:label>
@@ -527,32 +527,32 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"/>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"/>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"/>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date of the comment</rdfs:comment>
         <rdfs:label xml:lang="en">has Comment Date</rdfs:label>
@@ -560,11 +560,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">The date when comment was modified</rdfs:comment>
         <rdfs:label xml:lang="en">has Comment Modified Date</rdfs:label>
@@ -572,11 +572,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentText -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentText">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The comment text</rdfs:comment>
         <rdfs:label xml:lang="en">has Comment Text</rdfs:label>
@@ -584,11 +584,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date when the topic was created.</rdfs:comment>
         <rdfs:label xml:lang="en">has Creation Date</rdfs:label>
@@ -596,11 +596,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Default Visibility</rdfs:comment>
         <rdfs:label xml:lang="en">has Default Visibility</rdfs:label>
@@ -608,11 +608,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Description of the topic.</rdfs:comment>
         <rdfs:label xml:lang="en">has Description</rdfs:label>
@@ -620,11 +620,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date until when the topics issue needs to be resolved.</rdfs:comment>
         <rdfs:label xml:lang="en">has Due Date</rdfs:label>
@@ -632,11 +632,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasFieldOfView -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasFieldOfView">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">Camera&apos;s field of view angle in degrees.</rdfs:comment>
         <rdfs:label xml:lang="en">has Vield Of View</rdfs:label>
@@ -644,17 +644,17 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid">
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Project"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
-                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Project"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
+                    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -665,11 +665,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Component"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The IfcGuid of the component</rdfs:comment>
         <rdfs:label xml:lang="en">has Ifc Guid</rdfs:label>
@@ -677,11 +677,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Number to maintain the order of the topics.</rdfs:comment>
         <rdfs:comment xml:lang="en">Parameter for sorting</rdfs:comment>
@@ -690,11 +690,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasName -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasName -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Project"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasName">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of the project.</rdfs:comment>
         <rdfs:label xml:lang="en">has Name</rdfs:label>
@@ -702,11 +702,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasProjectId -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Project"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasProjectId">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">GUID of the Project</rdfs:comment>
         <rdfs:label xml:lang="en">has Project ID</rdfs:label>
@@ -714,11 +714,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">The URL of the snapshot(.png)</rdfs:comment>
         <rdfs:label xml:lang="en">has Snapshot</rdfs:label>
@@ -726,11 +726,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTitle -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTitle">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Title of the topic.</rdfs:comment>
         <rdfs:label xml:lang="en">has Title</rdfs:label>
@@ -738,11 +738,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date when the topic was last modified. Exists only when Topic has been modified after creation.</rdfs:comment>
         <rdfs:label xml:lang="en">has Topic Modified Date</rdfs:label>
@@ -750,11 +750,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewToWorldScale -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewToWorldScale">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">Proportion of camera view to model</rdfs:comment>
         <rdfs:label xml:lang="en">has View To World Scale</rdfs:label>
@@ -762,11 +762,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Openings Visible class</rdfs:comment>
         <rdfs:label xml:lang="en">openings Visible</rdfs:label>
@@ -774,11 +774,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Space Boundaries Visible class</rdfs:comment>
         <rdfs:label xml:lang="en">space Boundaries Visible</rdfs:label>
@@ -786,11 +786,11 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Spaces Visible class</rdfs:comment>
         <rdfs:label xml:lang="en">spaces Visible</rdfs:label>
@@ -810,35 +810,35 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Bitmap -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Bitmap">
         <rdfs:comment xml:lang="en">A list of bitmaps can be used to add more information, for example, text in the visualization.</rdfs:comment>
         <rdfs:label xml:lang="en">Bitmap</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Camera -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Camera -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -848,93 +848,93 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#ClippingPlanes -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ClippingPlanes">
         <rdfs:comment xml:lang="en">ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Clipping Planes</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Coloring -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Coloring">
         <rdfs:comment xml:lang="en">The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color &lt;span style=&quot;color:#40E0D0;&quot;;&gt;Turquoise. More information about the color format can be found on Wikipedia.</rdfs:comment>
         <rdfs:label xml:lang="en">Coloring</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Comment -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Comment -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Comment">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Comment">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentDate"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentText"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -944,55 +944,55 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Component -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Component -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Component">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Component">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1002,13 +1002,13 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Exception -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Exception -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Exception">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Exception">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1018,43 +1018,43 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1064,62 +1064,62 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Label -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Label -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Label">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Label">
         <rdfs:comment xml:lang="en">The label is for tagging the Issue to be able to make a better categorization</rdfs:comment>
         <rdfs:label xml:lang="en">Label</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Lines -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Lines -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Lines">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Lines">
         <rdfs:comment xml:lang="en">Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.</rdfs:comment>
         <rdfs:label xml:lang="en">Lines</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#OriginatingSystem -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#OriginatingSystem">
         <rdfs:comment xml:lang="en">Software with which the respective element was created</rdfs:comment>
         <rdfs:label xml:lang="en">Originating System</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera">
-        <rdfs:subClassOf rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"/>
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera">
+        <rdfs:subClassOf rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewToWorldScale"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera"/>
+        <owl:disjointWith rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera"/>
         <rdfs:comment xml:lang="en">This element describes a viewpoint using orthogonal camera. </rdfs:comment>
         <rdfs:label xml:lang="en">Orthogonal Camera</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera">
-        <rdfs:subClassOf rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"/>
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera">
+        <rdfs:subClassOf rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasFieldOfView"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1129,41 +1129,41 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Priority -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Priority -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Priority">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Priority">
         <rdfs:comment xml:lang="en">Indication of the Priority of an Issue</rdfs:comment>
         <rdfs:label xml:lang="en">Priority</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Project -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Project -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Project">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Project">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasName"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasName"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasProjectId"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1173,13 +1173,13 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Selection -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Selection -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Selection">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1189,167 +1189,167 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Stage -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Stage -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Stage">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Stage">
         <rdfs:comment xml:lang="en">To what stage of the project does the Topic relate to?</rdfs:comment>
         <rdfs:label xml:lang="en">Stage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Topic -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Topic -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Topic">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTitle"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1359,141 +1359,141 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#TopicStatus -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#TopicStatus">
         <rdfs:comment xml:lang="en">Status of the issue. Is it still active or closed?</rdfs:comment>
         <rdfs:label xml:lang="en">Topic Status</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#TopicType -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#TopicType">
         <rdfs:comment xml:lang="en">The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Topic Type</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint -->
 
 
-    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint">
+    <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasException"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible"/>
+                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1540,15 +1540,15 @@
      -->
 
 
-    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection">
+    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection">
         <rdfs:comment xml:lang="en">Points to the Camera direction, defined as wktLiteral</rdfs:comment>
         <rdfs:label xml:lang="en">has Camera Direction</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector">
+    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector">
         <rdfs:comment xml:lang="en">Points to the Camera up vector, defined as wktLiteral</rdfs:comment>
         <rdfs:label xml:lang="en">has Camera Up Vector</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint">
+    <rdf:Description rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint">
         <rdfs:comment xml:lang="en">Points to the Camera location, defined as wktLiteral</rdfs:comment>
         <rdfs:label xml:lang="en">has Camera View Point</rdfs:label>
     </rdf:Description>

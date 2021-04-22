@@ -1,13 +1,13 @@
-@prefix : <http://lbd.arch.rwth-aachen.de/bcfOWL/> .
+@prefix : <http://lbd.arch.rwth-aachen.de/bcfOWL#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://lbd.arch.rwth-aachen.de/bcfOWL/> .
+@base <http://lbd.arch.rwth-aachen.de/bcfOWL#> .
 
-<http://lbd.arch.rwth-aachen.de/bcfOWL/> rdf:type owl:Ontology ;
-                                          owl:versionIRI <http://lbd.arch.rwth-aachen.de/bcfOWL/> ;
+<http://lbd.arch.rwth-aachen.de/bcfOWL#> rdf:type owl:Ontology ;
+                                          owl:versionIRI <http://lbd.arch.rwth-aachen.de/bcfOWL#> ;
                                           <http://purl.org/dc/terms/creator> "Jakob Beetz" ,
                                                                              "Jyrki Oraskai" ,
                                                                              "Oliver Schulz" ;
@@ -15,7 +15,7 @@
                                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
                                           <http://purl.org/dc/terms/title> "BIM collaboration Format Ontology" ;
                                           <http://purl.org/vocab/vann/prefferedNamespacePrefix> "bcfOWL" ;
-                                          <http://purl.org/vocab/vann/prefferedNamespaceURI> "http://lbd.arch.rwth-aachen.de/bcfOWL/" ;
+                                          <http://purl.org/vocab/vann/prefferedNamespaceURI> "http://lbd.arch.rwth-aachen.de/bcfOWL#" ;
                                           owl:versionInfo "0.7.0" .
 
 #################################################################
@@ -50,7 +50,7 @@
 #    Object Properties
 #################################################################
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo
 :hasAssignedTo rdf:type owl:ObjectProperty ;
                rdfs:domain :Topic ;
                rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
@@ -58,7 +58,7 @@
                rdfs:label "has Assigned To"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor
 :hasAuthor rdf:type owl:ObjectProperty ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :Comment
@@ -70,7 +70,7 @@
            rdfs:label "has Author"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap
 :hasBitmap rdf:type owl:ObjectProperty ;
            rdfs:domain :Viewpoint ;
            rdfs:range :Bitmap ;
@@ -78,25 +78,25 @@
            rdfs:label "has Bitmap"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection
 :hasCameraDirection rdf:type owl:ObjectProperty ;
                     rdfs:domain :Camera ;
                     rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector
 :hasCameraUpVector rdf:type owl:ObjectProperty ;
                    rdfs:domain :Camera ;
                    rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint
 :hasCameraViewPoint rdf:type owl:ObjectProperty ;
                     rdfs:domain :Camera ;
                     rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes
 :hasClippingPlanes rdf:type owl:ObjectProperty ;
                    rdfs:domain :Viewpoint ;
                    rdfs:range :ClippingPlanes ;
@@ -104,7 +104,7 @@
                    rdfs:label "has Clipping Planes"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring
 :hasColoring rdf:type owl:ObjectProperty ;
              rdfs:domain :Viewpoint ;
              rdfs:range :Coloring ;
@@ -112,7 +112,7 @@
              rdfs:label "has Coloring"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor
 :hasCommentModifiedAuthor rdf:type owl:ObjectProperty ;
                           rdfs:domain :Comment ;
                           rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
@@ -120,7 +120,7 @@
                           rdfs:label "has Comment Modified Author"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               rdfs:domain [ rdf:type owl:Class ;
                             owl:unionOf ( :Exception
@@ -132,7 +132,7 @@
               rdfs:label "has Component"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor
 :hasCreationAuthor rdf:type owl:ObjectProperty ;
                    rdfs:domain :Topic ;
                    rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
@@ -140,7 +140,7 @@
                    rdfs:label "has Creation Author"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasException
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasException
 :hasException rdf:type owl:ObjectProperty ;
               rdfs:domain :Viewpoint ;
               rdfs:range :Exception ;
@@ -148,7 +148,7 @@
               rdfs:label "has Exception"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema
 :hasExtensionSchema rdf:type owl:ObjectProperty ;
                     rdfs:domain :Project ;
                     rdfs:range :ExtensionSchema ;
@@ -156,7 +156,7 @@
                     rdfs:label "has Extension Schema"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement
 :hasIfcElement rdf:type owl:ObjectProperty ;
                rdfs:domain :Component ;
                rdfs:range [ rdf:type owl:Class ;
@@ -168,7 +168,7 @@
                rdfs:label "has Ifc Element"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels
 :hasLabels rdf:type owl:ObjectProperty ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :ExtensionSchema
@@ -180,7 +180,7 @@
            rdfs:label "has Label"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines
 :hasLines rdf:type owl:ObjectProperty ;
           rdfs:domain :Viewpoint ;
           rdfs:range :Lines ;
@@ -188,7 +188,7 @@
           rdfs:label "has Lines"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem
 :hasOriginatingSystem rdf:type owl:ObjectProperty ;
                       rdfs:domain :Component ;
                       rdfs:range :OriginatingSystem ;
@@ -196,7 +196,7 @@
                       rdfs:label "has Originating System"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera
 :hasOrthogonalCamera rdf:type owl:ObjectProperty ;
                      rdfs:domain :Viewpoint ;
                      rdfs:range :OrthogonalCamera ;
@@ -204,7 +204,7 @@
                      rdfs:label "has Orthogonal Camera"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera
 :hasPerspectiveCamera rdf:type owl:ObjectProperty ;
                       rdfs:domain :Viewpoint ;
                       rdfs:range :PerspectiveCamera ;
@@ -212,7 +212,7 @@
                       rdfs:label "has Perspective Camera"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority
 :hasPriority rdf:type owl:ObjectProperty ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :ExtensionSchema
@@ -224,7 +224,7 @@
              rdfs:label "has Priority"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject
 :hasProject rdf:type owl:ObjectProperty ;
             rdfs:domain [ rdf:type owl:Class ;
                           owl:unionOf ( :Comment
@@ -237,7 +237,7 @@
             rdfs:label "has Project"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection
 :hasSelection rdf:type owl:ObjectProperty ;
               rdfs:domain :Viewpoint ;
               rdfs:range :Selection ;
@@ -245,7 +245,7 @@
               rdfs:label "has Selection"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( :ExtensionSchema
@@ -257,7 +257,7 @@
           rdfs:label "has Stage"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic
 :hasTopic rdf:type owl:ObjectProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( :Comment
@@ -269,7 +269,7 @@
           rdfs:label "has Topic"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor
 :hasTopicModifiedAuthor rdf:type owl:ObjectProperty ;
                         rdfs:domain :Topic ;
                         rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
@@ -277,7 +277,7 @@
                         rdfs:label "has Topic Modified Author"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus
 :hasTopicStatus rdf:type owl:ObjectProperty ;
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :ExtensionSchema
@@ -289,7 +289,7 @@
                 rdfs:label "has Topic Status"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType
 :hasTopicType rdf:type owl:ObjectProperty ;
               rdfs:domain [ rdf:type owl:Class ;
                             owl:unionOf ( :ExtensionSchema
@@ -301,7 +301,7 @@
               rdfs:label "has Topic Type"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint
 :hasViewpoint rdf:type owl:ObjectProperty ;
               rdfs:domain :Comment ;
               rdfs:range :Viewpoint ;
@@ -314,7 +314,7 @@
 #    Data properties
 #################################################################
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasAspectRatio
 :hasAspectRatio rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Camera ;
                 rdfs:range xsd:double ;
@@ -322,7 +322,7 @@
                 rdfs:label "has Aspect Ratio"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId
 :hasAuthoringToolId rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Component ;
                     rdfs:range xsd:string ;
@@ -330,19 +330,19 @@
                     rdfs:label "has Authoring Tool Id"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection
 :hasCameraDirection rdf:type owl:DatatypeProperty .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector
 :hasCameraUpVector rdf:type owl:DatatypeProperty .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint
 :hasCameraViewPoint rdf:type owl:DatatypeProperty .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentDate
 :hasCommentDate rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Comment ;
                 rdfs:range xsd:dateTime ;
@@ -350,7 +350,7 @@
                 rdfs:label "has Comment Date"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate
 :hasCommentModifiedDate rdf:type owl:DatatypeProperty ;
                         rdfs:domain :Comment ;
                         rdfs:range xsd:dateTime ;
@@ -358,7 +358,7 @@
                         rdfs:label "has Comment Modified Date"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentText
 :hasCommentText rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Comment ;
                 rdfs:range xsd:string ;
@@ -366,7 +366,7 @@
                 rdfs:label "has Comment Text"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate
 :hasCreationDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Topic ;
                  rdfs:range xsd:dateTime ;
@@ -374,7 +374,7 @@
                  rdfs:label "has Creation Date"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility
 :hasDefaulVisibility rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Viewpoint ;
                      rdfs:range xsd:boolean ;
@@ -382,7 +382,7 @@
                      rdfs:label "has Default Visibility"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Topic ;
                 rdfs:range xsd:string ;
@@ -390,7 +390,7 @@
                 rdfs:label "has Description"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate
 :hasDueDate rdf:type owl:DatatypeProperty ;
             rdfs:domain :Topic ;
             rdfs:range xsd:dateTime ;
@@ -398,7 +398,7 @@
             rdfs:label "has Due Date"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasFieldOfView
 :hasFieldOfView rdf:type owl:DatatypeProperty ;
                 rdfs:domain :PerspectiveCamera ;
                 rdfs:range xsd:double ;
@@ -406,7 +406,7 @@
                 rdfs:label "has Vield Of View"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid
 :hasGuid rdf:type owl:DatatypeProperty ;
          rdfs:domain [ rdf:type owl:Class ;
                        owl:unionOf ( :Comment
@@ -420,7 +420,7 @@
          rdfs:label "has GUID"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid
 :hasIfcGuid rdf:type owl:DatatypeProperty ;
             rdfs:domain :Component ;
             rdfs:range xsd:string ;
@@ -428,7 +428,7 @@
             rdfs:label "has Ifc Guid"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex
 :hasIndex rdf:type owl:DatatypeProperty ;
           rdfs:domain :Topic ;
           rdfs:range xsd:integer ;
@@ -437,7 +437,7 @@
           rdfs:label "has Index"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasName
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:domain :Project ;
          rdfs:range xsd:string ;
@@ -445,7 +445,7 @@
          rdfs:label "has Name"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasProjectId
 :hasProjectId rdf:type owl:DatatypeProperty ;
               rdfs:domain :Project ;
               rdfs:range xsd:string ;
@@ -453,7 +453,7 @@
               rdfs:label "has Project ID"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot
 :hasSnapshot rdf:type owl:DatatypeProperty ;
              rdfs:domain :Viewpoint ;
              rdfs:range xsd:anyURI ;
@@ -461,7 +461,7 @@
              rdfs:label "has Snapshot"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTitle
 :hasTitle rdf:type owl:DatatypeProperty ;
           rdfs:domain :Topic ;
           rdfs:range xsd:string ;
@@ -469,7 +469,7 @@
           rdfs:label "has Title"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate
 :hasTopicModifiedDate rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Topic ;
                       rdfs:range xsd:dateTime ;
@@ -477,7 +477,7 @@
                       rdfs:label "has Topic Modified Date"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewToWorldScale
 :hasViewToWorldScale rdf:type owl:DatatypeProperty ;
                      rdfs:domain :OrthogonalCamera ;
                      rdfs:range xsd:double ;
@@ -485,7 +485,7 @@
                      rdfs:label "has View To World Scale"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible
 :openingsVisible rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Viewpoint ;
                  rdfs:range xsd:boolean ;
@@ -493,7 +493,7 @@
                  rdfs:label "openings Visible"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible
 :spaceBoundariesVisible rdf:type owl:DatatypeProperty ;
                         rdfs:domain :Viewpoint ;
                         rdfs:range xsd:boolean ;
@@ -501,7 +501,7 @@
                         rdfs:label "space Boundaries Visible"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible
 :spacesVisible rdf:type owl:DatatypeProperty ;
                rdfs:domain :Viewpoint ;
                rdfs:range xsd:boolean ;
@@ -513,13 +513,13 @@
 #    Classes
 #################################################################
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Bitmap
 :Bitmap rdf:type owl:Class ;
         rdfs:comment "A list of bitmaps can be used to add more information, for example, text in the visualization."@en ;
         rdfs:label "Bitmap"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Camera
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Camera
 :Camera rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :hasCameraDirection ;
@@ -537,19 +537,19 @@
         rdfs:label "Camera"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#ClippingPlanes
 :ClippingPlanes rdf:type owl:Class ;
                 rdfs:comment "ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction."@en ;
                 rdfs:label "Clipping Planes"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Coloring
 :Coloring rdf:type owl:Class ;
           rdfs:comment "The Coloring element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, 40E0D0 would be the color <span style=\"color:#40E0D0;\";>Turquoise. More information about the color format can be found on Wikipedia."@en ;
           rdfs:label "Coloring"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Comment
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Comment
 :Comment rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :hasCommentModifiedAuthor ;
@@ -599,7 +599,7 @@
          rdfs:label "Comment"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Component
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Component
 :Component rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasIfcElement ;
@@ -637,7 +637,7 @@
            rdfs:label "Component"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Exception
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Exception
 :Exception rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasComponent ;
@@ -647,7 +647,7 @@
            rdfs:label "Exception"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema
 :ExtensionSchema rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasAuthor ;
@@ -677,25 +677,25 @@
                  rdfs:label "Extension Schema"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Label
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Label
 :Label rdf:type owl:Class ;
        rdfs:comment "The label is for tagging the Issue to be able to make a better categorization"@en ;
        rdfs:label "Label"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Lines
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Lines
 :Lines rdf:type owl:Class ;
        rdfs:comment "Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly."@en ;
        rdfs:label "Lines"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#OriginatingSystem
 :OriginatingSystem rdf:type owl:Class ;
                    rdfs:comment "Software with which the respective element was created"@en ;
                    rdfs:label "Originating System"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera
 :OrthogonalCamera rdf:type owl:Class ;
                   rdfs:subClassOf :Camera ,
                                   [ rdf:type owl:Restriction ;
@@ -707,7 +707,7 @@
                   rdfs:label "Orthogonal Camera"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera
 :PerspectiveCamera rdf:type owl:Class ;
                    rdfs:subClassOf :Camera ,
                                    [ rdf:type owl:Restriction ;
@@ -718,13 +718,13 @@
                    rdfs:label "Perspective Camera"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Priority
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Priority
 :Priority rdf:type owl:Class ;
           rdfs:comment "Indication of the Priority of an Issue"@en ;
           rdfs:label "Priority"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Project
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Project
 :Project rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :hasExtensionSchema ;
@@ -746,7 +746,7 @@
          rdfs:label "Project"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Selection
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Selection
 :Selection rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasComponent ;
@@ -756,13 +756,13 @@
            rdfs:label "Selection"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Stage
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Stage
 :Stage rdf:type owl:Class ;
        rdfs:comment "To what stage of the project does the Topic relate to?"@en ;
        rdfs:label "Stage"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Topic
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Topic
 :Topic rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :hasAssignedTo ;
@@ -868,19 +868,19 @@
        rdfs:label "Topic"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#TopicStatus
 :TopicStatus rdf:type owl:Class ;
              rdfs:comment "Status of the issue. Is it still active or closed?"@en ;
              rdfs:label "Topic Status"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#TopicType
 :TopicType rdf:type owl:Class ;
            rdfs:comment "The Topic Type specifies the use case of a BCF Issue. E.g. an Information request, an error etc."@en ;
            rdfs:label "Topic Type"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint
 :Viewpoint rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasColoring ;

@@ -382,7 +382,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection">
-        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Component"/>
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"/>
         <rdfs:range rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL/Selection"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Selection class</rdfs:comment>
         <rdfs:label xml:lang="en">has Selection</rdfs:label>

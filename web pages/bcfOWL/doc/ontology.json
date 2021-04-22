@@ -1976,7 +1976,7 @@
     "@value" : "Object Property, pointing to the Selection class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

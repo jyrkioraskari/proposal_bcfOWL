@@ -3,9 +3,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
     } ]
   } ]
 }, {
@@ -13,9 +13,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     } ]
   } ]
 }, {
@@ -26,7 +26,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"
   } ]
 }, {
   "@id" : "_:genid101",
@@ -36,7 +36,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"
   } ]
 }, {
   "@id" : "_:genid102",
@@ -46,7 +46,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"
   } ]
 }, {
   "@id" : "_:genid103",
@@ -56,7 +56,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"
   } ]
 }, {
   "@id" : "_:genid104",
@@ -66,7 +66,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"
   } ]
 }, {
   "@id" : "_:genid105",
@@ -76,7 +76,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasException"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"
   } ]
 }, {
   "@id" : "_:genid106",
@@ -86,7 +86,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"
   } ]
 }, {
   "@id" : "_:genid107",
@@ -96,7 +96,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"
   } ]
 }, {
   "@id" : "_:genid108",
@@ -106,7 +106,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"
   } ]
 }, {
   "@id" : "_:genid109",
@@ -116,7 +116,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot"
   } ]
 }, {
   "@id" : "_:genid110",
@@ -126,7 +126,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible"
   } ]
 }, {
   "@id" : "_:genid111",
@@ -136,7 +136,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility"
   } ]
 }, {
   "@id" : "_:genid112",
@@ -146,7 +146,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"
   } ]
 }, {
   "@id" : "_:genid113",
@@ -156,7 +156,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible"
   } ]
 }, {
   "@id" : "_:genid114",
@@ -166,7 +166,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible"
   } ]
 }, {
   "@id" : "_:genid115",
@@ -176,7 +176,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot"
   } ]
 }, {
   "@id" : "_:genid116",
@@ -186,16 +186,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible"
   } ]
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     } ]
   } ]
 }, {
@@ -203,11 +203,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
     } ]
   } ]
 }, {
@@ -215,9 +215,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     } ]
   } ]
 }, {
@@ -225,9 +225,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
     } ]
   } ]
 }, {
@@ -235,9 +235,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     } ]
   } ]
 }, {
@@ -245,9 +245,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     } ]
   } ]
 }, {
@@ -255,13 +255,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Project"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Project"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
     } ]
   } ]
 }, {
@@ -272,7 +272,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"
   } ]
 }, {
   "@id" : "_:genid38",
@@ -282,7 +282,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"
   } ]
 }, {
   "@id" : "_:genid39",
@@ -292,16 +292,16 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Exception"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Exception"
     }, {
-      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Selection"
+      "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Selection"
     } ]
   } ]
 }, {
@@ -312,7 +312,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"
   } ]
 }, {
   "@id" : "_:genid41",
@@ -322,7 +322,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"
   } ]
 }, {
   "@id" : "_:genid42",
@@ -332,7 +332,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"
   } ]
 }, {
   "@id" : "_:genid43",
@@ -342,7 +342,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"
   } ]
 }, {
   "@id" : "_:genid44",
@@ -352,7 +352,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"
   } ]
 }, {
   "@id" : "_:genid45",
@@ -362,7 +362,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"
   } ]
 }, {
   "@id" : "_:genid46",
@@ -372,7 +372,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"
   } ]
 }, {
   "@id" : "_:genid47",
@@ -382,7 +382,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate"
   } ]
 }, {
   "@id" : "_:genid48",
@@ -392,7 +392,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentDate"
   } ]
 }, {
   "@id" : "_:genid49",
@@ -402,7 +402,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentText"
   } ]
 }, {
   "@id" : "_:genid50",
@@ -412,7 +412,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate"
   } ]
 }, {
   "@id" : "_:genid51",
@@ -422,7 +422,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"
   } ]
 }, {
   "@id" : "_:genid52",
@@ -432,7 +432,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"
   } ]
 }, {
   "@id" : "_:genid53",
@@ -442,7 +442,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"
   } ]
 }, {
   "@id" : "_:genid54",
@@ -452,7 +452,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"
   } ]
 }, {
   "@id" : "_:genid55",
@@ -462,7 +462,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId"
   } ]
 }, {
   "@id" : "_:genid56",
@@ -472,7 +472,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid"
   } ]
 }, {
   "@id" : "_:genid57",
@@ -482,7 +482,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId"
   } ]
 }, {
   "@id" : "_:genid58",
@@ -492,7 +492,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid"
   } ]
 }, {
   "@id" : "_:genid59",
@@ -502,7 +502,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"
   } ]
 }, {
   "@id" : "_:genid60",
@@ -512,7 +512,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"
   } ]
 }, {
   "@id" : "_:genid61",
@@ -522,7 +522,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"
   } ]
 }, {
   "@id" : "_:genid62",
@@ -532,7 +532,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"
   } ]
 }, {
   "@id" : "_:genid63",
@@ -542,7 +542,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"
   } ]
 }, {
   "@id" : "_:genid64",
@@ -552,7 +552,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"
   } ]
 }, {
   "@id" : "_:genid65",
@@ -562,7 +562,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"
   } ]
 }, {
   "@id" : "_:genid66",
@@ -572,7 +572,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewToWorldScale"
   } ]
 }, {
   "@id" : "_:genid67",
@@ -582,7 +582,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasFieldOfView"
   } ]
 }, {
   "@id" : "_:genid68",
@@ -592,7 +592,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema"
   } ]
 }, {
   "@id" : "_:genid69",
@@ -602,7 +602,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -622,7 +622,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasName"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasName"
   } ]
 }, {
   "@id" : "_:genid71",
@@ -632,7 +632,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasProjectId"
   } ]
 }, {
   "@id" : "_:genid72",
@@ -642,7 +642,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"
   } ]
 }, {
   "@id" : "_:genid73",
@@ -652,7 +652,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"
   } ]
 }, {
   "@id" : "_:genid74",
@@ -662,7 +662,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"
   } ]
 }, {
   "@id" : "_:genid75",
@@ -672,7 +672,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"
   } ]
 }, {
   "@id" : "_:genid76",
@@ -682,7 +682,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"
   } ]
 }, {
   "@id" : "_:genid77",
@@ -692,7 +692,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"
   } ]
 }, {
   "@id" : "_:genid78",
@@ -702,7 +702,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"
   } ]
 }, {
   "@id" : "_:genid79",
@@ -712,7 +712,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"
   } ]
 }, {
   "@id" : "_:genid80",
@@ -722,7 +722,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor"
   } ]
 }, {
   "@id" : "_:genid81",
@@ -732,7 +732,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"
   } ]
 }, {
   "@id" : "_:genid82",
@@ -742,7 +742,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"
   } ]
 }, {
   "@id" : "_:genid83",
@@ -752,7 +752,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"
   } ]
 }, {
   "@id" : "_:genid84",
@@ -762,7 +762,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"
   } ]
 }, {
   "@id" : "_:genid85",
@@ -772,7 +772,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"
   } ]
 }, {
   "@id" : "_:genid86",
@@ -782,7 +782,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"
   } ]
 }, {
   "@id" : "_:genid87",
@@ -792,7 +792,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription"
   } ]
 }, {
   "@id" : "_:genid88",
@@ -802,7 +802,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate"
   } ]
 }, {
   "@id" : "_:genid89",
@@ -812,7 +812,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex"
   } ]
 }, {
   "@id" : "_:genid90",
@@ -822,7 +822,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate"
   } ]
 }, {
   "@id" : "_:genid91",
@@ -832,7 +832,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate"
   } ]
 }, {
   "@id" : "_:genid92",
@@ -842,7 +842,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"
   } ]
 }, {
   "@id" : "_:genid93",
@@ -852,7 +852,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTitle"
   } ]
 }, {
   "@id" : "_:genid94",
@@ -862,7 +862,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription"
   } ]
 }, {
   "@id" : "_:genid95",
@@ -872,7 +872,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate"
   } ]
 }, {
   "@id" : "_:genid96",
@@ -882,7 +882,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex"
   } ]
 }, {
   "@id" : "_:genid97",
@@ -892,7 +892,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate"
   } ]
 }, {
   "@id" : "_:genid98",
@@ -902,7 +902,7 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"
   } ]
 }, {
   "@id" : "_:genid99",
@@ -912,10 +912,10 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasException"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Jakob Beetz"
@@ -937,16 +937,16 @@
     "@value" : "bcfOWL"
   } ],
   "http://purl.org/vocab/vann/prefferedNamespaceURI" : [ {
-    "@value" : "http://lbd.arch.rwth-aachen.de/bcfOWL/"
+    "@value" : "http://lbd.arch.rwth-aachen.de/bcfOWL#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.7.0"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Bitmap",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -957,7 +957,7 @@
     "@value" : "Bitmap"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -975,7 +975,7 @@
     "@id" : "_:genid39"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ClippingPlanes",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -986,7 +986,7 @@
     "@value" : "Clipping Planes"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Coloring",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -997,7 +997,7 @@
     "@value" : "Coloring"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1031,7 +1031,7 @@
     "@id" : "_:genid50"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A component that links to a building element."
@@ -1058,7 +1058,7 @@
     "@id" : "_:genid58"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Exception",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Exception",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1072,7 +1072,7 @@
     "@id" : "_:genid59"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1096,7 +1096,7 @@
     "@id" : "_:genid65"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Label",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Label",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1107,7 +1107,7 @@
     "@value" : "Label"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Lines",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Lines",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1118,7 +1118,7 @@
     "@value" : "Lines"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#OriginatingSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1129,7 +1129,7 @@
     "@value" : "Originating System"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1140,15 +1140,15 @@
     "@value" : "Orthogonal Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"
   }, {
     "@id" : "_:genid66"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1159,12 +1159,12 @@
     "@value" : "Perspective Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"
   }, {
     "@id" : "_:genid67"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Priority",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Priority",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1175,7 +1175,7 @@
     "@value" : "Priority"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Project",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Project",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1195,7 +1195,7 @@
     "@id" : "_:genid71"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Selection",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Selection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1209,7 +1209,7 @@
     "@id" : "_:genid72"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Stage",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Stage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1220,7 +1220,7 @@
     "@value" : "Stage"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1282,7 +1282,7 @@
     "@id" : "_:genid97"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#TopicStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1293,7 +1293,7 @@
     "@value" : "Topic Status"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#TopicType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1304,7 +1304,7 @@
     "@value" : "Topic Type"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1354,14 +1354,14 @@
     "@id" : "_:genid116"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAspectRatio",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAspectRatio",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Proportional relationship between the width and the height of the view (w/h)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1371,14 +1371,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAssignedTo",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1388,7 +1388,7 @@
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthor",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1405,14 +1405,14 @@
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasAuthoringToolId",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthoringToolId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Name of the system in which the component is originated"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1422,31 +1422,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasBitmap",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Bitmap"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Bitmap"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Bitmap"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Bitmap"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraDirection",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Points to the Camera direction, defined as wktLiteral"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1456,14 +1456,14 @@
     "@id" : "http://www.opengis.net/ont/geosparql#wktLiteral"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraUpVector",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Points to the Camera up vector, defined as wktLiteral"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1473,14 +1473,14 @@
     "@id" : "http://www.opengis.net/ont/geosparql#wktLiteral"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCameraViewPoint",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Points to the Camera location, defined as wktLiteral"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Camera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1490,48 +1490,48 @@
     "@id" : "http://www.opengis.net/ont/geosparql#wktLiteral"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasClippingPlanes",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Clipping Planes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Clipping Planes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ClippingPlanes"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ClippingPlanes"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasColoring",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Coloring class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Coloring"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Coloring"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Coloring"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentDate",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date of the comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1541,14 +1541,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedAuthor",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The author who modified the comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1558,14 +1558,14 @@
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentModifiedDate",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The date when comment was modified"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1575,14 +1575,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCommentText",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The comment text"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1592,7 +1592,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasComponent",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1606,17 +1606,17 @@
     "@value" : "has Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Component"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationAuthor",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "User who created the topic."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1626,14 +1626,14 @@
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasCreationDate",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date when the topic was created."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1643,14 +1643,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDefaulVisibility",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Default Visibility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1660,14 +1660,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDescription",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Description of the topic."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1677,14 +1677,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasDueDate",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasDueDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date until when the topics issue needs to be resolved."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1694,48 +1694,48 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasException",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasException",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Exception"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Exception"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Exception"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Exception"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasExtensionSchema",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "URI to the extension schema."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Project"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Extension Schema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/ExtensionSchema"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#ExtensionSchema"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasFieldOfView",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasFieldOfView",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Camera's field of view angle in degrees."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1745,7 +1745,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasGuid",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1762,14 +1762,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcElement",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The link to the linked data Ifc Element."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1779,14 +1779,14 @@
     "@id" : "_:genid7"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIfcGuid",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcGuid",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The IfcGuid of the component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1796,7 +1796,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasIndex",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1806,7 +1806,7 @@
     "@value" : "Parameter for sorting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1816,7 +1816,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasLabels",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1830,34 +1830,34 @@
     "@value" : "has Label"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Label"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Label"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasLines",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Lines"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Lines"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Lines"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Lines"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasName",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Name of the project."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Project"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1867,58 +1867,58 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOriginatingSystem",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Name of the system in which the component is originated"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Component"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Originating System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/OriginatingSystem"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#OriginatingSystem"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasOrthogonalCamera",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the orthogonal camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Orthogonal Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPerspectiveCamera",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Perspective Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Perspective Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/PerspectiveCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#PerspectiveCamera"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasPriority",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1932,10 +1932,10 @@
     "@value" : "has Priority"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Priority"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Priority"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasProject",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1949,17 +1949,17 @@
     "@value" : "has Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Project"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Project"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasProjectId",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasProjectId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "GUID of the Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Project"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1969,31 +1969,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Selection class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Selection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Selection"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Selection"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasSnapshot",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The URL of the snapshot(.png)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2003,7 +2003,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasStage",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2017,17 +2017,17 @@
     "@value" : "has Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Stage"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Stage"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTitle",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTitle",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Title of the topic."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2037,7 +2037,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopic",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2051,17 +2051,17 @@
     "@value" : "has Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedAuthor",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "User who modified the topic. Exists only when Topic has been modified after creation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2071,14 +2071,14 @@
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicModifiedDate",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date when the topic was last modified. Exists only when Topic has been modified after creation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Topic"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2088,7 +2088,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicStatus",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2102,10 +2102,10 @@
     "@value" : "has Topic Status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/TopicStatus"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#TopicStatus"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasTopicType",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2119,17 +2119,17 @@
     "@value" : "has Topic Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/TopicType"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#TopicType"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewToWorldScale",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewToWorldScale",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Proportion of camera view to model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/OrthogonalCamera"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#OrthogonalCamera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2139,7 +2139,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/hasViewpoint",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2149,24 +2149,24 @@
     "@value" : "The viewpoint "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Comment"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Comment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/openingsVisible",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Openings Visible class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2176,14 +2176,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/spaceBoundariesVisible",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Space Boundaries Visible class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2193,14 +2193,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/spacesVisible",
+  "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Object Property, pointing to the Spaces Visible class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint"
+    "@id" : "http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

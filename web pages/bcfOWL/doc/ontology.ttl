@@ -239,7 +239,7 @@
 
 ###  http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection
 :hasSelection rdf:type owl:ObjectProperty ;
-              rdfs:domain :Component ;
+              rdfs:domain :Viewpoint ;
               rdfs:range :Selection ;
               rdfs:comment "Object Property, pointing to the Selection class"@en ;
               rdfs:label "has Selection"@en .

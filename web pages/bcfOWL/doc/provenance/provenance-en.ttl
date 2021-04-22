@@ -3,10 +3,11 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL/> a prov:Entity;
-	 dc:title "BCF 0.7 Ontology Description";
+	 dc:title "BIM Collaboration Format Ontology";
 	 prov:wasAttributedTo <https://dc.rwth-aachen.de/de/team/team/>;
 	 dc:creator <https://dc.rwth-aachen.de/de/team/team/>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <http://lbd.arch.rwth-aachen.de/bcfOWL/>;
+	 prov:wasRevisionOf <None yet>;
 	 prov:wasGeneratedAt "21.4.2021";
 .

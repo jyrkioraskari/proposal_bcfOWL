@@ -243,7 +243,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection
 <http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL/Component> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL/Viewpoint> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection> <http://www.w3.org/2000/01/rdf-schema#range> <http://lbd.arch.rwth-aachen.de/bcfOWL/Selection> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection> <http://www.w3.org/2000/01/rdf-schema#comment> "Object Property, pointing to the Selection class"@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL/hasSelection> <http://www.w3.org/2000/01/rdf-schema#label> "has Selection"@en .

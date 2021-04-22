@@ -767,7 +767,7 @@ bcfOWL:hasSelection
         a            owl:ObjectProperty ;
         rdfs:label       "has Selection"@en ;
         rdfs:comment   "Object Property, pointing to the Selection class"@en ;
-        rdfs:domain  bcfOWL:Component ;
+        rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Selection .
 
 #### Cameras ####

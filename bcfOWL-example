@@ -1,0 +1,71 @@
+@prefix inst:  	<http://example.org/> .
+@prefix owl:   	<http://www.w3.org/2002/07/owl#> .
+@prefix geo: 	<http://www.opengis.net/ont/geosparql#> .
+@prefix bot:   	<https://w3id.org/bot#> .
+@prefix xsd: 	<http://www.w3.org/2001/XMLSchema#> .
+@prefix bcfOWL: <http://lbd.arch.rwth-aachen.de/bcfOWL/> .
+@prefix rdfs:  	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: 	<http://xmlns.com/foaf/0.1/> .
+
+
+inst:topic_296c7f16-a92e-4608-a649-5506145bf8f0		a	bcfOWL:Topic ;
+		bcfOWL:hasGuid						"296c7f16-a92e-4608-a649-5506145bf8f0"^^xsd:string ;
+		bcfOWL:hasProject					inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 ;
+		bcfOWL:hasTopicStatus				inst:Closed ;
+		bcfOWL:hasTopicType					inst:Information ;
+		bcfOWL:hasTitle						"Working Title"^^xsd:string ;
+		bcfOWL:hasCreationAuthor			inst:OliverSchulz ;
+		bcfOWL:hasCreationDay				"2021-01-25T17:18:50+00:00"^^xsd:dateTime ;
+		bcfOWL:hasAssignedTo				inst:OliverSchulz ;
+		bcfOWL:hasLabels					inst:Documentation ;
+		bcfOWL:hasIndex						"1"^^xsd:integer .
+		
+inst:comment_c77146fe-030d-49a2-8791-895708d37450	a bcfOWL:Comment ;
+		bcfOWL:hasGuid						"c77146fe-030d-49a2-8791-895708d37450"^^xsd:string ;
+		bcfOWL:hasTopic						inst:topic_296c7f16-a92e-4608-a649-5506145bf8f0 ;
+		bcfOWL:hasProject					inst:project_5a9bc49e-da48-9615-bcc9-0c45d0a3ede4 ;
+		bcfOWL:hasComment					"Test Comment"^^xsd:string ;
+		bcfOWL:hasAuthor					inst:OliverSchulz ;
+		bcfOWL:hasModifiedAuthor			inst:OliverSchulz ;
+		bcfOWL:hasCommentDate				"2021-01-25T17:18:50+00:00"^^xsd:dateTime ;
+		bcfOWL:hasViewpoint					inst:viewpoint_2101f59a-21f7-4577-a63d-c7466e8a57f1 .
+		
+inst:viewpoint_2101f59a-21f7-4577-a63d-c7466e8a57f1	a bcfOWL:Viewpoint ;
+		bcfOWL:hasGuid						"2101f59a-21f7-4577-a63d-c7466e8a57f1"^^xsd:string ;
+		bcfOWL:hasTopic						inst:topic_296c7f16-a92e-4608-a649-5506145bf8f0 ;
+		bcfOWL:hasProject					inst:project_752c06eb-40e4-4d32-9d3b-791251aef919 ;
+		bcfOWL:hasPerspectiveCamera			inst:PerspectiveCamera_2101f59a-21f7-4577-a63d-c7466e8a57f1 ;
+		bcfOWL:hasSelection					inst:Selection_2101f59a-21f7-4577-a63d-c7466e8a57f1 ;
+		bcfOWL:SpacesVisible				true ;
+		bcfOWL:SpaceBoundariesVisible		false ;
+		bcfOWL:OpeningsVisible				true ;
+		bcfOWL:hasException					inst:Exception_2101f59a-21f7-4577-a63d-c7466e8a57f1 ;
+		bcfOWL:hasDefaulVisibility			false ;
+		bcfOWL:hasSnapshot					"http://lbd.arch.rwth-aachen.de/bcf/v2.1/snapshot/daca6c77-555e-4854-9e13-90668f1f41a5" .
+			
+inst:PerspectiveCamera_2101f59a-21f7-4577-a63d-c7466e8a57f1 a bcfOWL:PerspectiveCamera ;
+		bcfOWL:hasCameraViewPoint			inst:CameraViewPoint_752c06eb-40e4-4d32-9d3b-791251aef919 ;
+		bcfOWL:hasCameraDirection			inst:CameraDirection_752c06eb-40e4-4d32-9d3b-791251aef919 ;
+		bcfOWL:hasCameraUpVector			inst:CameraUpVector_752c06eb-40e4-4d32-9d3b-791251aef919 ;
+		bcfOWL:hasFieldOfView				"30"^^xsd:double ;
+		bcfOWL:hasAspectRatio				"1.33"^^xsd:double .
+		
+inst:CameraViewPoint_2101f59a-21f7-4577-a63d-c7466e8a57f1 a geo:Geometry ;
+		geo:asWKT							"POINT Z(10.72 16.16 1.26)"^^geo:wktLiteral .
+
+inst:CameraDirection_2101f59a-21f7-4577-a63d-c7466e8a57f1 a geo:Geometry ;
+		geo:asWKT							"POINT Z(0.96 -0.21 -0.14)"^^geo:wktLiteral .
+
+inst:CameraUpVector_2101f59a-21f7-4577-a63d-c7466e8a57f1 a geo:Geometry ;
+		geo:asWKT							"POINT Z(0.13 -0.03 0.99)"^^geo:wktLiteral .
+	
+inst:Selection_2101f59a-21f7-4577-a63d-c7466e8a57f1 a bcfOWL:Selection ;
+		bcfOWL:hasComponent					inst:Element_a22a6d69-b769-4d7a-bc66-f657f8efb8b2 ;
+		bcfOWL:hasComponent					inst:Element_7e5bf9f9311442c998188bca9a0fca47 .
+		
+inst:Exception_2101f59a-21f7-4577-a63d-c7466e8a57f1 a bcfOWL:Exception ;
+		bcfOWL:hasComponent					inst:Element_4ScshxZO9AJBebsniSz9Yk .
+
+inst:Element_a22a6d69-b769-4d7a-bc66-f657f8efb8b2 a bcfOWL:Component ;
+		bcfOWL:hasIfcGuid					"a22a6d69-b769-4d7a-bc66-f657f8efb8b2"^^xsd:string ;
+		bcfOWL:hasOriginatingSystem			inst:ExampleCADApplication .

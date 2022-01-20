@@ -628,7 +628,7 @@ bcfOWL:hasException
         rdfs:domain  bcfOWL:Viewpoint ;
         rdfs:range   bcfOWL:Exception .
 
-bcfOWL:hasDefaulVisibility
+bcfOWL:hasDefaultVisibility
         a            owl:DatatypeProperty ;
         rdfs:label       "has Default Visibility"@en ;
         rdfs:comment   "Object Property, pointing to the Default Visibility"@en ;

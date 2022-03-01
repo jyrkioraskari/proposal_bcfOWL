@@ -52,6 +52,24 @@ bcfOWL:hasTopic
                                   owl:unionOf  ( bcfOWL:Viewpoint bcfOWL:Comment )
                       ] ;
         rdfs:range    bcfOWL:Topic .
+        
+bcfOWL:hasTopicsContainer
+        a             owl:ObjectProperty ;
+        rdfs:label    "has Topics Container"@en ;
+        rdfs:comment  "Link to a resource containing URIs for Topics."@en ;
+        rdfs:domain   bcfOWL:Project .
+
+bcfOWL:hasViewpointsContainer
+        a             owl:ObjectProperty ;
+        rdfs:label    "has Viewpoints Container"@en ;
+        rdfs:comment  "Link to a resource containing URIs for Viewpoints."@en ;
+        rdfs:domain   bcfOWL:Topic .
+
+bcfOWL:hasCommentsContainer
+        a             owl:ObjectProperty ;
+        rdfs:label    "has Comments Container"@en ;
+        rdfs:comment  "Link to a resource containing URIs for Comments."@en ;
+        rdfs:domain   bcfOWL:Viewpoint .
 
 #### Project ####
 

@@ -46,6 +46,10 @@
 <http://purl.org/vocab/vann/prefferedNamespaceURI> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -118,6 +122,13 @@
                           rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
                           rdfs:comment "The author who modified the comment"@en ;
                           rdfs:label "has Comment Modified Author"@en .
+
+
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer
+:hasCommentsContainer rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Viewpoint ;
+                      rdfs:comment "Link to a resource containing URIs for Comments."@en ;
+                      rdfs:label "has Comments Container"@en .
 
 
 ###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent
@@ -301,6 +312,13 @@
               rdfs:label "has Topic Type"@en .
 
 
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer
+:hasTopicsContainer rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Project ;
+                    rdfs:comment "Link to a resource containing URIs for Topics."@en ;
+                    rdfs:label "has Topics Container"@en .
+
+
 ###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint
 :hasViewpoint rdf:type owl:ObjectProperty ;
               rdfs:domain :Comment ;
@@ -308,6 +326,13 @@
               rdfs:comment "Back reference to the viewpoint"@en ,
                            "The viewpoint "@en ;
               rdfs:label "has Viewpoint"@en .
+
+
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer
+:hasViewpointsContainer rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Topic ;
+                        rdfs:comment "Link to a resource containing URIs for Viewpoints."@en ;
+                        rdfs:label "has Viewpoints Container"@en .
 
 
 #################################################################
@@ -374,12 +399,12 @@
                  rdfs:label "has Creation Date"@en .
 
 
-###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility
-:hasDefaulVisibility rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Viewpoint ;
-                     rdfs:range xsd:boolean ;
-                     rdfs:comment "Object Property, pointing to the Default Visibility"@en ;
-                     rdfs:label "has Default Visibility"@en .
+###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility
+:hasDefaultVisibility rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Viewpoint ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Object Property, pointing to the Default Visibility"@en ;
+                      rdfs:label "has Default Visibility"@en .
 
 
 ###  http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription
@@ -882,7 +907,8 @@
 
 ###  http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint
 :Viewpoint rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
+           rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :hasColoring ;
                              owl:minCardinality "0"^^xsd:nonNegativeInteger
                            ] ,
@@ -935,10 +961,6 @@
                              owl:minCardinality "0"^^xsd:nonNegativeInteger
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasDefaulVisibility ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty :hasGuid ;
                              owl:cardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -962,6 +984,10 @@
            rdfs:label "Viewpoint"@en .
 
 
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
 ###  http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct
 <http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct> rdf:type owl:Class .
 
@@ -978,12 +1004,15 @@
 <https://w3id.org/bot#Element> rdf:type owl:Class .
 
 
+[ owl:cardinality "1"^^xsd:int
+] .
+
 #################################################################
 #    Annotations
 #################################################################
 
 :hasCameraDirection rdfs:comment "Points to the Camera direction, defined as wktLiteral"@en ;
-                    rdfs:label "has Camera Direction"@en .
+                     rdfs:label "has Camera Direction"@en .
 
 
 :hasCameraUpVector rdfs:comment "Points to the Camera up vector, defined as wktLiteral"@en ;

@@ -36,6 +36,9 @@
 # http://purl.org/vocab/vann/prefferedNamespaceURI
 <http://purl.org/vocab/vann/prefferedNamespaceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2002/07/owl#cardinality
+<http://www.w3.org/2002/07/owl#cardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -111,6 +114,12 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The author who modified the comment"@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "has Comment Modified Author"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to a resource containing URIs for Comments."@en .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer> <http://www.w3.org/2000/01/rdf-schema#label> "has Comments Container"@en .
 # 
 # http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -315,6 +324,12 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of the topic (Predefined list)"@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType> <http://www.w3.org/2000/01/rdf-schema#label> "has Topic Type"@en .
 # 
+# http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL#Project> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to a resource containing URIs for Topics."@en .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer> <http://www.w3.org/2000/01/rdf-schema#label> "has Topics Container"@en .
+# 
 # http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL#Comment> .
@@ -322,6 +337,12 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Back reference to the viewpoint"@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The viewpoint "@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has Viewpoint"@en .
+# 
+# http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL#Topic> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to a resource containing URIs for Viewpoints."@en .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer> <http://www.w3.org/2000/01/rdf-schema#label> "has Viewpoints Container"@en .
 # 
 # 
 # 
@@ -383,12 +404,12 @@ _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the topic was created."@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has Creation Date"@en .
 # 
-# http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility
-<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> .
-<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Object Property, pointing to the Default Visibility"@en .
-<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility> <http://www.w3.org/2000/01/rdf-schema#label> "has Default Visibility"@en .
+# http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Object Property, pointing to the Default Visibility"@en .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility> <http://www.w3.org/2000/01/rdf-schema#label> "has Default Visibility"@en .
 # 
 # http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription
 <http://lbd.arch.rwth-aachen.de/bcfOWL#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -868,6 +889,8 @@ _:genid97 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org
 # 
 # http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.semanticweb.owlapi/error#Error1> .
+<http://org.semanticweb.owlapi/error#Error1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
 _:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid98 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring> .
@@ -922,30 +945,28 @@ _:genid110 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aach
 _:genid110 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid111 .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid111 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility> .
+_:genid111 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid> .
 _:genid111 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid112 .
 _:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid112 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid> .
+_:genid112 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible> .
 _:genid112 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid113 .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#openingsVisible> .
+_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible> .
 _:genid113 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid114 .
 _:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid114 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#spaceBoundariesVisible> .
-_:genid114 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid114 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot> .
+_:genid114 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid115 .
 _:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid115 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#hasSnapshot> .
+_:genid115 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible> .
 _:genid115 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid116 .
-_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid116 <http://www.w3.org/2002/07/owl#onProperty> <http://lbd.arch.rwth-aachen.de/bcfOWL#spacesVisible> .
-_:genid116 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely."@en .
 <http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Viewpoint"@en .
+# 
+# http://org.semanticweb.owlapi/error#Error1
 # 
 # http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct
 # 
@@ -955,6 +976,7 @@ _:genid116 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.or
 # 
 # https://w3id.org/bot#Element
 # 
+_:genid116 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # 
 # #################################################################

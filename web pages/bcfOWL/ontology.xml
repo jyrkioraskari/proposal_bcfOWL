@@ -77,6 +77,13 @@
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#cardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -194,6 +201,17 @@
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">The author who modified the comment</rdfs:comment>
         <rdfs:label xml:lang="en">has Comment Modified Author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer -->
+
+
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
+        <rdfs:comment xml:lang="en">Link to a resource containing URIs for Comments.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Comments Container</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -478,6 +496,17 @@
     
 
 
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer -->
+
+
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Project"/>
+        <rdfs:comment xml:lang="en">Link to a resource containing URIs for Topics.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Topics Container</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint -->
 
 
@@ -487,6 +516,17 @@
         <rdfs:comment xml:lang="en">Back reference to the viewpoint</rdfs:comment>
         <rdfs:comment xml:lang="en">The viewpoint </rdfs:comment>
         <rdfs:label xml:lang="en">has Viewpoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer -->
+
+
+    <owl:ObjectProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer">
+        <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Topic"/>
+        <rdfs:comment xml:lang="en">Link to a resource containing URIs for Viewpoints.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Viewpoints Container</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -596,10 +636,10 @@
     
 
 
-    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility -->
+    <!-- http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility -->
 
 
-    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility">
+    <owl:DatatypeProperty rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaultVisibility">
         <rdfs:domain rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Object Property, pointing to the Default Visibility</rdfs:comment>
@@ -1383,6 +1423,7 @@
 
 
     <owl:Class rdf:about="http://lbd.arch.rwth-aachen.de/bcfOWL#Viewpoint">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"/>
@@ -1463,12 +1504,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasDefaulVisibility"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://lbd.arch.rwth-aachen.de/bcfOWL#hasGuid"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
@@ -1503,6 +1538,13 @@
     
 
 
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
     <!-- http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct -->
 
 
@@ -1528,6 +1570,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/bot#Element"/>
+    <rdf:Description>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    </rdf:Description>
     
 
 

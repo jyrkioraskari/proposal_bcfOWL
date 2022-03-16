@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>BIM Collaboration Format Ontology</title>
+    <title>Proposal for the BIM Collaboration Format Ontology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Evaluation of the ontology with the OOPS tool.">
     <meta name="Languaje" content="English">
@@ -37,11 +37,11 @@
 
   </head>
 <div class="container">
-<h1> <a href="http://lbd.arch.rwth-aachen.de/bcfOWL#" target="_blank">BIM Collaboration Format Ontology</a></h1>
+<h1> <a href="http://lbd.arch.rwth-aachen.de/bcfOWL#" target="_blank">Proposal for the BIM Collaboration Format Ontology</a></h1>
 <br>
 <dl class="dl-horizontal">
 <dt>Title</dt>
-<dd><a href="http://lbd.arch.rwth-aachen.de/bcfOWL#" target="_blank">BIM Collaboration Format Ontology</a></dd>
+<dd><a href="http://lbd.arch.rwth-aachen.de/bcfOWL#" target="_blank">Proposal for the BIM Collaboration Format Ontology</a></dd>
 <dt>URI</dt>
 <dd><a href="http://lbd.arch.rwth-aachen.de/bcfOWL#" target="_blank">http://lbd.arch.rwth-aachen.de/bcfOWL#</a></dd>
 <dt>Version</dt>
@@ -62,34 +62,58 @@
 <div class="panel-heading">
 <h4 class="panel-title">
 <a data-toggle="collapse" href="#collapse0">
-P08. Missing annotations<span style="float: right;">4 cases detected. <span class="label label-minor">Minor</span></span></a>
+P04. Creating unconnected ontology elements<span style="float: right;">1 case detected. <span class="label label-minor">Minor</span></span></a>
 </h4>
 </div>
 <div id="collapse0" class="panel-collapse collapse">
 <div class="panel-body">
-<p>This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct"^^xsd:anyURI" target="_blank">"http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct"^^xsd:anyURI</a></li><li><a href=""http://xmlns.com/foaf/0.1/Person"^^xsd:anyURI" target="_blank">"http://xmlns.com/foaf/0.1/Person"^^xsd:anyURI</a></li><li><a href=""https://w3id.org/bot#Element"^^xsd:anyURI" target="_blank">"https://w3id.org/bot#Element"^^xsd:anyURI</a></li><li><a href=""http://www.opengis.net/ont/geosparql#wktLiteral"^^xsd:anyURI" target="_blank">"http://www.opengis.net/ont/geosparql#wktLiteral"^^xsd:anyURI</a></li></ul></div>
+<p>Ontology elements (classes, object properties and datatype properties) are created isolated, with no relation to the rest of the ontology.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://org.semanticweb.owlapi/error#Error1"^^xsd:anyURI" target="_blank">"http://org.semanticweb.owlapi/error#Error1"^^xsd:anyURI</a></li></ul></div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
 <a data-toggle="collapse" href="#collapse1">
-P13. Inverse relationships not explicitly declared<span style="float: right;">28 cases detected. <span class="label label-minor">Minor</span></span></a>
+P08. Missing annotations<span style="float: right;">5 cases detected. <span class="label label-minor">Minor</span></span></a>
 </h4>
 </div>
 <div id="collapse1" class="panel-collapse collapse">
 <div class="panel-body">
-<p>This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"^^xsd:anyURI</a></li></ul></div>
+<p>This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""https://w3id.org/bot#Element"^^xsd:anyURI" target="_blank">"https://w3id.org/bot#Element"^^xsd:anyURI</a></li><li><a href=""http://xmlns.com/foaf/0.1/Person"^^xsd:anyURI" target="_blank">"http://xmlns.com/foaf/0.1/Person"^^xsd:anyURI</a></li><li><a href=""http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct"^^xsd:anyURI" target="_blank">"http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_Final#IfcProduct"^^xsd:anyURI</a></li><li><a href=""http://org.semanticweb.owlapi/error#Error1"^^xsd:anyURI" target="_blank">"http://org.semanticweb.owlapi/error#Error1"^^xsd:anyURI</a></li><li><a href=""http://www.opengis.net/ont/geosparql#wktLiteral"^^xsd:anyURI" target="_blank">"http://www.opengis.net/ont/geosparql#wktLiteral"^^xsd:anyURI</a></li></ul></div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
 <a data-toggle="collapse" href="#collapse2">
-P22. Using different naming conventions in the ontology<span style="float: right;"> ontology *<span class="label label-minor">Minor</span></span></a>
+P11. Missing domain or range in properties<span style="float: right;">3 cases detected. <span class="label label-warning">Important</span></span></a>
 </h4>
 </div>
 <div id="collapse2" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Object and/or datatype properties without domain or range (or none of them) are included in the ontology. 	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer"^^xsd:anyURI</a></li></ul></div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" href="#collapse3">
+P13. Inverse relationships not explicitly declared<span style="float: right;">31 cases detected. <span class="label label-minor">Minor</span></span></a>
+</h4>
+</div>
+<div id="collapse3" class="panel-collapse collapse">
+<div class="panel-body">
+<p>This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicStatus"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasAssignedTo"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraDirection"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraViewPoint"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasStage"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasExtensionSchema"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasLines"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasException"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCameraUpVector"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasColoring"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicModifiedAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicsContainer"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopicType"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasComponent"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasIfcElement"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasClippingPlanes"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentModifiedAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasOrthogonalCamera"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasSelection"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasPerspectiveCamera"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasLabels"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasTopic"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpointsContainer"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasPriority"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasBitmap"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasOriginatingSystem"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCreationAuthor"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasCommentsContainer"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasViewpoint"^^xsd:anyURI</a></li><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#hasProject"^^xsd:anyURI</a></li></ul></div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" href="#collapse4">
+P22. Using different naming conventions in the ontology<span style="float: right;"> ontology *<span class="label label-minor">Minor</span></span></a>
+</h4>
+</div>
+<div id="collapse4" class="panel-collapse collapse">
 <div class="panel-body">
 <p>The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as &quot;-&quot; or &quot;_&quot;) . Some notions about naming conventions are provided in [2].	</p><p>*This pitfall applies to the ontology in general instead of specific elements</p></div>
 </div>
@@ -97,13 +121,13 @@ P22. Using different naming conventions in the ontology<span style="float: right
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse3">
+<a data-toggle="collapse" href="#collapse5">
 P30. Equivalent classes not explicitly declared<span style="float: right;">1 case detected. <span class="label label-warning">Important</span></span></a>
 </h4>
 </div>
-<div id="collapse3" class="panel-collapse collapse">
+<div id="collapse5" class="panel-collapse collapse">
 <div class="panel-body">
-<p>This pitfall consists in missing the definition of equivalent classes (owl:equivalentClass) in case of duplicated concepts. When an ontology reuses terms from other ontologies, classes that have the same meaning should be defined as equivalent in order to benefit the interoperability between both ontologies.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#Component"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#Component"^^xsd:anyURI</a> , <a href=""https://w3id.org/bot#Element"^^xsd:anyURI" target="_blank">"https://w3id.org/bot#Element"^^xsd:anyURI</a></li></ul></div>
+<p>This pitfall consists in missing the definition of equivalent classes (owl:equivalentClass) in case of duplicated concepts. When an ontology reuses terms from other ontologies, classes that have the same meaning should be defined as equivalent in order to benefit the interoperability between both ontologies.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""https://w3id.org/bot#Element"^^xsd:anyURI" target="_blank">"https://w3id.org/bot#Element"^^xsd:anyURI</a> , <a href=""http://lbd.arch.rwth-aachen.de/bcfOWL#Component"^^xsd:anyURI" target="_blank">"http://lbd.arch.rwth-aachen.de/bcfOWL#Component"^^xsd:anyURI</a></li></ul></div>
 </div>
 </div>
 </div>

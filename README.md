@@ -1,6 +1,9 @@
 # BIM Collaboration Format (BCF) Ontology Description
 
 
+The current version of the ontology is here: https://w3id.org/bcfOWL#
+
+
 version 0.7.0
 The published web page for the ontology is here:
 http://lbd.arch.rwth-aachen.de/bcfOWL
